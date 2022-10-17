@@ -97,7 +97,8 @@ namespace TheHotelManager
             {
                 con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
-                cmd.CommandText = "INSERT INTO " + tablename + " (name, surname, password, department) VALUES('" + name + "', '" + surname + "', '" + password + "', '" + department + "');";
+                string text = "INSERT INTO " + tablename + " (name,surname,password,department) VALUES('" + name + "', '" + surname + "', '" + password + "', '" + department + "')";
+                cmd = new MySqlCommand(text, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
