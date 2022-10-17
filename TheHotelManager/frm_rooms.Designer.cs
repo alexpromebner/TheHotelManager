@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_roomType = new System.Windows.Forms.Label();
             this.cb_roomType = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -39,18 +38,11 @@
             this.lbl_price = new System.Windows.Forms.Label();
             this.btn_addR = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.edit_reservation = new System.Windows.Forms.Button();
+            this.btn_backRooms = new System.Windows.Forms.Button();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(1, 1);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 17;
-            this.pbx_logo.TabStop = false;
             // 
             // lbl_roomType
             // 
@@ -130,7 +122,7 @@
             // 
             this.lbl_price.AutoSize = true;
             this.lbl_price.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_price.Location = new System.Drawing.Point(12, 292);
+            this.lbl_price.Location = new System.Drawing.Point(12, 267);
             this.lbl_price.Name = "lbl_price";
             this.lbl_price.Size = new System.Drawing.Size(164, 31);
             this.lbl_price.TabIndex = 29;
@@ -141,7 +133,7 @@
             this.btn_addR.BackColor = System.Drawing.Color.Gray;
             this.btn_addR.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addR.ForeColor = System.Drawing.Color.White;
-            this.btn_addR.Location = new System.Drawing.Point(12, 356);
+            this.btn_addR.Location = new System.Drawing.Point(12, 315);
             this.btn_addR.Name = "btn_addR";
             this.btn_addR.Size = new System.Drawing.Size(202, 35);
             this.btn_addR.TabIndex = 30;
@@ -160,12 +152,46 @@
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
             // 
+            // edit_reservation
+            // 
+            this.edit_reservation.BackColor = System.Drawing.Color.Gray;
+            this.edit_reservation.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit_reservation.ForeColor = System.Drawing.Color.White;
+            this.edit_reservation.Location = new System.Drawing.Point(12, 356);
+            this.edit_reservation.Name = "edit_reservation";
+            this.edit_reservation.Size = new System.Drawing.Size(202, 35);
+            this.edit_reservation.TabIndex = 32;
+            this.edit_reservation.Text = "Edit Reservation";
+            this.edit_reservation.UseVisualStyleBackColor = false;
+            // 
+            // btn_backRooms
+            // 
+            this.btn_backRooms.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_backRooms.Location = new System.Drawing.Point(342, 409);
+            this.btn_backRooms.Name = "btn_backRooms";
+            this.btn_backRooms.Size = new System.Drawing.Size(75, 23);
+            this.btn_backRooms.TabIndex = 33;
+            this.btn_backRooms.Text = "Back";
+            this.btn_backRooms.UseVisualStyleBackColor = true;
+            // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 17;
+            this.pbx_logo.TabStop = false;
+            // 
             // frm_rooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
+            this.Controls.Add(this.btn_backRooms);
+            this.Controls.Add(this.edit_reservation);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_addR);
             this.Controls.Add(this.lbl_price);
@@ -200,5 +226,7 @@
         private System.Windows.Forms.Label lbl_price;
         private System.Windows.Forms.Button btn_addR;
         private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button edit_reservation;
+        private System.Windows.Forms.Button btn_backRooms;
     }
 }

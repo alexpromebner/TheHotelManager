@@ -28,24 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.btn_warehouse = new System.Windows.Forms.Button();
             this.btn_cleaning = new System.Windows.Forms.Button();
             this.btn_rooms = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.lbl_choose = new System.Windows.Forms.Label();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(1, 1);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 1;
-            this.pbx_logo.TabStop = false;
             // 
             // btn_warehouse
             // 
@@ -58,6 +48,7 @@
             this.btn_warehouse.TabIndex = 7;
             this.btn_warehouse.Text = "Warehouse";
             this.btn_warehouse.UseVisualStyleBackColor = false;
+            this.btn_warehouse.Click += new System.EventHandler(this.btn_warehouse_Click);
             // 
             // btn_cleaning
             // 
@@ -82,6 +73,7 @@
             this.btn_rooms.TabIndex = 5;
             this.btn_rooms.Text = "Rooms";
             this.btn_rooms.UseVisualStyleBackColor = false;
+            this.btn_rooms.Click += new System.EventHandler(this.btn_rooms_Click);
             // 
             // btn_back
             // 
@@ -102,6 +94,16 @@
             this.lbl_choose.Size = new System.Drawing.Size(282, 28);
             this.lbl_choose.TabIndex = 9;
             this.lbl_choose.Text = "What do you want to do?";
+            // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(1, 1);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 1;
+            this.pbx_logo.TabStop = false;
             // 
             // frm_hotel
             // 

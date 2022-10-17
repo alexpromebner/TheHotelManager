@@ -35,6 +35,7 @@
             this.lbl_contactAdmin = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.pbx_logo = new System.Windows.Forms.PictureBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +153,7 @@
         private System.Windows.Forms.Button btn_employee;
         private System.Windows.Forms.Label lbl_contactAdmin;
         private System.Windows.Forms.Button btn_logout;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
 

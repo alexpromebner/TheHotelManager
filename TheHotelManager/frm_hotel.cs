@@ -16,5 +16,21 @@ namespace TheHotelManager
         {
             InitializeComponent();
         }
+
+        private void btn_rooms_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_rooms rooms = new frm_rooms();
+            rooms.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_warehouse_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_warehouse warehouse = new frm_warehouse();
+            warehouse.ShowDialog();
+            this.Close();
+        }
     }
 }

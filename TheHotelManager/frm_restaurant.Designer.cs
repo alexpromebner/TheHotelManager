@@ -80,6 +80,7 @@
             this.btn_menu.TabIndex = 12;
             this.btn_menu.Text = "Menu";
             this.btn_menu.UseVisualStyleBackColor = false;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
             // btn_tables
             // 
@@ -92,6 +93,7 @@
             this.btn_tables.TabIndex = 11;
             this.btn_tables.Text = "Tables";
             this.btn_tables.UseVisualStyleBackColor = false;
+            this.btn_tables.Click += new System.EventHandler(this.btn_tables_Click);
             // 
             // pbx_logo
             // 

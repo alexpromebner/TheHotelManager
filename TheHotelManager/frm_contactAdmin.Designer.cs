@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_problems = new System.Windows.Forms.Label();
             this.btn_backA = new System.Windows.Forms.Button();
             this.lbl_other = new System.Windows.Forms.Label();
@@ -36,18 +35,9 @@
             this.btn_send = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.cb_problems = new System.Windows.Forms.ComboBox();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(1, 1);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 1;
-            this.pbx_logo.TabStop = false;
             // 
             // lbl_problems
             // 
@@ -128,6 +118,16 @@
             this.cb_problems.TabIndex = 30;
             this.cb_problems.SelectedIndexChanged += new System.EventHandler(this.cb_problems_SelectedIndexChanged);
             // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(1, 1);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 1;
+            this.pbx_logo.TabStop = false;
+            // 
             // frm_contactAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,7 +143,8 @@
             this.Controls.Add(this.lbl_problems);
             this.Controls.Add(this.pbx_logo);
             this.Name = "frm_contactAdmin";
-            this.Text = "frm_contactAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Contact";
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
