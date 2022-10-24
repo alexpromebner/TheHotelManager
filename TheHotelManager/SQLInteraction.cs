@@ -31,7 +31,7 @@ namespace TheHotelManager
                 con.Open();
                 string text = "CREATE DATABASE IF NOT EXISTS '" + dbname + "';";
                 cmd = new MySqlCommand(text, con);
-                MessageBox.Show("Database opened!");
+                //MessageBox.Show("Database opened!");
                 con.Close();
             }
             catch (Exception e)

@@ -69,7 +69,7 @@
             this.txt_password.Location = new System.Drawing.Point(169, 279);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(157, 20);
-            this.txt_password.TabIndex = 9;
+            this.txt_password.TabIndex = 4;
             this.txt_password.UseSystemPasswordChar = true;
             // 
             // txt_department
@@ -77,7 +77,7 @@
             this.txt_department.Location = new System.Drawing.Point(169, 152);
             this.txt_department.Name = "txt_department";
             this.txt_department.Size = new System.Drawing.Size(157, 20);
-            this.txt_department.TabIndex = 8;
+            this.txt_department.TabIndex = 1;
             // 
             // lbl_password
             // 
@@ -104,7 +104,7 @@
             this.txt_name.Location = new System.Drawing.Point(169, 195);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(157, 20);
-            this.txt_name.TabIndex = 11;
+            this.txt_name.TabIndex = 2;
             // 
             // lbl_name
             // 
@@ -121,7 +121,7 @@
             this.txt_surname.Location = new System.Drawing.Point(169, 235);
             this.txt_surname.Name = "txt_surname";
             this.txt_surname.Size = new System.Drawing.Size(157, 20);
-            this.txt_surname.TabIndex = 13;
+            this.txt_surname.TabIndex = 3;
             // 
             // lbl_surname
             // 
@@ -141,7 +141,7 @@
             this.btn_finished.Location = new System.Drawing.Point(65, 356);
             this.btn_finished.Name = "btn_finished";
             this.btn_finished.Size = new System.Drawing.Size(232, 54);
-            this.btn_finished.TabIndex = 14;
+            this.btn_finished.TabIndex = 6;
             this.btn_finished.Text = "Finished";
             this.btn_finished.UseVisualStyleBackColor = false;
             this.btn_finished.Click += new System.EventHandler(this.btn_finished_Click);
@@ -151,7 +151,7 @@
             this.txt_repeatpw.Location = new System.Drawing.Point(169, 319);
             this.txt_repeatpw.Name = "txt_repeatpw";
             this.txt_repeatpw.Size = new System.Drawing.Size(157, 20);
-            this.txt_repeatpw.TabIndex = 16;
+            this.txt_repeatpw.TabIndex = 5;
             this.txt_repeatpw.UseSystemPasswordChar = true;
             // 
             // label1
