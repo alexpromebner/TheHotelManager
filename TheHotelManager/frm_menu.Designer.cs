@@ -39,6 +39,8 @@
             this.btn_italic = new System.Windows.Forms.Button();
             this.cb_fontSize = new System.Windows.Forms.ComboBox();
             this.btn_newPage = new System.Windows.Forms.Button();
+            this.btn_left = new System.Windows.Forms.Button();
+            this.btn_right = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +68,7 @@
             // 
             this.rtb_menuEditor.Location = new System.Drawing.Point(12, 147);
             this.rtb_menuEditor.Name = "rtb_menuEditor";
-            this.rtb_menuEditor.Size = new System.Drawing.Size(405, 234);
+            this.rtb_menuEditor.Size = new System.Drawing.Size(405, 208);
             this.rtb_menuEditor.TabIndex = 20;
             this.rtb_menuEditor.Text = "";
             // 
@@ -165,12 +167,34 @@
             this.btn_newPage.Text = "New Page";
             this.btn_newPage.UseVisualStyleBackColor = true;
             // 
+            // btn_left
+            // 
+            this.btn_left.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_left.Location = new System.Drawing.Point(342, 361);
+            this.btn_left.Name = "btn_left";
+            this.btn_left.Size = new System.Drawing.Size(30, 36);
+            this.btn_left.TabIndex = 43;
+            this.btn_left.Text = "<";
+            this.btn_left.UseVisualStyleBackColor = true;
+            // 
+            // btn_right
+            // 
+            this.btn_right.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_right.Location = new System.Drawing.Point(378, 361);
+            this.btn_right.Name = "btn_right";
+            this.btn_right.Size = new System.Drawing.Size(30, 36);
+            this.btn_right.TabIndex = 44;
+            this.btn_right.Text = ">";
+            this.btn_right.UseVisualStyleBackColor = true;
+            // 
             // frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
+            this.Controls.Add(this.btn_right);
+            this.Controls.Add(this.btn_left);
             this.Controls.Add(this.btn_newPage);
             this.Controls.Add(this.cb_fontSize);
             this.Controls.Add(this.btn_italic);
@@ -205,5 +229,7 @@
         private System.Windows.Forms.Button btn_italic;
         private System.Windows.Forms.ComboBox cb_fontSize;
         private System.Windows.Forms.Button btn_newPage;
+        private System.Windows.Forms.Button btn_left;
+        private System.Windows.Forms.Button btn_right;
     }
 }

@@ -16,5 +16,10 @@ namespace TheHotelManager
         {
             InitializeComponent();
         }
+
+        private void btn_cleaned_Click(object sender, EventArgs e)
+        {
+            string rooms = lb_rooms.SelectedItem.ToString();
+        }
     }
 }

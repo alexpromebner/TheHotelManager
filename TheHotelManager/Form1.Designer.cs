@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.btn_hotel = new System.Windows.Forms.Button();
             this.btn_restaurant = new System.Windows.Forms.Button();
             this.btn_employee = new System.Windows.Forms.Button();
             this.lbl_contactAdmin = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,6 +136,7 @@
             this.Controls.Add(this.btn_hotel);
             this.Controls.Add(this.lbl_welcome);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TheHotelManager";

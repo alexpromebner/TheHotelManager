@@ -32,10 +32,10 @@
             this.lb_rooms = new System.Windows.Forms.ListBox();
             this.lbl_choose = new System.Windows.Forms.Label();
             this.btn_backR = new System.Windows.Forms.Button();
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.btn_cleaned = new System.Windows.Forms.Button();
             this.btn_dirty = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +50,23 @@
             // 
             // lb_rooms
             // 
+            this.lb_rooms.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lb_rooms.FormattingEnabled = true;
+            this.lb_rooms.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
             this.lb_rooms.Location = new System.Drawing.Point(147, 117);
             this.lb_rooms.Name = "lb_rooms";
             this.lb_rooms.Size = new System.Drawing.Size(273, 277);
@@ -76,16 +92,6 @@
             this.btn_backR.Text = "Back";
             this.btn_backR.UseVisualStyleBackColor = true;
             // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 26;
-            this.pbx_logo.TabStop = false;
-            // 
             // btn_cleaned
             // 
             this.btn_cleaned.BackColor = System.Drawing.Color.ForestGreen;
@@ -97,6 +103,7 @@
             this.btn_cleaned.TabIndex = 31;
             this.btn_cleaned.Text = "Cleaned";
             this.btn_cleaned.UseVisualStyleBackColor = false;
+            this.btn_cleaned.Click += new System.EventHandler(this.btn_cleaned_Click);
             // 
             // btn_dirty
             // 
@@ -121,6 +128,16 @@
             this.btn_save.TabIndex = 34;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
+            // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 26;
+            this.pbx_logo.TabStop = false;
             // 
             // frm_cleaning
             // 
