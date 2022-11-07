@@ -112,7 +112,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 //cmd.CommandText = "UPDATE " + tablename + " SET " + columnname + " = " + columnname + " + 1 WHERE id = " + id + ";";
                 cmd.ExecuteNonQuery();
@@ -128,7 +128,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 SqlCommand cmd1 = new SqlCommand();
                 cmd.CommandText = "SELECT " + name + " FROM " + tablename + " WHERE username = '" + v_username + "';";
@@ -146,7 +146,7 @@ namespace TheHotelManager
         {
             string username;
 
-            con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+            con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
             cmd.Connection = con;
             //cmd.CommandText = "Select Username from Login where Username = '" + username1 + "';";

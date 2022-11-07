@@ -31,7 +31,6 @@
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_login = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
-            this.txt_department = new System.Windows.Forms.TextBox();
             this.lbl_password = new System.Windows.Forms.Label();
             this.lbl_department = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@
             this.btn_finished = new System.Windows.Forms.Button();
             this.txt_repeatpw = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmb_department = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,13 +71,6 @@
             this.txt_password.Size = new System.Drawing.Size(157, 20);
             this.txt_password.TabIndex = 4;
             this.txt_password.UseSystemPasswordChar = true;
-            // 
-            // txt_department
-            // 
-            this.txt_department.Location = new System.Drawing.Point(169, 152);
-            this.txt_department.Name = "txt_department";
-            this.txt_department.Size = new System.Drawing.Size(157, 20);
-            this.txt_department.TabIndex = 1;
             // 
             // lbl_password
             // 
@@ -164,11 +157,25 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "repeat password";
             // 
+            // cmb_department
+            // 
+            this.cmb_department.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_department.FormattingEnabled = true;
+            this.cmb_department.Items.AddRange(new object[] {
+            "Restaurant",
+            "Putzkraft",
+            "Hotel"});
+            this.cmb_department.Location = new System.Drawing.Point(169, 149);
+            this.cmb_department.Name = "cmb_department";
+            this.cmb_department.Size = new System.Drawing.Size(157, 21);
+            this.cmb_department.TabIndex = 1;
+            // 
             // frm_editemployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 439);
+            this.Controls.Add(this.cmb_department);
             this.Controls.Add(this.txt_repeatpw);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_finished);
@@ -177,13 +184,13 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_department);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_department);
             this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.pbx_logo);
             this.Name = "frm_editemployee";
             this.Text = "Edit Employee";
+            this.Load += new System.EventHandler(this.frm_editemployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,7 +202,6 @@
         private System.Windows.Forms.PictureBox pbx_logo;
         private System.Windows.Forms.Label lbl_login;
         private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.TextBox txt_department;
         private System.Windows.Forms.Label lbl_password;
         private System.Windows.Forms.Label lbl_department;
         private System.Windows.Forms.TextBox txt_name;
@@ -205,5 +211,6 @@
         private System.Windows.Forms.Button btn_finished;
         private System.Windows.Forms.TextBox txt_repeatpw;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmb_department;
     }
 }
