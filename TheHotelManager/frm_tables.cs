@@ -16,5 +16,13 @@ namespace TheHotelManager
         {
             InitializeComponent();
         }
+
+        private void btn_backRooms_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_restaurant tablesRestaurant = new frm_restaurant();
+            tablesRestaurant.ShowDialog();
+            this.Close();
+        }
     }
 }

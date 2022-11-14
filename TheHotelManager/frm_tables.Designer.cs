@@ -55,6 +55,7 @@
             this.btn_backRooms.TabIndex = 46;
             this.btn_backRooms.Text = "Back";
             this.btn_backRooms.UseVisualStyleBackColor = true;
+            this.btn_backRooms.Click += new System.EventHandler(this.btn_backRooms_Click);
             // 
             // edit_reservation
             // 

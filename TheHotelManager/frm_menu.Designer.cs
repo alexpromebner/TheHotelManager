@@ -41,6 +41,7 @@
             this.btn_newPage = new System.Windows.Forms.Button();
             this.btn_left = new System.Windows.Forms.Button();
             this.btn_right = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,6 +138,7 @@
             this.btn_italic.TabIndex = 40;
             this.btn_italic.Text = "I";
             this.btn_italic.UseVisualStyleBackColor = true;
+            this.btn_italic.Click += new System.EventHandler(this.btn_italic_Click);
             // 
             // cb_fontSize
             // 
@@ -160,9 +162,9 @@
             // btn_newPage
             // 
             this.btn_newPage.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_newPage.Location = new System.Drawing.Point(207, 116);
+            this.btn_newPage.Location = new System.Drawing.Point(12, 361);
             this.btn_newPage.Name = "btn_newPage";
-            this.btn_newPage.Size = new System.Drawing.Size(75, 23);
+            this.btn_newPage.Size = new System.Drawing.Size(89, 23);
             this.btn_newPage.TabIndex = 42;
             this.btn_newPage.Text = "New Page";
             this.btn_newPage.UseVisualStyleBackColor = true;
@@ -170,7 +172,7 @@
             // btn_left
             // 
             this.btn_left.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_left.Location = new System.Drawing.Point(342, 361);
+            this.btn_left.Location = new System.Drawing.Point(346, 361);
             this.btn_left.Name = "btn_left";
             this.btn_left.Size = new System.Drawing.Size(30, 36);
             this.btn_left.TabIndex = 43;
@@ -180,12 +182,22 @@
             // btn_right
             // 
             this.btn_right.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_right.Location = new System.Drawing.Point(378, 361);
+            this.btn_right.Location = new System.Drawing.Point(382, 361);
             this.btn_right.Name = "btn_right";
             this.btn_right.Size = new System.Drawing.Size(30, 36);
             this.btn_right.TabIndex = 44;
             this.btn_right.Text = ">";
             this.btn_right.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(107, 361);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 23);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Delete Page";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_menu
             // 
@@ -193,6 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_right);
             this.Controls.Add(this.btn_left);
             this.Controls.Add(this.btn_newPage);
@@ -231,5 +244,6 @@
         private System.Windows.Forms.Button btn_newPage;
         private System.Windows.Forms.Button btn_left;
         private System.Windows.Forms.Button btn_right;
+        private System.Windows.Forms.Button button1;
     }
 }
