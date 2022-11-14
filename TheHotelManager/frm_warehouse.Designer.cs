@@ -56,6 +56,7 @@
             this.btn_backWh.TabIndex = 46;
             this.btn_backWh.Text = "Back";
             this.btn_backWh.UseVisualStyleBackColor = true;
+            this.btn_backWh.Click += new System.EventHandler(this.btn_backWh_Click);
             // 
             // edit_cancelOrder
             // 

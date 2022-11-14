@@ -16,10 +16,37 @@ namespace TheHotelManager
         {
             InitializeComponent();
         }
-
+    
         private void btn_cleaned_Click(object sender, EventArgs e)
         {
-            string rooms = lb_rooms.SelectedItem.ToString();
+            //enter room number, get room status from data bank, show room number and status on label
+            lbl_room.BackColor = Color.Green;
+            //if mit label wenn Daten erfolgreich geändert auf Datenbank
+        }
+
+        private void btn_dirty_Click(object sender, EventArgs e)
+        {
+            lbl_room.BackColor = Color.Red;
+            //if mit label wenn Daten erfolgreich geändert auf Datenbank
+        }
+
+        private void btn_seach_Click(object sender, EventArgs e)
+        {
+            lbl_room.Text = "Room: " + txt_addSearch.Text;
+        }
+
+        private void txt_addSearch_Click(object sender, EventArgs e)
+        {
+            txt_addSearch.Text = "";
+            txt_addSearch.ForeColor = Color.Black;
+        }
+
+        private void btn_backR_Click(object sender, EventArgs e)
+        {
+                this.Hide();
+                frm_hotel cleaningHotel = new frm_hotel();
+                cleaningHotel.ShowDialog();
+                this.Close();
         }
     }
 }

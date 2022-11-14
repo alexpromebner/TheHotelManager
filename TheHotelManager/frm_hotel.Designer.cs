@@ -61,6 +61,7 @@
             this.btn_cleaning.TabIndex = 6;
             this.btn_cleaning.Text = "Cleaning";
             this.btn_cleaning.UseVisualStyleBackColor = false;
+            this.btn_cleaning.Click += new System.EventHandler(this.btn_cleaning_Click);
             // 
             // btn_rooms
             // 
@@ -84,6 +85,7 @@
             this.btn_back.TabIndex = 8;
             this.btn_back.Text = "Back";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // lbl_choose
             // 

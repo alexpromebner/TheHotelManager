@@ -32,5 +32,21 @@ namespace TheHotelManager
             warehouse.ShowDialog();
             this.Close();
         }
+
+        private void btn_cleaning_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_cleaning cleaning = new frm_cleaning();
+            cleaning.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_main hotelMain = new frm_main();
+            hotelMain.ShowDialog();
+            this.Close();
+        }
     }
 }
