@@ -17,6 +17,8 @@ namespace TheHotelManager
             InitializeComponent();
         }
 
+        public static int getid;
+
         private void frm_login_Load(object sender, EventArgs e)
         {
             SQLInteraction.CreateDatabase("a.promebner_hotelmanager");
@@ -26,6 +28,9 @@ namespace TheHotelManager
         private void btn_login_Click(object sender, EventArgs e)
         {
             SQLInteraction.CheckTable("login", txt_department.Text, txt_password.Text);
+
+            getid = SQLInteraction.GetID("login", txt_department.Text, "id");
+            SQLInteraction.con.Close();
         }
     }
 }

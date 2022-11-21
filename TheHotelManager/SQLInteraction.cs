@@ -32,6 +32,7 @@ namespace TheHotelManager
                 string text = "CREATE DATABASE IF NOT EXISTS '" + dbname + "';";
                 cmd = new MySqlCommand(text, con);
                 //MessageBox.Show("Database opened!");
+                cmd.ExecuteNonQuery();
                 con.Close();
             }
             catch (Exception e)
@@ -51,6 +52,7 @@ namespace TheHotelManager
                 con.Open();
                 string text = "use [" + dbname + "] if not exists(select * from sysobjects where name = '" + tablename + "') begin create table " + tablename + "(Id int NOT NULL Primary Key,username varchar(20),password varchar(70)) end";
                 cmd = new MySqlCommand(text, con);
+                cmd.ExecuteNonQuery();
                 con.Close();
             }
             catch (Exception e)
@@ -131,8 +133,8 @@ namespace TheHotelManager
                 con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 SqlCommand cmd1 = new SqlCommand();
-                cmd.CommandText = "SELECT " + name + " FROM " + tablename + " WHERE username = '" + v_username + "';";
-                cmd.ExecuteNonQuery();
+                cmd.CommandText = "SELECT " + name + " FROM " + tablename + " WHERE department = '" + v_username + "';";
+                cmd.ExecuteScalar();
                 //con.Close();          
             }
             catch (Exception e)
