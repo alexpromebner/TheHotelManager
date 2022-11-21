@@ -26,6 +26,11 @@ namespace TheHotelManager
         private void btn_login_Click(object sender, EventArgs e)
         {
             SQLInteraction.CheckTable("login", txt_department.Text, txt_password.Text);
+            
+            this.Hide();
+            frm_main logInMain = new frm_main();
+            logInMain.ShowDialog();
+            this.Close();
         }
     }
 }
