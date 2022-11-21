@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_login = new System.Windows.Forms.Label();
             this.lbl_department = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
-            this.txt_department = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
+            this.cb_department = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +44,6 @@
             this.pbx_logo.Location = new System.Drawing.Point(12, 12);
             this.pbx_logo.Name = "pbx_logo";
             this.pbx_logo.Size = new System.Drawing.Size(88, 74);
-
             this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_logo.TabIndex = 0;
             this.pbx_logo.TabStop = false;
@@ -80,13 +78,6 @@
             this.lbl_password.TabIndex = 3;
             this.lbl_password.Text = "password";
             // 
-            // txt_department
-            // 
-            this.txt_department.Location = new System.Drawing.Point(168, 195);
-            this.txt_department.Name = "txt_department";
-            this.txt_department.Size = new System.Drawing.Size(170, 20);
-            this.txt_department.TabIndex = 1;
-            // 
             // txt_password
             // 
             this.txt_password.Location = new System.Drawing.Point(168, 243);
@@ -108,15 +99,29 @@
             this.btn_login.UseVisualStyleBackColor = false;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
+            // cb_department
+            // 
+            this.cb_department.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_department.FormattingEnabled = true;
+            this.cb_department.Items.AddRange(new object[] {
+            "admin",
+            "Cleaning",
+            "Reception",
+            "Restaurant"});
+            this.cb_department.Location = new System.Drawing.Point(168, 195);
+            this.cb_department.Name = "cb_department";
+            this.cb_department.Size = new System.Drawing.Size(170, 21);
+            this.cb_department.TabIndex = 4;
+            // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(443, 401);
+            this.Controls.Add(this.cb_department);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_department);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_department);
             this.Controls.Add(this.lbl_login);
@@ -137,9 +142,9 @@
         private System.Windows.Forms.Label lbl_login;
         private System.Windows.Forms.Label lbl_department;
         private System.Windows.Forms.Label lbl_password;
-        private System.Windows.Forms.TextBox txt_department;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.ComboBox cb_department;
     }
 }
 

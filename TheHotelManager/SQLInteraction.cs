@@ -81,7 +81,13 @@ namespace TheHotelManager
                         MessageBox.Show("Something went wrong!", "Error!");
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Something went wrong!", "Error!");
+                }
                 con.Close();
+                
+                
             }
             catch (Exception e)
             {
@@ -124,14 +130,14 @@ namespace TheHotelManager
             }
         }
 
-        public static int GetID(string tablename, string v_username, string name)
+        public static void GetID(string tablename, string v_department, string name)
         {
             try
             {
                 con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 SqlCommand cmd1 = new SqlCommand();
-                cmd.CommandText = "SELECT " + name + " FROM " + tablename + " WHERE username = '" + v_username + "';";
+                cmd.CommandText = "SELECT " + name + " FROM " + tablename + " WHERE department = '" + v_department + "';";
                 cmd.ExecuteNonQuery();
                 //con.Close();          
             }
@@ -139,7 +145,7 @@ namespace TheHotelManager
             {
                 MessageBox.Show(e.Message);
             }
-            return (int)cmd.ExecuteScalar();
+            
         }
 
         public static string getusername()
@@ -154,6 +160,26 @@ namespace TheHotelManager
             con.Close();
             //to return the username as string at the end of the method
             return username;
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // SQLInteraction
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(443, 401);
+            this.Name = "SQLInteraction";
+            this.Load += new System.EventHandler(this.SQLInteraction_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        private void SQLInteraction_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
