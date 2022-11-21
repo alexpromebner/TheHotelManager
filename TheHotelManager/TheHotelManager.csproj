@@ -150,6 +150,12 @@
     <Compile Include="frm_hotel.Designer.cs">
       <DependentUpon>frm_hotel.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
