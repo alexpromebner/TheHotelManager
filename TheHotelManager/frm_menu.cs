@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TheHotelManager
@@ -14,27 +8,11 @@ namespace TheHotelManager
     {
         private bool isBold = false;
         private bool isItalic = false;
+        private bool isUnderlined = false;
 
         public frm_menu()
         {
             InitializeComponent();
-        }
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_bold_Click(object sender, EventArgs e)
-        {
-            if (!isBold)
-            {
-                Bold();
-            }
-            else
-            {
-                ResetBold();
-            }
         }
 
         private void frm_menu_Load(object sender, EventArgs e)
@@ -42,16 +20,61 @@ namespace TheHotelManager
 
         }
 
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_bold_Click(object sender, EventArgs e)
+        {
+            if (isBold == true)
+            {
+                Bold();
+            }
+            else if (isBold == false)
+            {
+                ResetBold();
+            }
+            else if(isBold == true && isItalic == true)
+            {
+
+            }
+            else if (isBold == true && isItalic == true && isUnderlined == true)
+            {
+
+            }
+            else if (isBold == true && isUnderlined == true)
+            {
+
+            }
+            else if (isItalic == true && isUnderlined == true)
+            {
+
+            }
+        }
+
         private void btn_italic_Click(object sender, EventArgs e)
         {
-            if (!isItalic)
+            if (isItalic == true)
             {
                 Italic();
             }
-            else
+            else if (isItalic == false)
             {
                 ResetItalic();
             }
+        }
+        private void btn_underline_Click(object sender, EventArgs e)
+        {
+            if (isUnderlined == true)
+            {
+                Underline();
+            }
+            else if (isUnderlined == false)
+            {
+                ResetUnderline();
+            }
+            
         }
 
         public void Bold()
@@ -83,6 +106,32 @@ namespace TheHotelManager
             btn_italic.BackColor = Color.White;
             btn_italic.ForeColor = Color.Black;
             isItalic = false;
+        }
+        public void Underline()
+        {
+            rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.Font, FontStyle.Underline);
+            btn_underline.BackColor = Color.Blue;
+            btn_underline.ForeColor = Color.White;
+            isUnderlined = true;
+        }
+
+        public void ResetUnderline()
+        {
+            rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.Font, FontStyle.Regular);
+            btn_underline.BackColor = Color.White;
+            btn_underline.ForeColor = Color.Black;
+            isUnderlined = false;
+        }
+
+        public void UIB()
+        {
+            rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.Font, FontStyle.Underline | FontStyle.Italic | FontStyle.Bold);
+            isUnderlined = true;
+        }
+
+        private void btn_backR_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

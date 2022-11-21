@@ -28,32 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.rtb_menuEditor = new System.Windows.Forms.RichTextBox();
             this.btn_Msave = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_backR = new System.Windows.Forms.Button();
             this.btn_bold = new System.Windows.Forms.Button();
-            this.btn_unterline = new System.Windows.Forms.Button();
+            this.btn_underline = new System.Windows.Forms.Button();
             this.btn_italic = new System.Windows.Forms.Button();
             this.cb_fontSize = new System.Windows.Forms.ComboBox();
             this.btn_newPage = new System.Windows.Forms.Button();
             this.btn_left = new System.Windows.Forms.Button();
             this.btn_right = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 18;
-            this.pbx_logo.TabStop = false;
             // 
             // lbl_welcome
             // 
@@ -107,6 +97,7 @@
             this.btn_backR.TabIndex = 37;
             this.btn_backR.Text = "Back";
             this.btn_backR.UseVisualStyleBackColor = true;
+            this.btn_backR.Click += new System.EventHandler(this.btn_backR_Click);
             // 
             // btn_bold
             // 
@@ -119,15 +110,16 @@
             this.btn_bold.UseVisualStyleBackColor = true;
             this.btn_bold.Click += new System.EventHandler(this.btn_bold_Click);
             // 
-            // btn_unterline
+            // btn_underline
             // 
-            this.btn_unterline.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_unterline.Location = new System.Drawing.Point(382, 118);
-            this.btn_unterline.Name = "btn_unterline";
-            this.btn_unterline.Size = new System.Drawing.Size(17, 23);
-            this.btn_unterline.TabIndex = 39;
-            this.btn_unterline.Text = "U";
-            this.btn_unterline.UseVisualStyleBackColor = true;
+            this.btn_underline.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_underline.Location = new System.Drawing.Point(382, 118);
+            this.btn_underline.Name = "btn_underline";
+            this.btn_underline.Size = new System.Drawing.Size(17, 23);
+            this.btn_underline.TabIndex = 39;
+            this.btn_underline.Text = "U";
+            this.btn_underline.UseVisualStyleBackColor = true;
+            this.btn_underline.Click += new System.EventHandler(this.btn_underline_Click);
             // 
             // btn_italic
             // 
@@ -199,6 +191,16 @@
             this.button1.Text = "Delete Page";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 18;
+            this.pbx_logo.TabStop = false;
+            // 
             // frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,7 +213,7 @@
             this.Controls.Add(this.btn_newPage);
             this.Controls.Add(this.cb_fontSize);
             this.Controls.Add(this.btn_italic);
-            this.Controls.Add(this.btn_unterline);
+            this.Controls.Add(this.btn_underline);
             this.Controls.Add(this.btn_bold);
             this.Controls.Add(this.btn_backR);
             this.Controls.Add(this.btn_reset);
@@ -238,7 +240,7 @@
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_backR;
         private System.Windows.Forms.Button btn_bold;
-        private System.Windows.Forms.Button btn_unterline;
+        private System.Windows.Forms.Button btn_underline;
         private System.Windows.Forms.Button btn_italic;
         private System.Windows.Forms.ComboBox cb_fontSize;
         private System.Windows.Forms.Button btn_newPage;
