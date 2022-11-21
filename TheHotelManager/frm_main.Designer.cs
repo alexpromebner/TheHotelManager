@@ -28,70 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_choose = new System.Windows.Forms.Label();
-            this.btn_back = new System.Windows.Forms.Button();
-            this.btn_warehouse = new System.Windows.Forms.Button();
-            this.btn_cleaning = new System.Windows.Forms.Button();
-            this.btn_rooms = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.lbl_contactAdmin = new System.Windows.Forms.Label();
+            this.btn_employee = new System.Windows.Forms.Button();
+            this.btn_restaurant = new System.Windows.Forms.Button();
+            this.btn_hotel = new System.Windows.Forms.Button();
+            this.lbl_welcome = new System.Windows.Forms.Label();
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_choose
+            // btn_logout
             // 
-            this.lbl_choose.AutoSize = true;
-            this.lbl_choose.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_choose.Location = new System.Drawing.Point(137, 7);
-            this.lbl_choose.Name = "lbl_choose";
-            this.lbl_choose.Size = new System.Drawing.Size(282, 28);
-            this.lbl_choose.TabIndex = 15;
-            this.lbl_choose.Text = "What do you want to do?";
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.Location = new System.Drawing.Point(340, 407);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(75, 23);
+            this.btn_logout.TabIndex = 20;
+            this.btn_logout.Text = "Logout";
+            this.btn_logout.UseVisualStyleBackColor = true;
             // 
-            // btn_back
+            // lbl_contactAdmin
             // 
-            this.btn_back.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back.Location = new System.Drawing.Point(340, 407);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(75, 23);
-            this.btn_back.TabIndex = 14;
-            this.btn_back.Text = "Back";
-            this.btn_back.UseVisualStyleBackColor = true;
+            this.lbl_contactAdmin.AutoSize = true;
+            this.lbl_contactAdmin.BackColor = System.Drawing.Color.White;
+            this.lbl_contactAdmin.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_contactAdmin.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_contactAdmin.Location = new System.Drawing.Point(21, 403);
+            this.lbl_contactAdmin.Name = "lbl_contactAdmin";
+            this.lbl_contactAdmin.Size = new System.Drawing.Size(136, 20);
+            this.lbl_contactAdmin.TabIndex = 19;
+            this.lbl_contactAdmin.Text = "Contact an admin";
             // 
-            // btn_warehouse
+            // btn_employee
             // 
-            this.btn_warehouse.BackColor = System.Drawing.Color.Gray;
-            this.btn_warehouse.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_warehouse.ForeColor = System.Drawing.Color.White;
-            this.btn_warehouse.Location = new System.Drawing.Point(190, 290);
-            this.btn_warehouse.Name = "btn_warehouse";
-            this.btn_warehouse.Size = new System.Drawing.Size(166, 49);
-            this.btn_warehouse.TabIndex = 13;
-            this.btn_warehouse.Text = "Warehouse";
-            this.btn_warehouse.UseVisualStyleBackColor = false;
+            this.btn_employee.BackColor = System.Drawing.Color.Gray;
+            this.btn_employee.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_employee.ForeColor = System.Drawing.Color.White;
+            this.btn_employee.Location = new System.Drawing.Point(190, 290);
+            this.btn_employee.Name = "btn_employee";
+            this.btn_employee.Size = new System.Drawing.Size(166, 49);
+            this.btn_employee.TabIndex = 18;
+            this.btn_employee.Text = "Employees";
+            this.btn_employee.UseVisualStyleBackColor = false;
             // 
-            // btn_cleaning
+            // btn_restaurant
             // 
-            this.btn_cleaning.BackColor = System.Drawing.Color.Gray;
-            this.btn_cleaning.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cleaning.ForeColor = System.Drawing.Color.White;
-            this.btn_cleaning.Location = new System.Drawing.Point(190, 211);
-            this.btn_cleaning.Name = "btn_cleaning";
-            this.btn_cleaning.Size = new System.Drawing.Size(166, 49);
-            this.btn_cleaning.TabIndex = 12;
-            this.btn_cleaning.Text = "Cleaning";
-            this.btn_cleaning.UseVisualStyleBackColor = false;
+            this.btn_restaurant.BackColor = System.Drawing.Color.Gray;
+            this.btn_restaurant.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_restaurant.ForeColor = System.Drawing.Color.White;
+            this.btn_restaurant.Location = new System.Drawing.Point(190, 211);
+            this.btn_restaurant.Name = "btn_restaurant";
+            this.btn_restaurant.Size = new System.Drawing.Size(166, 49);
+            this.btn_restaurant.TabIndex = 17;
+            this.btn_restaurant.Text = "Restaurant";
+            this.btn_restaurant.UseVisualStyleBackColor = false;
             // 
-            // btn_rooms
+            // btn_hotel
             // 
-            this.btn_rooms.BackColor = System.Drawing.Color.Gray;
-            this.btn_rooms.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rooms.ForeColor = System.Drawing.Color.White;
-            this.btn_rooms.Location = new System.Drawing.Point(190, 132);
-            this.btn_rooms.Name = "btn_rooms";
-            this.btn_rooms.Size = new System.Drawing.Size(166, 49);
-            this.btn_rooms.TabIndex = 11;
-            this.btn_rooms.Text = "Rooms";
-            this.btn_rooms.UseVisualStyleBackColor = false;
+            this.btn_hotel.BackColor = System.Drawing.Color.Gray;
+            this.btn_hotel.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hotel.ForeColor = System.Drawing.Color.White;
+            this.btn_hotel.Location = new System.Drawing.Point(190, 132);
+            this.btn_hotel.Name = "btn_hotel";
+            this.btn_hotel.Size = new System.Drawing.Size(166, 49);
+            this.btn_hotel.TabIndex = 16;
+            this.btn_hotel.Text = "Hotel";
+            this.btn_hotel.UseVisualStyleBackColor = false;
+            // 
+            // lbl_welcome
+            // 
+            this.lbl_welcome.AutoSize = true;
+            this.lbl_welcome.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_welcome.Location = new System.Drawing.Point(154, 7);
+            this.lbl_welcome.Name = "lbl_welcome";
+            this.lbl_welcome.Size = new System.Drawing.Size(264, 39);
+            this.lbl_welcome.TabIndex = 15;
+            this.lbl_welcome.Text = "Welcome, (user)!";
             // 
             // pbx_logo
             // 
@@ -100,23 +113,25 @@
             this.pbx_logo.Name = "pbx_logo";
             this.pbx_logo.Size = new System.Drawing.Size(124, 141);
             this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 10;
+            this.pbx_logo.TabIndex = 14;
             this.pbx_logo.TabStop = false;
             // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
-            this.Controls.Add(this.lbl_choose);
-            this.Controls.Add(this.btn_back);
-            this.Controls.Add(this.btn_warehouse);
-            this.Controls.Add(this.btn_cleaning);
-            this.Controls.Add(this.btn_rooms);
+            this.Controls.Add(this.btn_logout);
+            this.Controls.Add(this.lbl_contactAdmin);
+            this.Controls.Add(this.btn_employee);
+            this.Controls.Add(this.btn_restaurant);
+            this.Controls.Add(this.btn_hotel);
+            this.Controls.Add(this.lbl_welcome);
             this.Controls.Add(this.pbx_logo);
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_main";
+            this.Text = "The Hotel Manager";
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,11 +140,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_choose;
-        private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.Button btn_warehouse;
-        private System.Windows.Forms.Button btn_cleaning;
-        private System.Windows.Forms.Button btn_rooms;
+        private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Label lbl_contactAdmin;
+        private System.Windows.Forms.Button btn_employee;
+        private System.Windows.Forms.Button btn_restaurant;
+        private System.Windows.Forms.Button btn_hotel;
+        private System.Windows.Forms.Label lbl_welcome;
         private System.Windows.Forms.PictureBox pbx_logo;
     }
 }
