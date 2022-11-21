@@ -47,6 +47,7 @@
             this.btn_logout.TabIndex = 20;
             this.btn_logout.Text = "Logout";
             this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click_1);
             // 
             // lbl_contactAdmin
             // 
@@ -59,6 +60,7 @@
             this.lbl_contactAdmin.Size = new System.Drawing.Size(136, 20);
             this.lbl_contactAdmin.TabIndex = 19;
             this.lbl_contactAdmin.Text = "Contact an admin";
+            this.lbl_contactAdmin.Click += new System.EventHandler(this.lbl_contactAdmin_Click);
             // 
             // btn_employee
             // 
@@ -71,6 +73,7 @@
             this.btn_employee.TabIndex = 18;
             this.btn_employee.Text = "Employees";
             this.btn_employee.UseVisualStyleBackColor = false;
+            this.btn_employee.Click += new System.EventHandler(this.btn_employee_Click);
             // 
             // btn_restaurant
             // 
@@ -83,6 +86,7 @@
             this.btn_restaurant.TabIndex = 17;
             this.btn_restaurant.Text = "Restaurant";
             this.btn_restaurant.UseVisualStyleBackColor = false;
+            this.btn_restaurant.Click += new System.EventHandler(this.btn_restaurant_Click);
             // 
             // btn_hotel
             // 
@@ -95,6 +99,7 @@
             this.btn_hotel.TabIndex = 16;
             this.btn_hotel.Text = "Hotel";
             this.btn_hotel.UseVisualStyleBackColor = false;
+            this.btn_hotel.Click += new System.EventHandler(this.btn_hotel_Click);
             // 
             // lbl_welcome
             // 
