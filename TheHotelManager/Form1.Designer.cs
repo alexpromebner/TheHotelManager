@@ -1,6 +1,6 @@
 ﻿namespace TheHotelManager
 {
-    partial class frm_main
+    partial class frm_login
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,118 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
-            this.lbl_welcome = new System.Windows.Forms.Label();
-            this.btn_hotel = new System.Windows.Forms.Button();
-            this.btn_restaurant = new System.Windows.Forms.Button();
-            this.btn_employee = new System.Windows.Forms.Button();
-            this.lbl_contactAdmin = new System.Windows.Forms.Label();
-            this.btn_logout = new System.Windows.Forms.Button();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+
             this.pbx_logo = new System.Windows.Forms.PictureBox();
+            this.lbl_login = new System.Windows.Forms.Label();
+            this.lbl_department = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
+            this.txt_department = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.btn_login = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbl_welcome
-            // 
-            this.lbl_welcome.AutoSize = true;
-            this.lbl_welcome.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_welcome.Location = new System.Drawing.Point(156, 9);
-            this.lbl_welcome.Name = "lbl_welcome";
-            this.lbl_welcome.Size = new System.Drawing.Size(264, 39);
-            this.lbl_welcome.TabIndex = 1;
-            this.lbl_welcome.Text = "Welcome, (user)!";
-            // 
-            // btn_hotel
-            // 
-            this.btn_hotel.BackColor = System.Drawing.Color.Gray;
-            this.btn_hotel.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_hotel.ForeColor = System.Drawing.Color.White;
-            this.btn_hotel.Location = new System.Drawing.Point(192, 134);
-            this.btn_hotel.Name = "btn_hotel";
-            this.btn_hotel.Size = new System.Drawing.Size(166, 49);
-            this.btn_hotel.TabIndex = 2;
-            this.btn_hotel.Text = "Hotel";
-            this.btn_hotel.UseVisualStyleBackColor = false;
-            this.btn_hotel.Click += new System.EventHandler(this.btn_hotel_Click);
-            // 
-            // btn_restaurant
-            // 
-            this.btn_restaurant.BackColor = System.Drawing.Color.Gray;
-            this.btn_restaurant.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_restaurant.ForeColor = System.Drawing.Color.White;
-            this.btn_restaurant.Location = new System.Drawing.Point(192, 213);
-            this.btn_restaurant.Name = "btn_restaurant";
-            this.btn_restaurant.Size = new System.Drawing.Size(166, 49);
-            this.btn_restaurant.TabIndex = 3;
-            this.btn_restaurant.Text = "Restaurant";
-            this.btn_restaurant.UseVisualStyleBackColor = false;
-            this.btn_restaurant.Click += new System.EventHandler(this.btn_restaurant_Click);
-            // 
-            // btn_employee
-            // 
-            this.btn_employee.BackColor = System.Drawing.Color.Gray;
-            this.btn_employee.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_employee.ForeColor = System.Drawing.Color.White;
-            this.btn_employee.Location = new System.Drawing.Point(192, 292);
-            this.btn_employee.Name = "btn_employee";
-            this.btn_employee.Size = new System.Drawing.Size(166, 49);
-            this.btn_employee.TabIndex = 4;
-            this.btn_employee.Text = "Employees";
-            this.btn_employee.UseVisualStyleBackColor = false;
-            this.btn_employee.Click += new System.EventHandler(this.btn_employee_Click);
-            // 
-            // lbl_contactAdmin
-            // 
-            this.lbl_contactAdmin.AutoSize = true;
-            this.lbl_contactAdmin.BackColor = System.Drawing.Color.White;
-            this.lbl_contactAdmin.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_contactAdmin.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_contactAdmin.Location = new System.Drawing.Point(23, 405);
-            this.lbl_contactAdmin.Name = "lbl_contactAdmin";
-            this.lbl_contactAdmin.Size = new System.Drawing.Size(136, 20);
-            this.lbl_contactAdmin.TabIndex = 5;
-            this.lbl_contactAdmin.Text = "Contact an admin";
-            this.lbl_contactAdmin.Click += new System.EventHandler(this.lbl_contactAdmin_Click);
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logout.Location = new System.Drawing.Point(342, 409);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(75, 23);
-            this.btn_logout.TabIndex = 6;
-            this.btn_logout.Text = "Logout";
-            this.btn_logout.UseVisualStyleBackColor = true;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // pbx_logo
             // 
             this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(1, 1);
+            this.pbx_logo.Location = new System.Drawing.Point(12, 12);
             this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.Size = new System.Drawing.Size(88, 74);
+
             this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_logo.TabIndex = 0;
             this.pbx_logo.TabStop = false;
             // 
-            // frm_main
+            // lbl_login
+            // 
+            this.lbl_login.AutoSize = true;
+            this.lbl_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_login.Location = new System.Drawing.Point(204, 57);
+            this.lbl_login.Name = "lbl_login";
+            this.lbl_login.Size = new System.Drawing.Size(78, 29);
+            this.lbl_login.TabIndex = 1;
+            this.lbl_login.Text = "Login";
+            // 
+            // lbl_department
+            // 
+            this.lbl_department.AutoSize = true;
+            this.lbl_department.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_department.Location = new System.Drawing.Point(44, 193);
+            this.lbl_department.Name = "lbl_department";
+            this.lbl_department.Size = new System.Drawing.Size(91, 20);
+            this.lbl_department.TabIndex = 2;
+            this.lbl_department.Text = "department";
+            // 
+            // lbl_password
+            // 
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_password.Location = new System.Drawing.Point(44, 241);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(77, 20);
+            this.lbl_password.TabIndex = 3;
+            this.lbl_password.Text = "password";
+            // 
+            // txt_department
+            // 
+            this.txt_department.Location = new System.Drawing.Point(168, 195);
+            this.txt_department.Name = "txt_department";
+            this.txt_department.Size = new System.Drawing.Size(170, 20);
+            this.txt_department.TabIndex = 1;
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(168, 243);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(170, 20);
+            this.txt_password.TabIndex = 2;
+            this.txt_password.UseSystemPasswordChar = true;
+            // 
+            // btn_login
+            // 
+            this.btn_login.BackColor = System.Drawing.Color.Gray;
+            this.btn_login.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.Color.White;
+            this.btn_login.Location = new System.Drawing.Point(93, 324);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(232, 54);
+            this.btn_login.TabIndex = 3;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            // 
+            // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(429, 444);
-            this.Controls.Add(this.btn_logout);
-            this.Controls.Add(this.lbl_contactAdmin);
-            this.Controls.Add(this.btn_employee);
-            this.Controls.Add(this.btn_restaurant);
-            this.Controls.Add(this.btn_hotel);
-            this.Controls.Add(this.lbl_welcome);
+            this.ClientSize = new System.Drawing.Size(443, 401);
+            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_department);
+            this.Controls.Add(this.lbl_password);
+            this.Controls.Add(this.lbl_department);
+            this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.pbx_logo);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frm_main";
+            this.Name = "frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TheHotelManager";
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.frm_login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -149,13 +134,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbx_logo;
-        private System.Windows.Forms.Label lbl_welcome;
-        private System.Windows.Forms.Button btn_hotel;
-        private System.Windows.Forms.Button btn_restaurant;
-        private System.Windows.Forms.Button btn_employee;
-        private System.Windows.Forms.Label lbl_contactAdmin;
-        private System.Windows.Forms.Button btn_logout;
-        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label lbl_login;
+        private System.Windows.Forms.Label lbl_department;
+        private System.Windows.Forms.Label lbl_password;
+        private System.Windows.Forms.TextBox txt_department;
+        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Button btn_login;
     }
 }
 
