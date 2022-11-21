@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_login = new System.Windows.Forms.Label();
             this.lbl_department = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.pbx_logo.Location = new System.Drawing.Point(12, 12);
             this.pbx_logo.Name = "pbx_logo";
             this.pbx_logo.Size = new System.Drawing.Size(88, 74);
+
             this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_logo.TabIndex = 0;
             this.pbx_logo.TabStop = false;
