@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace TheHotelManager
 {
-    public partial class Form1 : Form
+    public partial class frm_login : Form
     {
-        public Form1()
+        public frm_login()
         {
             InitializeComponent();
+        }
+
+        private void frm_login_Load(object sender, EventArgs e)
+        {
+            SQLInteraction.CreateDatabase("a.promebner_hotelmanager");
+            SQLInteraction.CreateTable("a.promebner_hotelmanager", "login");
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            SQLInteraction.CheckTable("login", txt_department.Text, txt_password.Text);
         }
     }
 }
