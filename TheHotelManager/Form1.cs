@@ -27,9 +27,9 @@ namespace TheHotelManager
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SQLInteraction.CheckTable("login", txt_department.Text, txt_password.Text);
+            SQLInteraction.CheckTable("login", cb_department.Text, txt_password.Text);
 
-            getid = SQLInteraction.GetID("login", txt_department.Text, "id");
+            getid = SQLInteraction.GetID("login", cb_department.Text, "id");
             SQLInteraction.con.Close();
         }
     }
