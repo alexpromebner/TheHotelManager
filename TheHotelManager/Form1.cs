@@ -37,11 +37,11 @@ namespace TheHotelManager
             SQLInteraction.GetID("login", cb_department.Text, "id");
             SQLInteraction.con.Close();
 
-            
 
-
+            this.Hide();
             frm_main frm = new frm_main();
             frm.ShowDialog();
+            this.Close();
 
         }
     }
