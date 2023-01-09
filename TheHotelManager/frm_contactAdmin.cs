@@ -19,7 +19,10 @@ namespace TheHotelManager
 
         private void btn_backA_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frm_main contactAdminMain = new frm_main();
+            contactAdminMain.ShowDialog();
+            this.Close();
         }
 
         private void cb_problems_SelectedIndexChanged(object sender, EventArgs e)

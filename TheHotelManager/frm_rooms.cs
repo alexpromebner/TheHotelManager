@@ -44,7 +44,7 @@ namespace TheHotelManager
 
         private void btn_addR_Click(object sender, EventArgs e)
         {
-            if(cb_peopleNumber.Text == "" | cb_roomType.Text == "" | txt_name.Text == "" | txt_surname.Text == "" | txt_name.Text == "Name" | txt_surname.Text == "Surname")
+            if(cb_peopleNumber.Text == "" || cb_roomType.Text == "" || txt_name.Text == "" || txt_surname.Text == "" || txt_name.Text == "Name" || txt_surname.Text == "Surname")
             {
                 MessageBox.Show("Please fill out the full form to continue.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -87,6 +87,28 @@ namespace TheHotelManager
         {
             txt_surname.Text = "";
             txt_surname.ForeColor = Color.Black;
+        }
+
+        private void cb_peopleNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SingleStandard();
+            //single bed, double bed, three beds, four beds
+        }
+
+        private void cb_roomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SingleStandard();
+            //Standard, Luxury, Kids, Youth
+        }
+
+        public void SingleStandard()
+        {
+            if (cb_peopleNumber.Text.Equals("single bed") && cb_roomType.Text.Equals("Standard"))
+            {
+                double date = Math.Round(35.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = date.ToString();
+                lbl_price.Text = "Price: " + dateToString + " €";
+            }
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
             this.btn_logout = new System.Windows.Forms.Button();
             this.lbl_contactAdmin = new System.Windows.Forms.Label();
             this.btn_employee = new System.Windows.Forms.Button();
@@ -40,8 +41,9 @@
             // 
             // btn_logout
             // 
+            this.btn_logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_logout.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logout.Location = new System.Drawing.Point(340, 407);
+            this.btn_logout.Location = new System.Drawing.Point(340, 430);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(75, 23);
             this.btn_logout.TabIndex = 20;
@@ -51,11 +53,12 @@
             // 
             // lbl_contactAdmin
             // 
+            this.lbl_contactAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_contactAdmin.AutoSize = true;
             this.lbl_contactAdmin.BackColor = System.Drawing.Color.White;
             this.lbl_contactAdmin.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_contactAdmin.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_contactAdmin.Location = new System.Drawing.Point(21, 403);
+            this.lbl_contactAdmin.Location = new System.Drawing.Point(21, 426);
             this.lbl_contactAdmin.Name = "lbl_contactAdmin";
             this.lbl_contactAdmin.Size = new System.Drawing.Size(136, 20);
             this.lbl_contactAdmin.TabIndex = 19;
@@ -64,10 +67,11 @@
             // 
             // btn_employee
             // 
+            this.btn_employee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_employee.BackColor = System.Drawing.Color.Gray;
             this.btn_employee.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_employee.ForeColor = System.Drawing.Color.White;
-            this.btn_employee.Location = new System.Drawing.Point(190, 290);
+            this.btn_employee.Location = new System.Drawing.Point(190, 301);
             this.btn_employee.Name = "btn_employee";
             this.btn_employee.Size = new System.Drawing.Size(166, 49);
             this.btn_employee.TabIndex = 18;
@@ -77,10 +81,11 @@
             // 
             // btn_restaurant
             // 
+            this.btn_restaurant.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_restaurant.BackColor = System.Drawing.Color.Gray;
             this.btn_restaurant.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_restaurant.ForeColor = System.Drawing.Color.White;
-            this.btn_restaurant.Location = new System.Drawing.Point(190, 211);
+            this.btn_restaurant.Location = new System.Drawing.Point(190, 222);
             this.btn_restaurant.Name = "btn_restaurant";
             this.btn_restaurant.Size = new System.Drawing.Size(166, 49);
             this.btn_restaurant.TabIndex = 17;
@@ -90,10 +95,11 @@
             // 
             // btn_hotel
             // 
+            this.btn_hotel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_hotel.BackColor = System.Drawing.Color.Gray;
             this.btn_hotel.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_hotel.ForeColor = System.Drawing.Color.White;
-            this.btn_hotel.Location = new System.Drawing.Point(190, 132);
+            this.btn_hotel.Location = new System.Drawing.Point(190, 143);
             this.btn_hotel.Name = "btn_hotel";
             this.btn_hotel.Size = new System.Drawing.Size(166, 49);
             this.btn_hotel.TabIndex = 16;
@@ -103,6 +109,7 @@
             // 
             // lbl_welcome
             // 
+            this.lbl_welcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_welcome.AutoSize = true;
             this.lbl_welcome.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_welcome.Location = new System.Drawing.Point(154, 7);
@@ -126,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(429, 444);
+            this.ClientSize = new System.Drawing.Size(429, 467);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.lbl_contactAdmin);
             this.Controls.Add(this.btn_employee);
@@ -134,9 +141,11 @@
             this.Controls.Add(this.btn_hotel);
             this.Controls.Add(this.lbl_welcome);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(445, 506);
+            this.MinimumSize = new System.Drawing.Size(445, 506);
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "The Hotel Manager";
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

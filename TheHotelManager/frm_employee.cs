@@ -22,5 +22,13 @@ namespace TheHotelManager
             txt_addSearch.Text = "";
             txt_addSearch.ForeColor = Color.Black;
         }
+
+        private void btn_backR_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_main employeeMain = new frm_main();
+            employeeMain.ShowDialog();
+            this.Close();
+        }
     }
 }

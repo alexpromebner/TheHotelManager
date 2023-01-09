@@ -58,6 +58,7 @@
             this.btn_backR.TabIndex = 20;
             this.btn_backR.Text = "Back";
             this.btn_backR.UseVisualStyleBackColor = true;
+            this.btn_backR.Click += new System.EventHandler(this.btn_backR_Click);
             // 
             // btn_delete
             // 

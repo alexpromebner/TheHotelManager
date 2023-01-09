@@ -27,29 +27,13 @@ namespace TheHotelManager
 
         private void btn_bold_Click(object sender, EventArgs e)
         {
-            if (isBold == true)
+            if (isBold == false)
             {
                 Bold();
             }
-            else if (isBold == false)
+            else if (isBold == true)
             {
                 ResetBold();
-            }
-            else if(isBold == true && isItalic == true)
-            {
-
-            }
-            else if (isBold == true && isItalic == true && isUnderlined == true)
-            {
-
-            }
-            else if (isBold == true && isUnderlined == true)
-            {
-
-            }
-            else if (isItalic == true && isUnderlined == true)
-            {
-
             }
         }
 
@@ -80,6 +64,13 @@ namespace TheHotelManager
         public void Bold()
         {
             rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.Font, FontStyle.Bold);
+            btn_bold.BackColor = Color.Blue;
+            btn_bold.ForeColor = Color.White;
+            isBold = true;
+        }
+        public void BoldItalic()
+        {
+            rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.Font, FontStyle.Bold & FontStyle.Italic);
             btn_bold.BackColor = Color.Blue;
             btn_bold.ForeColor = Color.White;
             isBold = true;
@@ -121,17 +112,14 @@ namespace TheHotelManager
             btn_underline.BackColor = Color.White;
             btn_underline.ForeColor = Color.Black;
             isUnderlined = false;
-        }
-
-        public void UIB()
-        {
-            rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.Font, FontStyle.Underline | FontStyle.Italic | FontStyle.Bold);
-            isUnderlined = true;
-        }
+        } 
 
         private void btn_backR_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frm_main menuRestaurant = new frm_main();
+            menuRestaurant.ShowDialog();
+            this.Close();
         }
     }
 }
