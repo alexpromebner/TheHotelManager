@@ -17,8 +17,12 @@ namespace TheHotelManager
             InitializeComponent();
         }
 
+
         public static int id;
         public static string usernameSQLcon;
+
+        public static int getid;
+
 
         private void frm_login_Load(object sender, EventArgs e)
         {
