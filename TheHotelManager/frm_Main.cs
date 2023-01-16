@@ -56,5 +56,15 @@ namespace TheHotelManager
                 contactAdmin.ShowDialog();
                 this.Close();
         }
+
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_welcome_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

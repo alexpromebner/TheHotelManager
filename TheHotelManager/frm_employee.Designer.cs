@@ -33,10 +33,11 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_change = new System.Windows.Forms.Button();
-            this.lb_employees = new System.Windows.Forms.ListBox();
             this.txt_addSearch = new System.Windows.Forms.TextBox();
             this.pbx_logo = new System.Windows.Forms.PictureBox();
+            this.dgv_employees = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_choose
@@ -95,14 +96,6 @@
             this.btn_change.Text = "Change";
             this.btn_change.UseVisualStyleBackColor = false;
             // 
-            // lb_employees
-            // 
-            this.lb_employees.FormattingEnabled = true;
-            this.lb_employees.Location = new System.Drawing.Point(144, 111);
-            this.lb_employees.Name = "lb_employees";
-            this.lb_employees.Size = new System.Drawing.Size(273, 277);
-            this.lb_employees.TabIndex = 24;
-            // 
             // txt_addSearch
             // 
             this.txt_addSearch.ForeColor = System.Drawing.Color.Silver;
@@ -123,14 +116,23 @@
             this.pbx_logo.TabIndex = 16;
             this.pbx_logo.TabStop = false;
             // 
+            // dgv_employees
+            // 
+            this.dgv_employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_employees.Location = new System.Drawing.Point(145, 128);
+            this.dgv_employees.Name = "dgv_employees";
+            this.dgv_employees.Size = new System.Drawing.Size(271, 259);
+            this.dgv_employees.TabIndex = 26;
+            this.dgv_employees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // frm_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
+            this.Controls.Add(this.dgv_employees);
             this.Controls.Add(this.txt_addSearch);
-            this.Controls.Add(this.lb_employees);
             this.Controls.Add(this.btn_change);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.lbl_choose);
@@ -140,7 +142,9 @@
             this.Name = "frm_employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees";
+            this.Load += new System.EventHandler(this.frm_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_employees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,7 +158,7 @@
         private System.Windows.Forms.PictureBox pbx_logo;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_change;
-        private System.Windows.Forms.ListBox lb_employees;
         private System.Windows.Forms.TextBox txt_addSearch;
+        private System.Windows.Forms.DataGridView dgv_employees;
     }
 }

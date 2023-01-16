@@ -110,6 +110,7 @@
             this.lbl_welcome.Size = new System.Drawing.Size(264, 39);
             this.lbl_welcome.TabIndex = 8;
             this.lbl_welcome.Text = "Welcome, (user)!";
+            this.lbl_welcome.Click += new System.EventHandler(this.lbl_welcome_Click);
             // 
             // pbx_logo
             // 
@@ -138,6 +139,7 @@
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Manager";
+            this.Load += new System.EventHandler(this.frm_main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

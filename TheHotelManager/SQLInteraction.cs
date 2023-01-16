@@ -32,7 +32,7 @@ namespace TheHotelManager
                 string text = "CREATE DATABASE IF NOT EXISTS '" + dbname + "';";
                 cmd = new MySqlCommand(text, con);
                 //MessageBox.Show("Database opened!");
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
                 con.Close();
             }
             catch (Exception e)
@@ -71,6 +71,7 @@ namespace TheHotelManager
                 con.Open();
                 cmd.CommandText = "Select password From login Where department='" + role + "'";
                 hashedpw = (string)cmd.ExecuteScalar();
+                con.Close();
                 //hashedpw = v_password;
                 if (hashedpw != null)
                 {
@@ -81,6 +82,10 @@ namespace TheHotelManager
                     else
                     {
                         MessageBox.Show("Something went wrong!", "Error!");
+                        
+                        
+                        frm_login login = new frm_login();
+                        login.ShowDialog();
                     }
                 }
                 else
@@ -88,11 +93,12 @@ namespace TheHotelManager
                     MessageBox.Show("Something went wrong!", "Error!");
                 }
                 con.Close();
-                
-                
+
+
             }
             catch (Exception e)
             {
+               
                 MessageBox.Show(e.Message);
             }
         }
@@ -178,6 +184,26 @@ namespace TheHotelManager
             this.PerformLayout();
 
         }
+
+        public static void GetName(string tablename, string surname, string name, string column1, string column2)
+        {
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                SqlCommand cmd1 = new SqlCommand();
+                cmd.CommandText = "SELECT " + column1 + ", " + column2 + " FROM " + tablename + " WHERE name = '" + name + "' AND WHERE surname = '" + surname + "';";
+                cmd.ExecuteNonQuery();
+                //con.Close();          
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+        }
+
+       
 
         private void SQLInteraction_Load(object sender, EventArgs e)
         {

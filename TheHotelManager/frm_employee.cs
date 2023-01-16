@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace TheHotelManager
 {
     public partial class frm_employee : Form
     {
+        public static MySqlConnection con = new MySqlConnection();
         public frm_employee()
         {
             InitializeComponent();
@@ -22,5 +25,35 @@ namespace TheHotelManager
             txt_addSearch.Text = "";
             txt_addSearch.ForeColor = Color.Black;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frm_employee_Load(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        void GetData()
+        {
+            con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("Select * From login;", con);
+
+
+            MySqlDataAdapter adap = new MySqlDataAdapter();
+            adap.SelectCommand = cmd;
+            DataTable dtset = new DataTable();
+            adap.Fill(dtset);
+            BindingSource bsource = new BindingSource();
+
+            bsource.DataSource = dtset;
+            dgv_employees.DataSource = bsource;
+            adap.Update(dtset);
+   
+        }
+
     }
 }

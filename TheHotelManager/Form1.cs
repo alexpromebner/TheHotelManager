@@ -32,9 +32,11 @@ namespace TheHotelManager
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            
+
             //SQLInteraction.CheckTable("login", txt_department.Text, txt_password.Text);
 
+
+            this.Hide();
             usernameSQLcon = txt_password.Text;
             SQLInteraction.CheckTable("login", cb_department.Text, txt_password.Text);
             
@@ -42,7 +44,7 @@ namespace TheHotelManager
             SQLInteraction.con.Close();
 
 
-            this.Hide();
+            
             frm_main frm = new frm_main();
             frm.ShowDialog();
             this.Close();
