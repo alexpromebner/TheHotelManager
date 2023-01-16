@@ -105,9 +105,10 @@
             this.cb_department.FormattingEnabled = true;
             this.cb_department.Items.AddRange(new object[] {
             "admin",
-            "hotel",
-            "restaurant",
-            "cleaning"});
+            "Cleaning",
+            "Reception",
+            "Restaurant"});
+
             this.cb_department.Location = new System.Drawing.Point(168, 195);
             this.cb_department.Name = "cb_department";
             this.cb_department.Size = new System.Drawing.Size(170, 21);
