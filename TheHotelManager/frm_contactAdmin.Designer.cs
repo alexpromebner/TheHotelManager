@@ -36,6 +36,7 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.cb_problems = new System.Windows.Forms.ComboBox();
             this.pbx_logo = new System.Windows.Forms.PictureBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,6 +91,7 @@
             this.btn_send.TabIndex = 29;
             this.btn_send.Text = "Send";
             this.btn_send.UseVisualStyleBackColor = false;
+            this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
             // btn_delete
             // 
@@ -105,6 +107,7 @@
             // 
             // cb_problems
             // 
+            this.cb_problems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_problems.FormattingEnabled = true;
             this.cb_problems.Items.AddRange(new object[] {
             "Cancellation",
@@ -128,12 +131,24 @@
             this.pbx_logo.TabIndex = 1;
             this.pbx_logo.TabStop = false;
             // 
+            // txt_email
+            // 
+            this.txt_email.ForeColor = System.Drawing.Color.Silver;
+            this.txt_email.Location = new System.Drawing.Point(12, 225);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(113, 20);
+            this.txt_email.TabIndex = 31;
+            this.txt_email.Text = "Enter your Email";
+            this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
+            // 
             // frm_contactAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
+            this.Controls.Add(this.txt_email);
             this.Controls.Add(this.cb_problems);
             this.Controls.Add(this.btn_send);
             this.Controls.Add(this.btn_delete);
@@ -161,5 +176,6 @@
         private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.ComboBox cb_problems;
+        private System.Windows.Forms.TextBox txt_email;
     }
 }

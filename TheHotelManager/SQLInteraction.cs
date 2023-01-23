@@ -77,13 +77,11 @@ namespace TheHotelManager
                 {
                     if (BCrypt.CheckPassword(password, hashedpw))
                     {
-                        MessageBox.Show("You are now logged in!", "Logged In!");
+                        //MessageBox.Show("You are now logged in!", "Logged In!");
                     }
                     else
                     {
                         MessageBox.Show("Something went wrong!", "Error!");
-                        
-                        
                         frm_login login = new frm_login();
                         login.ShowDialog();
                     }
@@ -91,8 +89,10 @@ namespace TheHotelManager
                 else
                 {
                     MessageBox.Show("Something went wrong!", "Error!");
+                    frm_login login = new frm_login();
+                    login.ShowDialog();
                 }
-                con.Close();
+                
 
 
             }
@@ -185,7 +185,7 @@ namespace TheHotelManager
 
         }
 
-        public static void GetName(string tablename, string surname, string name, string column1, string column2)
+        public static void GetDepartment(string tablename, string surname, string name, string column1, string column2)
         {
             try
             {
@@ -194,7 +194,7 @@ namespace TheHotelManager
                 SqlCommand cmd1 = new SqlCommand();
                 cmd.CommandText = "SELECT " + column1 + ", " + column2 + " FROM " + tablename + " WHERE name = '" + name + "' AND WHERE surname = '" + surname + "';";
                 cmd.ExecuteNonQuery();
-                //con.Close();          
+                con.Close();          
             }
             catch (Exception e)
             {
@@ -202,8 +202,6 @@ namespace TheHotelManager
             }
 
         }
-
-       
 
         private void SQLInteraction_Load(object sender, EventArgs e)
         {

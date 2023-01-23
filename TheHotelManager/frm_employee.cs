@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,25 +36,40 @@ namespace TheHotelManager
         {
             GetData();
         }
-
+        
+        MySqlDataAdapter adap;
+        DataTable dtset;
+        BindingSource bsource = new BindingSource();
         void GetData()
         {
             con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("Select * From login;", con);
-
-
-            MySqlDataAdapter adap = new MySqlDataAdapter();
-            adap.SelectCommand = cmd;
-            DataTable dtset = new DataTable();
+            //MySqlCommand cmd = new MySqlCommand("Select * From login;", con);
+            adap = new MySqlDataAdapter("Select * From login;", con);
+            //adap.SelectCommand = cmd;
+            dtset = new DataTable();
             adap.Fill(dtset);
-            BindingSource bsource = new BindingSource();
 
             bsource.DataSource = dtset;
             dgv_employees.DataSource = bsource;
             adap.Update(dtset);
+            con.Close();
    
         }
 
+        
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_addemployee addemployee = new frm_addemployee();
+            addemployee.ShowDialog();
+            this.Close();
+        }
+
+        private void txt_addSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

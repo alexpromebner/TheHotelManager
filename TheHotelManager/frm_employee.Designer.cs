@@ -53,7 +53,7 @@
             // btn_backR
             // 
             this.btn_backR.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_backR.Location = new System.Drawing.Point(342, 409);
+            this.btn_backR.Location = new System.Drawing.Point(586, 409);
             this.btn_backR.Name = "btn_backR";
             this.btn_backR.Size = new System.Drawing.Size(75, 23);
             this.btn_backR.TabIndex = 20;
@@ -83,6 +83,7 @@
             this.btn_add.TabIndex = 22;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_change
             // 
@@ -101,10 +102,11 @@
             this.txt_addSearch.ForeColor = System.Drawing.Color.Silver;
             this.txt_addSearch.Location = new System.Drawing.Point(144, 85);
             this.txt_addSearch.Name = "txt_addSearch";
-            this.txt_addSearch.Size = new System.Drawing.Size(273, 20);
+            this.txt_addSearch.Size = new System.Drawing.Size(517, 20);
             this.txt_addSearch.TabIndex = 25;
-            this.txt_addSearch.Text = "Search or add employees";
+            this.txt_addSearch.Text = "Search or add employees by their last name";
             this.txt_addSearch.Click += new System.EventHandler(this.txt_addSearch_Click);
+            this.txt_addSearch.TextChanged += new System.EventHandler(this.txt_addSearch_TextChanged);
             // 
             // pbx_logo
             // 
@@ -119,9 +121,9 @@
             // dgv_employees
             // 
             this.dgv_employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_employees.Location = new System.Drawing.Point(145, 128);
+            this.dgv_employees.Location = new System.Drawing.Point(144, 129);
             this.dgv_employees.Name = "dgv_employees";
-            this.dgv_employees.Size = new System.Drawing.Size(271, 259);
+            this.dgv_employees.Size = new System.Drawing.Size(517, 259);
             this.dgv_employees.TabIndex = 26;
             this.dgv_employees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -130,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(429, 444);
+            this.ClientSize = new System.Drawing.Size(673, 444);
             this.Controls.Add(this.dgv_employees);
             this.Controls.Add(this.txt_addSearch);
             this.Controls.Add(this.btn_change);

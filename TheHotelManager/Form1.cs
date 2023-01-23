@@ -43,10 +43,30 @@ namespace TheHotelManager
             SQLInteraction.GetID("login", cb_department.Text, "id");
             SQLInteraction.con.Close();
 
-
-            
             frm_main frm = new frm_main();
-            frm.ShowDialog();
+            if (cb_department.Text == "admin")
+            {
+                frm.lbl_welcome.Text = "Welcome, Admin!";
+            }
+            else if(cb_department.Text == "Cleaning")
+            {
+                frm.lbl_welcome.Text = "Welcome, Cleaning Staff!";
+                frm.btn_employee.Visible = false;
+                frm.btn_restaurant.Visible = false;
+            }
+            else if (cb_department.Text == "Restaurant")
+            {
+                frm.lbl_welcome.Text = "Welcome, Restaurant Staff!";
+                frm.btn_employee.Visible = false;
+                frm.btn_hotel.Visible = false;
+            }
+            else if (cb_department.Text == "Reception")
+            {
+                frm.lbl_welcome.Text = "Welcome, Reception Staff!";
+                frm.btn_employee.Visible = false;
+                frm.btn_restaurant.Visible = false;
+            }
+            frm.ShowDialog(); 
             this.Close();
 
         }
