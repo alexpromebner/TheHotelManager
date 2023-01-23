@@ -43,7 +43,7 @@
             this.lbl_from = new System.Windows.Forms.Label();
             this.lbl_to = new System.Windows.Forms.Label();
             this.pbx_logo = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_pricePerDay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +79,6 @@
             this.cb_roomType.Items.AddRange(new object[] {
             "Standard",
             "Luxury",
-            "Kids",
             "Youth"});
             this.cb_roomType.Location = new System.Drawing.Point(135, 83);
             this.cb_roomType.Name = "cb_roomType";
@@ -125,6 +124,7 @@
             this.dtp_dateFrom.Name = "dtp_dateFrom";
             this.dtp_dateFrom.Size = new System.Drawing.Size(197, 20);
             this.dtp_dateFrom.TabIndex = 28;
+            this.dtp_dateFrom.ValueChanged += new System.EventHandler(this.dtp_dateFrom_ValueChanged);
             // 
             // lbl_price
             // 
@@ -178,6 +178,7 @@
             this.dtp_dateTo.Name = "dtp_dateTo";
             this.dtp_dateTo.Size = new System.Drawing.Size(197, 20);
             this.dtp_dateTo.TabIndex = 34;
+            this.dtp_dateTo.ValueChanged += new System.EventHandler(this.dtp_dateTo_ValueChanged);
             // 
             // lbl_from
             // 
@@ -209,15 +210,15 @@
             this.pbx_logo.TabIndex = 17;
             this.pbx_logo.TabStop = false;
             // 
-            // label2
+            // lbl_pricePerDay
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 320);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 19);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Price per day:";
+            this.lbl_pricePerDay.AutoSize = true;
+            this.lbl_pricePerDay.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pricePerDay.Location = new System.Drawing.Point(14, 320);
+            this.lbl_pricePerDay.Name = "lbl_pricePerDay";
+            this.lbl_pricePerDay.Size = new System.Drawing.Size(92, 19);
+            this.lbl_pricePerDay.TabIndex = 37;
+            this.lbl_pricePerDay.Text = "Price per day:";
             // 
             // frm_rooms
             // 
@@ -225,7 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_pricePerDay);
             this.Controls.Add(this.lbl_to);
             this.Controls.Add(this.lbl_from);
             this.Controls.Add(this.dtp_dateTo);
@@ -267,6 +268,6 @@
         private System.Windows.Forms.DateTimePicker dtp_dateTo;
         private System.Windows.Forms.Label lbl_from;
         private System.Windows.Forms.Label lbl_to;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_pricePerDay;
     }
 }
