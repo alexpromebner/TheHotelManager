@@ -20,6 +20,7 @@ namespace TheHotelManager
         public string surname;
         public string from;
         public string to;
+       
 
         public frm_rooms()
         {
@@ -57,7 +58,7 @@ namespace TheHotelManager
 
                 if (controlDate.Equals(DialogResult.Yes))
                 {
-                    //code for reservation sql
+                    SQLInteraction.InsertIntoReservation("Rooms", cb_peopleNumber.Text, cb_roomType.Text, txt_name.Text, txt_surname.Text, dtp_dateFrom.Value.ToString(), dtp_dateTo.Value.ToString(), 18);
 
                     peopleNumber = cb_peopleNumber.Text;
                     roomType = cb_roomType.Text;
