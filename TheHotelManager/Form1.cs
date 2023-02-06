@@ -51,20 +51,20 @@ namespace TheHotelManager
             else if(cb_department.Text == "Cleaning")
             {
                 frm.lbl_welcome.Text = "Welcome, Cleaning Staff!";
-                frm.btn_employee.Visible = false;
-                frm.btn_restaurant.Visible = false;
+                frm.btn_employee.Enabled = false;
+                frm.btn_restaurant.Enabled = false;
             }
             else if (cb_department.Text == "Restaurant")
             {
                 frm.lbl_welcome.Text = "Welcome, Restaurant Staff!";
-                frm.btn_employee.Visible = false;
-                frm.btn_hotel.Visible = false;
+                frm.btn_employee.Enabled = false;
+                frm.btn_hotel.Enabled = false;
             }
             else if (cb_department.Text == "Reception")
             {
                 frm.lbl_welcome.Text = "Welcome, Reception Staff!";
-                frm.btn_employee.Visible = false;
-                frm.btn_restaurant.Visible = false;
+                frm.btn_employee.Enabled = false;
+                frm.btn_restaurant.Enabled = false;
             }
             frm.ShowDialog(); 
             this.Close();

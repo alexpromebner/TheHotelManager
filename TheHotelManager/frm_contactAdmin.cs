@@ -22,19 +22,15 @@ namespace TheHotelManager
 
         private void btn_backA_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frm_main frm = new frm_main();
+            frm.ShowDialog();
+            this.Close();
         }
 
         private void cb_problems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cb_problems.Text == "Other")
-            {
-                txt_other.Enabled = true;
-            }
-            else if (cb_problems.Text != "Other")
-            {
-                txt_other.Enabled = false;
-            }
+            
         }
 
         private void btn_send_Click(object sender, EventArgs e)
@@ -45,6 +41,8 @@ namespace TheHotelManager
                 // use the Gmail SMTP Host
                 SmtpClient client = new SmtpClient("smtp.gmail.com");
 
+                client.Timeout = 500000;
+
                 // Follow the RFS 5321 Email Standard
                 newMail.From = new MailAddress("thehotelmanagerswp@gmail.com", "The Hotel Manager");
 
@@ -52,21 +50,25 @@ namespace TheHotelManager
 
                 newMail.Subject = cb_problems.Text; // use HTML for the email body
 
-                newMail.IsBodyHtml = true; newMail.Body = "<h1> This is my first Templated Email in C# </h1>";
+                //newMail.IsBodyHtml = true; 
+                newMail.Body = "Your problem is in the queue! \n \n Your Problem:\n" + txt_other.Text + "\n\n\nThis email is generated automatically!";
 
                 // enable SSL for encryption across channels
                 client.EnableSsl = true;
                 // Port 465 for SSL communication
-                client.Port = 465;
+                client.Port = 587;
                 // Provide authentication information with Gmail SMTP server to authenticate your sender account
-                client.Credentials = new System.Net.NetworkCredential("thehotelmanagerswp@gmail.com", "iyuidkyiozmpmcpu");
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential("thehotelmanagerswp@gmail.com", "iyuidkyiozmpmcpu");
+
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
 
                 client.Send(newMail); // Send the constructed mail
                 MessageBox.Show("Email Sent");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error -" + ex);
+                MessageBox.Show(ex.ToString());
             }
 
         }
@@ -80,6 +82,18 @@ namespace TheHotelManager
         {
             txt_email.Text = "";
             txt_email.ForeColor = Color.Black;
+        }
+
+        private void frm_contactAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            cb_problems.ResetText();
+            txt_email.ResetText();
+            txt_other.ResetText();
         }
     }
 }
