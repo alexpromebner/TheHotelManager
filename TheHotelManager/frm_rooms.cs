@@ -20,6 +20,8 @@ namespace TheHotelManager
         public string surname;
         public string from;
         public string to;
+        public double price;
+        public double priceShort;
        
 
         public frm_rooms()
@@ -58,7 +60,8 @@ namespace TheHotelManager
 
                 if (controlDate.Equals(DialogResult.Yes))
                 {
-                    SQLInteraction.InsertIntoReservation("Rooms", cb_peopleNumber.Text, cb_roomType.Text, txt_name.Text, txt_surname.Text, dtp_dateFrom.Value.ToString(), dtp_dateTo.Value.ToString(), 18);
+                    //fix price sql con
+                    SQLInteraction.InsertIntoReservation("Rooms", cb_peopleNumber.Text, cb_roomType.Text, txt_name.Text, txt_surname.Text, dtp_dateFrom.Value.ToString(), dtp_dateTo.Value.ToString(), priceShort);
 
                     peopleNumber = cb_peopleNumber.Text;
                     roomType = cb_roomType.Text;
@@ -198,82 +201,107 @@ namespace TheHotelManager
 
         public void SingleStandard()
         {
-                double date = Math.Round(35.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = date.ToString();
+                price = Math.Round(35.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = price.ToString();
                 lbl_price.Text = "Price: " + dateToString + " €";
+                priceShort = Math.Round(price, 0);
         }
 
         public void DoubleStandard()
         {
-                double date = Math.Round(69.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = date.ToString();
+                price = Math.Round(69.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = price.ToString();
                 lbl_price.Text = "Price: " + dateToString + " €";
+                priceShort = Math.Round(price, 0);
         }
 
         public void ThreeStandard()
         {
-                double date = Math.Round(99.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = date.ToString();
+                price = Math.Round(99.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = price.ToString();
                 lbl_price.Text = "Price: " + dateToString + " €";
+                priceShort = Math.Round(price, 0);
         }
         public void FourStandard()
         {
-                double date = Math.Round(134.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = date.ToString();
+                price = Math.Round(134.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = price.ToString();
                 lbl_price.Text = "Price: " + dateToString + " €";
+                priceShort = Math.Round(price, 0);
         }
         public void SingleLuxury()
         {
-                double date = Math.Round(69.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = date.ToString();
+                price = Math.Round(69.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = price.ToString();
                 lbl_price.Text = "Price: " + dateToString + " €";
+                priceShort = Math.Round(price, 0);
         }
 
         public void DoubleLuxury()
         {
-                double date = Math.Round(119.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = date.ToString();
+                price = Math.Round(119.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = price.ToString();
                 lbl_price.Text = "Price: " + dateToString + " €";
+                priceShort = Math.Round(price, 0);
         }
 
         public void ThreeLuxury()
         {
-                double date = Math.Round(169.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = date.ToString();
+                price = Math.Round(169.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = price.ToString();
                 lbl_price.Text = "Price: " + dateToString + " €";
+                priceShort = Math.Round(price, 0);
         }
         public void FourLuxury()
         {
-                double date = Math.Round(249.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = date.ToString();
+                price = Math.Round(249.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+                string dateToString = price.ToString();
                 lbl_price.Text = "Price: " + dateToString + " €";
+                priceShort = Math.Round(price, 0);
         }
         public void SingleYouth()
         {
-            double date = Math.Round(19.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-            string dateToString = date.ToString();
+            price = Math.Round(19.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
             lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
 
         public void DoubleYouth()
         {
-            double date = Math.Round(39.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-            string dateToString = date.ToString();
+            price = Math.Round(39.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
             lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
 
         public void ThreeYouth()
         {
-            double date = Math.Round(59.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-            string dateToString = date.ToString();
+            price = Math.Round(59.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
             lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
 
         public void FourYouth()
         {
-            double date = Math.Round(79.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-            string dateToString = date.ToString();
+            price = Math.Round(79.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
             lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
+        }
+
+        private void edit_reservation_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_editRoom frm = new frm_editRoom();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void frm_rooms_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

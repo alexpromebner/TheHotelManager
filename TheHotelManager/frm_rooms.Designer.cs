@@ -42,8 +42,8 @@
             this.dtp_dateTo = new System.Windows.Forms.DateTimePicker();
             this.lbl_from = new System.Windows.Forms.Label();
             this.lbl_to = new System.Windows.Forms.Label();
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_pricePerDay = new System.Windows.Forms.Label();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,6 +160,7 @@
             this.edit_reservation.TabIndex = 32;
             this.edit_reservation.Text = "Edit Reservation";
             this.edit_reservation.UseVisualStyleBackColor = false;
+            this.edit_reservation.Click += new System.EventHandler(this.edit_reservation_Click);
             // 
             // btn_backRooms
             // 
@@ -200,16 +201,6 @@
             this.lbl_to.TabIndex = 36;
             this.lbl_to.Text = "To:";
             // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 17;
-            this.pbx_logo.TabStop = false;
-            // 
             // lbl_pricePerDay
             // 
             this.lbl_pricePerDay.AutoSize = true;
@@ -219,6 +210,16 @@
             this.lbl_pricePerDay.Size = new System.Drawing.Size(92, 19);
             this.lbl_pricePerDay.TabIndex = 37;
             this.lbl_pricePerDay.Text = "Price per day:";
+            // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 17;
+            this.pbx_logo.TabStop = false;
             // 
             // frm_rooms
             // 
@@ -245,6 +246,7 @@
             this.Name = "frm_rooms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rooms";
+            this.Load += new System.EventHandler(this.frm_rooms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -110,7 +110,7 @@ namespace TheHotelManager
 
 
         //New Reservation
-        public static void InsertIntoReservation(string tablename, string bednumber, string roomtype, string name, string surname, string datefrom, string dateto, int price)
+        public static void InsertIntoReservation(string tablename, string bednumber, string roomtype, string name, string surname, string datefrom, string dateto, double price)
         {
 
             try
