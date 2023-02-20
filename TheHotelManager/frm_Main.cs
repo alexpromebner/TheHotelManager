@@ -43,10 +43,10 @@ namespace TheHotelManager
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-                //this.Hide();
-                //frm_login login = new frm_login();
-                //login.ShowDialog();
-                //this.Close();
+                this.Hide();
+                frm_login login = new frm_login();
+                login.ShowDialog();
+                this.Close();
         }
 
         private void lbl_contactAdmin_Click(object sender, EventArgs e)
