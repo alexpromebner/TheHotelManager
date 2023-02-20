@@ -106,7 +106,6 @@ namespace TheHotelManager
         //New Account inserts into the database 
         public static void InsertInto(string tablename, string name, string surname, string password, string department)
         {
-
             try
             {
                 con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
@@ -140,6 +139,21 @@ namespace TheHotelManager
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        //select id if it is null --> create data set  if its not null update the data set
+        public static void GetRooms(int id, string cleanDirty)
+        {
+            //string username;
+
+            //con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+            //con.Open();
+            //cmd.Connection = con;
+            //cmd.CommandText = "Select Username from Login where Username = '" + username1 + "';";
+            //username = Convert.ToString(cmd.ExecuteScalar());
+            //con.Close();
+            ////to return the username as string at the end of the method
+            //return username;
         }
 
         public static void Update(string tablename, string columnname)

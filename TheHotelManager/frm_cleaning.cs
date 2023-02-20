@@ -48,5 +48,10 @@ namespace TheHotelManager
                 cleaningHotel.ShowDialog();
                 this.Close();
         }
+
+        private void frm_cleaning_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

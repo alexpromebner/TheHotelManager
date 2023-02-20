@@ -144,6 +144,7 @@
             this.Name = "frm_cleaning";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cleaning";
+            this.Load += new System.EventHandler(this.frm_cleaning_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
