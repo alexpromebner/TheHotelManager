@@ -122,6 +122,26 @@ namespace TheHotelManager
             }
         }
 
+
+        //New Reservation
+        public static void InsertIntoReservation(string tablename, string bednumber, string roomtype, string name, string surname, string datefrom, string dateto, double price)
+        {
+
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                string text = "INSERT INTO " + tablename + " (BedNumber,RoomType,Name,Surname,FromDate,ToDate,Price) VALUES('" + bednumber + "', '" + roomtype + "', '" + name + "', '" + surname + "', '" + datefrom + "', '" + dateto + "', '" + price + "')";
+                cmd = new MySqlCommand(text, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
         public static void Update(string tablename, string columnname)
         {
             try

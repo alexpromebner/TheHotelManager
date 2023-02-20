@@ -151,5 +151,13 @@ namespace TheHotelManager
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btn_backR_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_main employeeMain = new frm_main();
+            employeeMain.ShowDialog();
+            this.Close();
+        }
     }
 }
