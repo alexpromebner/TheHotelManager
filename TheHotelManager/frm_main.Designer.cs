@@ -49,7 +49,7 @@
             this.btn_logout.TabIndex = 20;
             this.btn_logout.Text = "Logout";
             this.btn_logout.UseVisualStyleBackColor = true;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click_1);
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // lbl_contactAdmin
             // 
@@ -146,6 +146,7 @@
             this.MinimumSize = new System.Drawing.Size(445, 506);
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,10 +157,10 @@
 
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label lbl_contactAdmin;
-        private System.Windows.Forms.Button btn_employee;
-        private System.Windows.Forms.Button btn_restaurant;
-        private System.Windows.Forms.Button btn_hotel;
-        private System.Windows.Forms.Label lbl_welcome;
         private System.Windows.Forms.PictureBox pbx_logo;
+        public System.Windows.Forms.Button btn_employee;
+        public System.Windows.Forms.Button btn_restaurant;
+        public System.Windows.Forms.Button btn_hotel;
+        public System.Windows.Forms.Label lbl_welcome;
     }
 }

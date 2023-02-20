@@ -17,7 +17,7 @@ namespace TheHotelManager
             InitializeComponent();
         }
 
-        private void btn_hotel_Click_1(object sender, EventArgs e)
+        private void btn_hotel_Click(object sender, EventArgs e)
         {
                 this.Hide();
                 frm_hotel hotel = new frm_hotel();
@@ -25,7 +25,7 @@ namespace TheHotelManager
                 this.Close();
         }
 
-        private void btn_restaurant_Click_1(object sender, EventArgs e)
+        private void btn_restaurant_Click(object sender, EventArgs e)
         {
                 this.Hide();
                 frm_restaurant restaurant = new frm_restaurant();
@@ -33,7 +33,7 @@ namespace TheHotelManager
                 this.Close();
         }
 
-        private void btn_employee_Click_1(object sender, EventArgs e)
+        private void btn_employee_Click(object sender, EventArgs e)
         {
                 this.Hide();
                 frm_employee employees = new frm_employee();
@@ -49,7 +49,7 @@ namespace TheHotelManager
                 this.Close();
         }
 
-        private void lbl_contactAdmin_Click_1(object sender, EventArgs e)
+        private void lbl_contactAdmin_Click(object sender, EventArgs e)
         {
                 this.Hide();
                 frm_contactAdmin contactAdmin = new frm_contactAdmin();
@@ -60,11 +60,6 @@ namespace TheHotelManager
         private void frm_main_Load(object sender, EventArgs e)
         {
 
-        }
-
-        public void lbl_welcome_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

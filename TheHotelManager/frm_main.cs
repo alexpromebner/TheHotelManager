@@ -41,12 +41,12 @@ namespace TheHotelManager
                 this.Close();
         }
 
-        private void btn_logout_Click_1(object sender, EventArgs e)
+        private void btn_logout_Click(object sender, EventArgs e)
         {
-                //this.Hide();
-                //frm_login login = new frm_login();
-                //login.ShowDialog();
-                //this.Close();
+                this.Hide();
+                frm_login login = new frm_login();
+                login.ShowDialog();
+                this.Close();
         }
 
         private void lbl_contactAdmin_Click(object sender, EventArgs e)
@@ -55,6 +55,11 @@ namespace TheHotelManager
                 frm_contactAdmin contactAdmin = new frm_contactAdmin();
                 contactAdmin.ShowDialog();
                 this.Close();
+        }
+
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
