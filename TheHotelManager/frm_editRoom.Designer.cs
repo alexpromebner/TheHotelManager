@@ -58,6 +58,7 @@
             this.btn_backEditRoom.TabIndex = 49;
             this.btn_backEditRoom.Text = "Back";
             this.btn_backEditRoom.UseVisualStyleBackColor = true;
+            this.btn_backEditRoom.Click += new System.EventHandler(this.btn_backEditRoom_Click);
             // 
             // btn_deleteR
             // 

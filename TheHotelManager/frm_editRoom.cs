@@ -130,5 +130,13 @@ namespace TheHotelManager
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btn_backEditRoom_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_rooms frm = new frm_rooms();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 }

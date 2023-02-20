@@ -32,19 +32,41 @@ namespace TheHotelManager
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            
+
             //SQLInteraction.CheckTable("login", txt_department.Text, txt_password.Text);
 
+
+            this.Hide();
             usernameSQLcon = txt_password.Text;
             SQLInteraction.CheckTable("login", cb_department.Text, txt_password.Text);
             
             SQLInteraction.GetID("login", cb_department.Text, "id");
             SQLInteraction.con.Close();
 
-
-            this.Hide();
             frm_main frm = new frm_main();
-            frm.ShowDialog();
+            if (cb_department.Text == "admin")
+            {
+                frm.lbl_welcome.Text = "Welcome, Admin!";
+            }
+            else if(cb_department.Text == "Cleaning")
+            {
+                frm.lbl_welcome.Text = "Welcome, Cleaning Staff!";
+                frm.btn_employee.Enabled = false;
+                frm.btn_restaurant.Enabled = false;
+            }
+            else if (cb_department.Text == "Restaurant")
+            {
+                frm.lbl_welcome.Text = "Welcome, Restaurant Staff!";
+                frm.btn_employee.Enabled = false;
+                frm.btn_hotel.Enabled = false;
+            }
+            else if (cb_department.Text == "Reception")
+            {
+                frm.lbl_welcome.Text = "Welcome, Reception Staff!";
+                frm.btn_employee.Enabled = false;
+                frm.btn_restaurant.Enabled = false;
+            }
+            frm.ShowDialog(); 
             this.Close();
 
         }

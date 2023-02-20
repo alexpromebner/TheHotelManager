@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TheHotelManager
 {
-    public partial class frm_editemployee : Form
+    public partial class frm_addemployee : Form
     {
-        public frm_editemployee()
+        public frm_addemployee()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace TheHotelManager
 
             if (String.IsNullOrEmpty(txt_name.Text) || String.IsNullOrEmpty(txt_surname.Text) || String.IsNullOrEmpty(txt_surname.Text) || String.IsNullOrEmpty(cmb_department.Text) || String.IsNullOrEmpty(txt_password.Text) || String.IsNullOrEmpty(txt_repeatpw.Text))
             {
-                MessageBox.Show("Check Input!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Input is Empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txt_password.Text != txt_repeatpw.Text)
             {
@@ -42,7 +42,11 @@ namespace TheHotelManager
 
                 SQLInteraction.InsertInto("login", txt_name.Text, txt_surname.Text, hashedpw, cmb_department.Text);
             }
-            
+
+            this.Hide();
+            frm_employee frm = new frm_employee();
+            frm.ShowDialog();
+            this.Close();
         }
 
         private void frm_editemployee_Load(object sender, EventArgs e)
