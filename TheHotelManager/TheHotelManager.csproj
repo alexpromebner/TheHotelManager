@@ -156,11 +156,11 @@
     <Compile Include="frm_hotel.Designer.cs">
       <DependentUpon>frm_hotel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_main.cs">
+    <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_main.Designer.cs">
-      <DependentUpon>frm_main.cs</DependentUpon>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_menu.cs">
       <SubType>Form</SubType>
@@ -228,6 +228,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SQLInteraction.resx">
+      <DependentUpon>SQLInteraction.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
