@@ -1,6 +1,6 @@
 ﻿namespace TheHotelManager
 {
-    partial class frm_editemployee
+    partial class frm_addemployee
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,7 @@
             this.lbl_login.Name = "lbl_login";
             this.lbl_login.Size = new System.Drawing.Size(183, 29);
             this.lbl_login.TabIndex = 2;
-            this.lbl_login.Text = "Edit Employee";
+            this.lbl_login.Text = "Add Employee";
             // 
             // txt_password
             // 
@@ -162,15 +162,15 @@
             this.cmb_department.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_department.FormattingEnabled = true;
             this.cmb_department.Items.AddRange(new object[] {
-            "Restaurant",
-            "Putzkraft",
-            "Hotel"});
+            "Cleaning",
+            "Reception",
+            "Restaurant"});
             this.cmb_department.Location = new System.Drawing.Point(169, 149);
             this.cmb_department.Name = "cmb_department";
             this.cmb_department.Size = new System.Drawing.Size(157, 21);
             this.cmb_department.TabIndex = 1;
             // 
-            // frm_editemployee
+            // frm_addemployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,7 +188,7 @@
             this.Controls.Add(this.lbl_department);
             this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.pbx_logo);
-            this.Name = "frm_editemployee";
+            this.Name = "frm_addemployee";
             this.Text = "Edit Employee";
             this.Load += new System.EventHandler(this.frm_editemployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();

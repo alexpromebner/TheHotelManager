@@ -36,6 +36,7 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.cb_problems = new System.Windows.Forms.ComboBox();
             this.pbx_logo = new System.Windows.Forms.PictureBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             // btn_backA
             // 
             this.btn_backA.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_backA.Location = new System.Drawing.Point(342, 409);
+            this.btn_backA.Location = new System.Drawing.Point(453, 414);
             this.btn_backA.Name = "btn_backA";
             this.btn_backA.Size = new System.Drawing.Size(75, 23);
             this.btn_backA.TabIndex = 23;
@@ -64,16 +65,15 @@
             // 
             this.lbl_other.AutoSize = true;
             this.lbl_other.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_other.Location = new System.Drawing.Point(140, 67);
+            this.lbl_other.Location = new System.Drawing.Point(140, 116);
             this.lbl_other.Name = "lbl_other";
-            this.lbl_other.Size = new System.Drawing.Size(72, 26);
+            this.lbl_other.Size = new System.Drawing.Size(54, 26);
             this.lbl_other.TabIndex = 25;
-            this.lbl_other.Text = "Other:";
+            this.lbl_other.Text = "Text";
             // 
             // txt_other
             // 
-            this.txt_other.Enabled = false;
-            this.txt_other.Location = new System.Drawing.Point(145, 96);
+            this.txt_other.Location = new System.Drawing.Point(145, 155);
             this.txt_other.Multiline = true;
             this.txt_other.Name = "txt_other";
             this.txt_other.Size = new System.Drawing.Size(271, 292);
@@ -84,27 +84,30 @@
             this.btn_send.BackColor = System.Drawing.Color.Gray;
             this.btn_send.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_send.ForeColor = System.Drawing.Color.White;
-            this.btn_send.Location = new System.Drawing.Point(12, 356);
+            this.btn_send.Location = new System.Drawing.Point(12, 363);
             this.btn_send.Name = "btn_send";
             this.btn_send.Size = new System.Drawing.Size(113, 35);
             this.btn_send.TabIndex = 29;
             this.btn_send.Text = "Send";
             this.btn_send.UseVisualStyleBackColor = false;
+            this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.Gray;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Location = new System.Drawing.Point(12, 397);
+            this.btn_delete.Location = new System.Drawing.Point(12, 404);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(113, 35);
             this.btn_delete.TabIndex = 28;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // cb_problems
             // 
+            this.cb_problems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_problems.FormattingEnabled = true;
             this.cb_problems.Items.AddRange(new object[] {
             "Cancellation",
@@ -128,12 +131,24 @@
             this.pbx_logo.TabIndex = 1;
             this.pbx_logo.TabStop = false;
             // 
+            // txt_email
+            // 
+            this.txt_email.ForeColor = System.Drawing.Color.Silver;
+            this.txt_email.Location = new System.Drawing.Point(145, 77);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(271, 20);
+            this.txt_email.TabIndex = 31;
+            this.txt_email.Text = "Enter your Email";
+            this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
+            // 
             // frm_contactAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(429, 444);
+            this.ClientSize = new System.Drawing.Size(540, 457);
+            this.Controls.Add(this.txt_email);
             this.Controls.Add(this.cb_problems);
             this.Controls.Add(this.btn_send);
             this.Controls.Add(this.btn_delete);
@@ -145,6 +160,7 @@
             this.Name = "frm_contactAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact";
+            this.Load += new System.EventHandler(this.frm_contactAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,5 +177,6 @@
         private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.ComboBox cb_problems;
+        private System.Windows.Forms.TextBox txt_email;
     }
 }

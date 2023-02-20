@@ -32,7 +32,7 @@ namespace TheHotelManager
                 string text = "CREATE DATABASE IF NOT EXISTS '" + dbname + "';";
                 cmd = new MySqlCommand(text, con);
                 //MessageBox.Show("Database opened!");
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
                 con.Close();
             }
             catch (Exception e)
@@ -71,28 +71,34 @@ namespace TheHotelManager
                 con.Open();
                 cmd.CommandText = "Select password From login Where department='" + role + "'";
                 hashedpw = (string)cmd.ExecuteScalar();
+                con.Close();
                 //hashedpw = v_password;
                 if (hashedpw != null)
                 {
                     if (BCrypt.CheckPassword(password, hashedpw))
                     {
-                        MessageBox.Show("You are now logged in!", "Logged In!");
+                        //MessageBox.Show("You are now logged in!", "Logged In!");
                     }
                     else
                     {
                         MessageBox.Show("Something went wrong!", "Error!");
+                        frm_login login = new frm_login();
+                        login.ShowDialog();
                     }
                 }
                 else
                 {
                     MessageBox.Show("Something went wrong!", "Error!");
+                    frm_login login = new frm_login();
+                    login.ShowDialog();
                 }
-                con.Close();
                 
-                
+
+
             }
             catch (Exception e)
             {
+               
                 MessageBox.Show(e.Message);
             }
         }
@@ -196,6 +202,24 @@ namespace TheHotelManager
             this.Load += new System.EventHandler(this.SQLInteraction_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
+        }
+
+        public static void GetDepartment(string tablename, string surname, string name, string column1, string column2)
+        {
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                SqlCommand cmd1 = new SqlCommand();
+                cmd.CommandText = "SELECT " + column1 + ", " + column2 + " FROM " + tablename + " WHERE name = '" + name + "' AND WHERE surname = '" + surname + "';";
+                cmd.ExecuteNonQuery();
+                con.Close();          
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
         }
 
