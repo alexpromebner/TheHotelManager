@@ -31,8 +31,10 @@ namespace TheHotelManager
         MySqlDataAdapter adap;
         DataTable dtset;
         BindingSource bsource = new BindingSource();
+
         void GetData()
         {
+
             con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
             //MySqlCommand cmd = new MySqlCommand("Select * From login;", con);
@@ -104,7 +106,7 @@ namespace TheHotelManager
                 if (cb_roomNumber.Text != "" && cb_roomType.Text != "" && txt_name.Text != "" && txt_surname.Text != "" && dtp_dateTo.Text != "" && dtp_dateFrom.Text != "" && txt_price.Text != "")
                 {
                     con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
-                    MySqlCommand cmd = new MySqlCommand("update login set BedNumber=@bednumber,RoomType=@roomtype,Name=@name,Surname=@surname,FromDate=@fromdate,ToDate=@todate,Price=@price where ID=@id", con);
+                    MySqlCommand cmd = new MySqlCommand("UPDATE login SET BedNumber = @bednumber, RoomType = @roomtype, Name = @name, Surname = @surname, FromDate = @fromdate, ToDate = @todate, Price = @price where ID = @id", con);
                     con.Open();
                     cmd.Parameters.AddWithValue("@id", ID);
                     cmd.Parameters.AddWithValue("@bednumber", cb_roomNumber.Text);
