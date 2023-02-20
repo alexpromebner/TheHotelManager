@@ -203,13 +203,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="frm_contactAdmin.resx">
       <DependentUpon>frm_contactAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_editRoom.resx">
       <DependentUpon>frm_editRoom.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="frm_employee.resx">
       <DependentUpon>frm_employee.cs</DependentUpon>
@@ -222,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_rooms.resx">
       <DependentUpon>frm_rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_warehouse.resx">
+      <DependentUpon>frm_warehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
