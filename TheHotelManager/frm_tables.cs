@@ -24,5 +24,20 @@ namespace TheHotelManager
             tablesRestaurant.ShowDialog();
             this.Close();
         }
+
+        private void nud_tNumber_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_tables_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_addR_Click(object sender, EventArgs e)
+        {
+            SQLInteraction.InsertIntoTables("tables",txt_Tname.Text,txt_Tsurname.Text,Convert.ToInt32(nud_tNumber.Value),Convert.ToInt32(nud_amount.Value),dtp_date.Value.ToString(),txt_notes.Text);
+        }
     }
 }
