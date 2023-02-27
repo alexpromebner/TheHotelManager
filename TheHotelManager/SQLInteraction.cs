@@ -144,16 +144,22 @@ namespace TheHotelManager
         //select id if it is null --> create data set  if its not null update the data set
         public static void GetRooms(int id, string cleanDirty)
         {
-            //string username;
+            try
+            {
+                frm_cleaning cleaning = new frm_cleaning();
 
-            //con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
-            //con.Open();
-            //cmd.Connection = con;
-            //cmd.CommandText = "Select Username from Login where Username = '" + username1 + "';";
-            //username = Convert.ToString(cmd.ExecuteScalar());
-            //con.Close();
-            ////to return the username as string at the end of the method
-            //return username;
+
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = "Select CleanDirty from cleaning where ID = '" + cleaning.roomNumber + "';";
+                cleanDirty = Convert.ToString(cmd.ExecuteScalar());
+                con.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message); 
+            }
         }
 
         public static void Update(string tablename, string columnname)

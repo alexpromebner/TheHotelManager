@@ -12,6 +12,7 @@ namespace TheHotelManager
 {
     public partial class frm_cleaning : Form
     {
+        public string roomNumber;
         public frm_cleaning()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace TheHotelManager
         private void btn_cleaned_Click(object sender, EventArgs e)
         {
             //enter room number, get room status from data bank, show room number and status on label
+
             lbl_room.BackColor = Color.Green;
             //if mit label wenn Daten erfolgreich geändert auf Datenbank
         }
@@ -33,6 +35,8 @@ namespace TheHotelManager
         private void btn_seach_Click(object sender, EventArgs e)
         {
             lbl_room.Text = "Room: " + txt_addSearch.Text;
+            roomNumber = txt_addSearch.Text;
+            SQLInteraction.GetRooms();
         }
 
         private void txt_addSearch_Click(object sender, EventArgs e)
