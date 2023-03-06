@@ -75,9 +75,9 @@
             // dgv_tables
             // 
             this.dgv_tables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tables.Location = new System.Drawing.Point(512, 129);
+            this.dgv_tables.Location = new System.Drawing.Point(311, 129);
             this.dgv_tables.Name = "dgv_tables";
-            this.dgv_tables.Size = new System.Drawing.Size(556, 312);
+            this.dgv_tables.Size = new System.Drawing.Size(757, 312);
             this.dgv_tables.TabIndex = 2;
             this.dgv_tables.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_tables_RowHeaderMouseClick);
             // 
@@ -97,7 +97,7 @@
             this.btn_deleteR.BackColor = System.Drawing.Color.Gray;
             this.btn_deleteR.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deleteR.ForeColor = System.Drawing.Color.White;
-            this.btn_deleteR.Location = new System.Drawing.Point(461, 515);
+            this.btn_deleteR.Location = new System.Drawing.Point(313, 516);
             this.btn_deleteR.Name = "btn_deleteR";
             this.btn_deleteR.Size = new System.Drawing.Size(202, 35);
             this.btn_deleteR.TabIndex = 51;
@@ -110,7 +110,7 @@
             this.btn_saveR.BackColor = System.Drawing.Color.Gray;
             this.btn_saveR.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_saveR.ForeColor = System.Drawing.Color.White;
-            this.btn_saveR.Location = new System.Drawing.Point(461, 474);
+            this.btn_saveR.Location = new System.Drawing.Point(313, 474);
             this.btn_saveR.Name = "btn_saveR";
             this.btn_saveR.Size = new System.Drawing.Size(202, 35);
             this.btn_saveR.TabIndex = 50;
@@ -124,7 +124,7 @@
             this.txt_notes.Location = new System.Drawing.Point(23, 435);
             this.txt_notes.Multiline = true;
             this.txt_notes.Name = "txt_notes";
-            this.txt_notes.Size = new System.Drawing.Size(405, 51);
+            this.txt_notes.Size = new System.Drawing.Size(282, 114);
             this.txt_notes.TabIndex = 60;
             // 
             // nud_tNumber
@@ -180,7 +180,7 @@
             // 
             this.dtp_date.Location = new System.Drawing.Point(23, 384);
             this.dtp_date.Name = "dtp_date";
-            this.dtp_date.Size = new System.Drawing.Size(405, 20);
+            this.dtp_date.Size = new System.Drawing.Size(282, 20);
             this.dtp_date.TabIndex = 57;
             // 
             // txt_Tsurname
@@ -189,7 +189,7 @@
             this.txt_Tsurname.ForeColor = System.Drawing.Color.Black;
             this.txt_Tsurname.Location = new System.Drawing.Point(23, 335);
             this.txt_Tsurname.Name = "txt_Tsurname";
-            this.txt_Tsurname.Size = new System.Drawing.Size(405, 21);
+            this.txt_Tsurname.Size = new System.Drawing.Size(282, 21);
             this.txt_Tsurname.TabIndex = 56;
             // 
             // txt_Tname
@@ -198,7 +198,7 @@
             this.txt_Tname.ForeColor = System.Drawing.Color.Black;
             this.txt_Tname.Location = new System.Drawing.Point(23, 285);
             this.txt_Tname.Name = "txt_Tname";
-            this.txt_Tname.Size = new System.Drawing.Size(405, 21);
+            this.txt_Tname.Size = new System.Drawing.Size(282, 21);
             this.txt_Tname.TabIndex = 55;
             // 
             // label1
