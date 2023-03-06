@@ -46,7 +46,7 @@
             this.btn_logout.Location = new System.Drawing.Point(340, 430);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(75, 23);
-            this.btn_logout.TabIndex = 20;
+            this.btn_logout.TabIndex = 5;
             this.btn_logout.Text = "Logout";
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
@@ -61,7 +61,7 @@
             this.lbl_contactAdmin.Location = new System.Drawing.Point(21, 426);
             this.lbl_contactAdmin.Name = "lbl_contactAdmin";
             this.lbl_contactAdmin.Size = new System.Drawing.Size(136, 20);
-            this.lbl_contactAdmin.TabIndex = 19;
+            this.lbl_contactAdmin.TabIndex = 4;
             this.lbl_contactAdmin.Text = "Contact an admin";
             this.lbl_contactAdmin.Click += new System.EventHandler(this.lbl_contactAdmin_Click);
             // 
@@ -74,7 +74,7 @@
             this.btn_employee.Location = new System.Drawing.Point(190, 301);
             this.btn_employee.Name = "btn_employee";
             this.btn_employee.Size = new System.Drawing.Size(166, 49);
-            this.btn_employee.TabIndex = 18;
+            this.btn_employee.TabIndex = 3;
             this.btn_employee.Text = "Employees";
             this.btn_employee.UseVisualStyleBackColor = false;
             this.btn_employee.Click += new System.EventHandler(this.btn_employee_Click);
@@ -88,7 +88,7 @@
             this.btn_restaurant.Location = new System.Drawing.Point(190, 222);
             this.btn_restaurant.Name = "btn_restaurant";
             this.btn_restaurant.Size = new System.Drawing.Size(166, 49);
-            this.btn_restaurant.TabIndex = 17;
+            this.btn_restaurant.TabIndex = 2;
             this.btn_restaurant.Text = "Restaurant";
             this.btn_restaurant.UseVisualStyleBackColor = false;
             this.btn_restaurant.Click += new System.EventHandler(this.btn_restaurant_Click);
@@ -102,7 +102,7 @@
             this.btn_hotel.Location = new System.Drawing.Point(190, 143);
             this.btn_hotel.Name = "btn_hotel";
             this.btn_hotel.Size = new System.Drawing.Size(166, 49);
-            this.btn_hotel.TabIndex = 16;
+            this.btn_hotel.TabIndex = 1;
             this.btn_hotel.Text = "Hotel";
             this.btn_hotel.UseVisualStyleBackColor = false;
             this.btn_hotel.Click += new System.EventHandler(this.btn_hotel_Click);
@@ -115,7 +115,7 @@
             this.lbl_welcome.Location = new System.Drawing.Point(154, 7);
             this.lbl_welcome.Name = "lbl_welcome";
             this.lbl_welcome.Size = new System.Drawing.Size(264, 39);
-            this.lbl_welcome.TabIndex = 15;
+            this.lbl_welcome.TabIndex = 6;
             this.lbl_welcome.Text = "Welcome, (user)!";
             // 
             // pbx_logo

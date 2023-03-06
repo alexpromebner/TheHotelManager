@@ -35,7 +35,10 @@ namespace TheHotelManager
 
         private void btn_backR_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            frm_main main = new frm_main();
+            main.ShowDialog();
+            this.Close();
         }
     }
 }

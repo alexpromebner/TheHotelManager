@@ -138,6 +138,12 @@
     <Compile Include="frm_contactAdmin.Designer.cs">
       <DependentUpon>frm_contactAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_editReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_editReservation.Designer.cs">
+      <DependentUpon>frm_editReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_editRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_contactAdmin.resx">
       <DependentUpon>frm_contactAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_editReservation.resx">
+      <DependentUpon>frm_editReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_editRoom.resx">
       <DependentUpon>frm_editRoom.cs</DependentUpon>

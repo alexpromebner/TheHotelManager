@@ -303,5 +303,10 @@ namespace TheHotelManager
         {
 
         }
+
+        private void txt_name_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
