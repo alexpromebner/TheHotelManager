@@ -12,7 +12,8 @@ namespace TheHotelManager
 {
     public partial class frm_cleaning : Form
     {
-        public string roomNumber;
+        public bool cD;
+        public int roomNumber;
         public frm_cleaning()
         {
             InitializeComponent();
@@ -20,23 +21,23 @@ namespace TheHotelManager
     
         private void btn_cleaned_Click(object sender, EventArgs e)
         {
-            //enter room number, get room status from data bank, show room number and status on label
-
+            //add method for updating room status
             lbl_room.BackColor = Color.Green;
-            //if mit label wenn Daten erfolgreich geändert auf Datenbank
+            cD = true;
         }
 
         private void btn_dirty_Click(object sender, EventArgs e)
         {
+            //add method for updating room status
             lbl_room.BackColor = Color.Red;
-            //if mit label wenn Daten erfolgreich geändert auf Datenbank
+            cD = false;
         }
 
         private void btn_seach_Click(object sender, EventArgs e)
         {
-            lbl_room.Text = "Room: " + txt_addSearch.Text;
-            roomNumber = txt_addSearch.Text;
-            SQLInteraction.GetRooms();
+            roomNumber = Convert.ToInt32(txt_addSearch.Text);
+            SQLInteraction.GetRooms(roomNumber);
+            lbl_room.Text = "Room: " + txt_addSearch.Text;          
         }
 
         private void txt_addSearch_Click(object sender, EventArgs e)

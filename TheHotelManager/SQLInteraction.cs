@@ -140,25 +140,41 @@ namespace TheHotelManager
                 MessageBox.Show(e.Message);
             }
         }
-
-        //select id if it is null --> create data set  if its not null update the data set
-        public static void GetRooms(int id, string cleanDirty)
+        //TODO:
+        //- code for adding room status (SQLInteraction)
+        //- code for updating room status (SQLInteraction)
+        //- add the method to clean an dirty (cleaning)
+        public static void GetRooms(int id)
         {
             try
             {
-                frm_cleaning cleaning = new frm_cleaning();
-
-
                 con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = "Select CleanDirty from cleaning where ID = '" + cleaning.roomNumber + "';";
-                cleanDirty = Convert.ToString(cmd.ExecuteScalar());
+                cmd.CommandText = "Select * from cleaning where ID = " + id + " ;";
+                int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
                 con.Close();
+                MessageBox.Show(cleanDirty2.ToString());
+                if (cleanDirty2 == 0)
+                {
+                    //code for adding room
+                    MessageBox.Show("A new room has been added!");
+                }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                MessageBox.Show(e.Message); 
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        public static void UpdateRooms(int id, bool cleanDirty)
+        {
+            try
+            {
+               //code for updating room status
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
 
