@@ -21,7 +21,6 @@ namespace TheHotelManager
     
         private void btn_cleaned_Click(object sender, EventArgs e)
         {
-            //add method for updating room status
             lbl_room.BackColor = Color.Green;
             cD = true;
             roomNumber = Convert.ToInt32(txt_addSearch.Text);
@@ -30,7 +29,6 @@ namespace TheHotelManager
 
         private void btn_dirty_Click(object sender, EventArgs e)
         {
-            //add method for updating room status
             lbl_room.BackColor = Color.Red;
             cD = false;
             roomNumber = Convert.ToInt32(txt_addSearch.Text);
@@ -40,8 +38,18 @@ namespace TheHotelManager
         private void btn_seach_Click(object sender, EventArgs e)
         {
             roomNumber = Convert.ToInt32(txt_addSearch.Text);
-            SQLInteraction.GetRooms(roomNumber, true);
+            SQLInteraction.GetRooms(roomNumber, false);
             lbl_room.Text = "Room: " + txt_addSearch.Text;
+            SQLInteraction.GetStatus(roomNumber);
+
+            if (SQLInteraction.roomStatus == 0)
+            {
+                lbl_room.BackColor = Color.Red;
+            }
+            else if (SQLInteraction.roomStatus == 1)
+            {
+                lbl_room.BackColor = Color.Green;
+            }
         }
 
         private void txt_addSearch_Click(object sender, EventArgs e)

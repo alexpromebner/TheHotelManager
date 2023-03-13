@@ -13,7 +13,7 @@ namespace TheHotelManager
 {
     class SQLInteraction : frm_login
     {
-
+        public static int roomStatus;
         public static MySqlConnection con = new MySqlConnection();
         static MySqlCommand cmd;
 
@@ -141,8 +141,6 @@ namespace TheHotelManager
             }
         }
         //TODO:
-        //- code for updating room status (SQLInteraction)
-        //- add the method to clean and dirty (cleaning)
         //- add select command and check the variable for showing if the slected room is clean or dirty
         public static void GetRooms(int id, bool cleanDirty)
         {
@@ -193,6 +191,23 @@ namespace TheHotelManager
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("The selected room has been updated!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        public static void GetStatus(int id)
+        {
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                cmd.CommandText = "Select CleanDirty from cleaning where ID = " + id + " ;";
+                int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
+                MessageBox.Show(cleanDirty2.ToString());
+                roomStatus = cleanDirty2;
             }
             catch (Exception e)
             {
