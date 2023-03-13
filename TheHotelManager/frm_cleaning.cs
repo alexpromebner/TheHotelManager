@@ -24,6 +24,8 @@ namespace TheHotelManager
             //add method for updating room status
             lbl_room.BackColor = Color.Green;
             cD = true;
+            roomNumber = Convert.ToInt32(txt_addSearch.Text);
+            SQLInteraction.UpdateRooms(roomNumber, cD);
         }
 
         private void btn_dirty_Click(object sender, EventArgs e)
@@ -31,6 +33,8 @@ namespace TheHotelManager
             //add method for updating room status
             lbl_room.BackColor = Color.Red;
             cD = false;
+            roomNumber = Convert.ToInt32(txt_addSearch.Text);
+            SQLInteraction.UpdateRooms(roomNumber, cD);
         }
 
         private void btn_seach_Click(object sender, EventArgs e)

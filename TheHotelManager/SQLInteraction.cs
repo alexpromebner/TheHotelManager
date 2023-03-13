@@ -159,7 +159,6 @@ namespace TheHotelManager
                 {
                     try
                     {
-                        //code for adding room
                         con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                         con.Open();
                         cmd.CommandText = "insert into cleaning (ID, CleanDirty) values(" + id + ", " + cleanDirty + " );";
@@ -187,7 +186,13 @@ namespace TheHotelManager
         {
             try
             {
-               //code for updating room status
+                //code for updating room status
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                cmd.CommandText = "UPDATE cleaning SET CleanDirty = "+cleanDirty+" where ID = "+id+";";
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("The selected room has been updated!");
             }
             catch (Exception e)
             {
