@@ -36,8 +36,8 @@ namespace TheHotelManager
         private void btn_seach_Click(object sender, EventArgs e)
         {
             roomNumber = Convert.ToInt32(txt_addSearch.Text);
-            SQLInteraction.GetRooms(roomNumber);
-            lbl_room.Text = "Room: " + txt_addSearch.Text;          
+            SQLInteraction.GetRooms(roomNumber, true);
+            lbl_room.Text = "Room: " + txt_addSearch.Text;
         }
 
         private void txt_addSearch_Click(object sender, EventArgs e)

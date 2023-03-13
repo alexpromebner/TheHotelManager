@@ -141,10 +141,10 @@ namespace TheHotelManager
             }
         }
         //TODO:
-        //- code for adding room status (SQLInteraction)
         //- code for updating room status (SQLInteraction)
-        //- add the method to clean an dirty (cleaning)
-        public static void GetRooms(int id)
+        //- add the method to clean and dirty (cleaning)
+        //- add select command and check the variable for showing if the slected room is clean or dirty
+        public static void GetRooms(int id, bool cleanDirty)
         {
             try
             {
@@ -154,10 +154,27 @@ namespace TheHotelManager
                 int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
                 con.Close();
                 MessageBox.Show(cleanDirty2.ToString());
+                
                 if (cleanDirty2 == 0)
                 {
-                    //code for adding room
-                    MessageBox.Show("A new room has been added!");
+                    try
+                    {
+                        //code for adding room
+                        con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                        con.Open();
+                        cmd.CommandText = "insert into cleaning (ID, CleanDirty) values(" + id + ", " + cleanDirty + " );";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("A new room has been added!");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("The room has been selected!");
                 }
             }
             catch (Exception e)
