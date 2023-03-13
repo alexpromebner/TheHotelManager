@@ -151,7 +151,6 @@ namespace TheHotelManager
                 cmd.CommandText = "Select * from cleaning where ID = " + id + " ;";
                 int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
                 con.Close();
-                MessageBox.Show(cleanDirty2.ToString());
                 
                 if (cleanDirty2 == 0)
                 {
@@ -206,7 +205,6 @@ namespace TheHotelManager
                 cmd.CommandText = "Select CleanDirty from cleaning where ID = " + id + " ;";
                 int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
                 con.Close();
-                MessageBox.Show(cleanDirty2.ToString());
                 roomStatus = cleanDirty2;
             }
             catch (Exception e)
