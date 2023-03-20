@@ -35,8 +35,9 @@
             this.btn_send = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.cb_problems = new System.Windows.Forms.ComboBox();
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.txt_email = new System.Windows.Forms.TextBox();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
+            this.btn_backWarehouse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,16 +122,6 @@
             this.cb_problems.TabIndex = 30;
             this.cb_problems.SelectedIndexChanged += new System.EventHandler(this.cb_problems_SelectedIndexChanged);
             // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(1, 1);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 1;
-            this.pbx_logo.TabStop = false;
-            // 
             // txt_email
             // 
             this.txt_email.ForeColor = System.Drawing.Color.Silver;
@@ -142,12 +133,35 @@
             this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
             this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(1, 1);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 1;
+            this.pbx_logo.TabStop = false;
+            // 
+            // btn_backWarehouse
+            // 
+            this.btn_backWarehouse.Enabled = false;
+            this.btn_backWarehouse.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_backWarehouse.Location = new System.Drawing.Point(453, 414);
+            this.btn_backWarehouse.Name = "btn_backWarehouse";
+            this.btn_backWarehouse.Size = new System.Drawing.Size(75, 23);
+            this.btn_backWarehouse.TabIndex = 32;
+            this.btn_backWarehouse.Text = "Back";
+            this.btn_backWarehouse.UseVisualStyleBackColor = true;
+            this.btn_backWarehouse.Click += new System.EventHandler(this.btn_backWarehouse_Click);
+            // 
             // frm_contactAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(540, 457);
+            this.Controls.Add(this.btn_backWarehouse);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.cb_problems);
             this.Controls.Add(this.btn_send);
@@ -176,7 +190,8 @@
         private System.Windows.Forms.TextBox txt_other;
         private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.ComboBox cb_problems;
         private System.Windows.Forms.TextBox txt_email;
+        public System.Windows.Forms.ComboBox cb_problems;
+        public System.Windows.Forms.Button btn_backWarehouse;
     }
 }

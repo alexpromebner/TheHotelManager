@@ -95,5 +95,13 @@ namespace TheHotelManager
             txt_email.ResetText();
             txt_other.ResetText();
         }
+
+        private void btn_backWarehouse_Click(object sender, EventArgs e)
+        {
+            frm_warehouse frm_Warehouse = new frm_warehouse();
+            this.Hide();
+            frm_Warehouse.ShowDialog();
+            this.Close();
+        }
     }
 }

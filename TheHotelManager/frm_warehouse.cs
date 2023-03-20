@@ -29,5 +29,36 @@ namespace TheHotelManager
         {
 
         }
+
+        private void btn_addOrder_Click(object sender, EventArgs e)
+        {
+            //add code for adding order on the database (method)
+        }
+
+        private void edit_cancelOrder_Click(object sender, EventArgs e)
+        {
+            //open the contact admin form and automatically choose cancellation
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            lbl_info.Text = "If you want to order other \n products please contact an admin";
+            lbl_info.Visible = true;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_info.Visible = false;
+        }
+
+        private void lbl_otherProducts_Click(object sender, EventArgs e)
+        {
+            frm_contactAdmin orderProducts = new frm_contactAdmin();
+            orderProducts.cb_problems.Text = "Cancellation";
+            orderProducts.btn_backWarehouse.Enabled = true;
+            this.Hide();
+            orderProducts.ShowDialog();
+            this.Close();
+        }
     }
 }
