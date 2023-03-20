@@ -15,7 +15,7 @@ namespace TheHotelManager
 {
     class SQLInteraction : frm_login
     {
-
+        public static int roomStatus;
         public static MySqlConnection con = new MySqlConnection();
         static MySqlCommand cmd;
 
@@ -108,7 +108,6 @@ namespace TheHotelManager
         //New Account inserts into the database 
         public static void InsertInto(string tablename, string name, string surname, string password, string department)
         {
-
             try
             {
                 con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
@@ -137,6 +136,78 @@ namespace TheHotelManager
                 cmd = new MySqlCommand(text, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        //TODO:
+        //- add select command and check the variable for showing if the slected room is clean or dirty
+        public static void GetRooms(int id, bool cleanDirty)
+        {
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                cmd.CommandText = "Select * from cleaning where ID = " + id + " ;";
+                int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
+                
+                if (cleanDirty2 == 0)
+                {
+                    try
+                    {
+                        con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                        con.Open();
+                        cmd.CommandText = "insert into cleaning (ID, CleanDirty) values(" + id + ", " + cleanDirty + " );";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("A new room has been added!");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("The room has been selected!");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        public static void UpdateRooms(int id, bool cleanDirty)
+        {
+            try
+            {
+                //code for updating room status
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                cmd.CommandText = "UPDATE cleaning SET CleanDirty = "+cleanDirty+" where ID = "+id+";";
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("The selected room has been updated!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        public static void GetStatus(int id)
+        {
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                cmd.CommandText = "Select CleanDirty from cleaning where ID = " + id + " ;";
+                int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
+                roomStatus = cleanDirty2;
             }
             catch (Exception e)
             {
