@@ -14,7 +14,7 @@ namespace TheHotelManager
 {
     public partial class frm_editRoom : Form
     {
-        //finish after DataGridView form Alex
+        //id important for filter the right room
         int ID = 0;
 
         public frm_editRoom()
@@ -32,12 +32,12 @@ namespace TheHotelManager
         DataTable dtset;
         BindingSource bsource = new BindingSource();
 
+        //get newest Data from Database
         void GetData()
         {
 
             con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
-            //MySqlCommand cmd = new MySqlCommand("Select * From login;", con);
             adap = new MySqlDataAdapter("Select * From Rooms;", con);
             //adap.SelectCommand = cmd;
             dtset = new DataTable();
@@ -50,6 +50,7 @@ namespace TheHotelManager
 
         }
 
+        //empty textboxes
         private void ClearData()
         {
             txt_name.Text = "";
@@ -58,6 +59,7 @@ namespace TheHotelManager
             ID = 0;
         }
 
+        //delete a room
         private void btn_deleteR_Click(object sender, EventArgs e)
         {
             try
@@ -86,6 +88,7 @@ namespace TheHotelManager
             }
         }
 
+        //fill up the textboxes
         private void dgv_rooms_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ID = Convert.ToInt32(dgv_rooms.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -98,6 +101,7 @@ namespace TheHotelManager
             txt_price.Text = dgv_rooms.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
+        //save the updates on database
         private void btn_saveR_Click(object sender, EventArgs e)
         {
             
@@ -133,6 +137,7 @@ namespace TheHotelManager
             }
         }
 
+        //going one form back
         private void btn_backEditRoom_Click(object sender, EventArgs e)
         {
             this.Hide();

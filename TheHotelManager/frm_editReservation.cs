@@ -37,10 +37,8 @@ namespace TheHotelManager
             con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
             adap = new MySqlDataAdapter("Select * From tables;", con);
-            //adap.SelectCommand = cmd;
             dtset = new DataTable();
             adap.Fill(dtset);
-
             bsource.DataSource = dtset;
             dgv_tables.DataSource = bsource;
             adap.Update(dtset);
@@ -56,6 +54,7 @@ namespace TheHotelManager
             this.Close();
         }
 
+        //delete button
         private void btn_deleteR_Click(object sender, EventArgs e)
         {
             try

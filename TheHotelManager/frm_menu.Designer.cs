@@ -37,10 +37,6 @@
             this.btn_underline = new System.Windows.Forms.Button();
             this.btn_italic = new System.Windows.Forms.Button();
             this.cb_fontSize = new System.Windows.Forms.ComboBox();
-            this.btn_newPage = new System.Windows.Forms.Button();
-            this.btn_left = new System.Windows.Forms.Button();
-            this.btn_right = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +45,7 @@
             // 
             this.lbl_welcome.AutoSize = true;
             this.lbl_welcome.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_welcome.Location = new System.Drawing.Point(218, 9);
+            this.lbl_welcome.Location = new System.Drawing.Point(200, 9);
             this.lbl_welcome.Name = "lbl_welcome";
             this.lbl_welcome.Size = new System.Drawing.Size(199, 39);
             this.lbl_welcome.TabIndex = 19;
@@ -151,46 +147,6 @@
             this.cb_fontSize.Size = new System.Drawing.Size(70, 21);
             this.cb_fontSize.TabIndex = 41;
             // 
-            // btn_newPage
-            // 
-            this.btn_newPage.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_newPage.Location = new System.Drawing.Point(12, 361);
-            this.btn_newPage.Name = "btn_newPage";
-            this.btn_newPage.Size = new System.Drawing.Size(89, 23);
-            this.btn_newPage.TabIndex = 42;
-            this.btn_newPage.Text = "New Page";
-            this.btn_newPage.UseVisualStyleBackColor = true;
-            // 
-            // btn_left
-            // 
-            this.btn_left.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_left.Location = new System.Drawing.Point(346, 361);
-            this.btn_left.Name = "btn_left";
-            this.btn_left.Size = new System.Drawing.Size(30, 36);
-            this.btn_left.TabIndex = 43;
-            this.btn_left.Text = "<";
-            this.btn_left.UseVisualStyleBackColor = true;
-            // 
-            // btn_right
-            // 
-            this.btn_right.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_right.Location = new System.Drawing.Point(382, 361);
-            this.btn_right.Name = "btn_right";
-            this.btn_right.Size = new System.Drawing.Size(30, 36);
-            this.btn_right.TabIndex = 44;
-            this.btn_right.Text = ">";
-            this.btn_right.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(107, 361);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Delete Page";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // pbx_logo
             // 
             this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
@@ -207,10 +163,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_right);
-            this.Controls.Add(this.btn_left);
-            this.Controls.Add(this.btn_newPage);
             this.Controls.Add(this.cb_fontSize);
             this.Controls.Add(this.btn_italic);
             this.Controls.Add(this.btn_underline);
@@ -243,9 +195,5 @@
         private System.Windows.Forms.Button btn_underline;
         private System.Windows.Forms.Button btn_italic;
         private System.Windows.Forms.ComboBox cb_fontSize;
-        private System.Windows.Forms.Button btn_newPage;
-        private System.Windows.Forms.Button btn_left;
-        private System.Windows.Forms.Button btn_right;
-        private System.Windows.Forms.Button button1;
     }
 }
