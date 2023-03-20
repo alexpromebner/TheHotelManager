@@ -209,6 +209,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_cleaning.resx">
+      <DependentUpon>frm_cleaning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_contactAdmin.resx">
       <DependentUpon>frm_contactAdmin.cs</DependentUpon>
     </EmbeddedResource>

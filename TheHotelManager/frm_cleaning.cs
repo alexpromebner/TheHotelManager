@@ -12,6 +12,8 @@ namespace TheHotelManager
 {
     public partial class frm_cleaning : Form
     {
+        public bool cD;
+        public int roomNumber;
         public frm_cleaning()
         {
             InitializeComponent();
@@ -19,20 +21,35 @@ namespace TheHotelManager
     
         private void btn_cleaned_Click(object sender, EventArgs e)
         {
-            //enter room number, get room status from data bank, show room number and status on label
             lbl_room.BackColor = Color.Green;
-            //if mit label wenn Daten erfolgreich geändert auf Datenbank
+            cD = true;
+            roomNumber = Convert.ToInt32(txt_addSearch.Text);
+            SQLInteraction.UpdateRooms(roomNumber, cD);
         }
 
         private void btn_dirty_Click(object sender, EventArgs e)
         {
             lbl_room.BackColor = Color.Red;
-            //if mit label wenn Daten erfolgreich geändert auf Datenbank
+            cD = false;
+            roomNumber = Convert.ToInt32(txt_addSearch.Text);
+            SQLInteraction.UpdateRooms(roomNumber, cD);
         }
 
         private void btn_seach_Click(object sender, EventArgs e)
         {
+            roomNumber = Convert.ToInt32(txt_addSearch.Text);
+            SQLInteraction.GetRooms(roomNumber, false);
             lbl_room.Text = "Room: " + txt_addSearch.Text;
+            SQLInteraction.GetStatus(roomNumber);
+
+            if (SQLInteraction.roomStatus == 0)
+            {
+                lbl_room.BackColor = Color.Red;
+            }
+            else if (SQLInteraction.roomStatus == 1)
+            {
+                lbl_room.BackColor = Color.Green;
+            }
         }
 
         private void txt_addSearch_Click(object sender, EventArgs e)
@@ -47,6 +64,11 @@ namespace TheHotelManager
                 frm_hotel cleaningHotel = new frm_hotel();
                 cleaningHotel.ShowDialog();
                 this.Close();
+        }
+
+        private void frm_cleaning_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
