@@ -105,6 +105,7 @@
             this.txt_name.Size = new System.Drawing.Size(405, 21);
             this.txt_name.TabIndex = 26;
             this.txt_name.Text = "Name";
+            this.txt_name.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_name_MaskInputRejected);
             this.txt_name.Click += new System.EventHandler(this.txt_name_Click);
             // 
             // txt_surname

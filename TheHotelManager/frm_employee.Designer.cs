@@ -40,7 +40,6 @@
             this.lbl_department = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
-            this.txt_department = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_surname = new System.Windows.Forms.TextBox();
             this.cb_department = new System.Windows.Forms.ComboBox();
@@ -175,13 +174,6 @@
             this.txt_name.Size = new System.Drawing.Size(194, 20);
             this.txt_name.TabIndex = 31;
             // 
-            // txt_department
-            // 
-            this.txt_department.Location = new System.Drawing.Point(507, 158);
-            this.txt_department.Name = "txt_department";
-            this.txt_department.Size = new System.Drawing.Size(194, 20);
-            this.txt_department.TabIndex = 32;
-            // 
             // txt_password
             // 
             this.txt_password.Location = new System.Drawing.Point(256, 144);
@@ -219,7 +211,6 @@
             this.Controls.Add(this.cb_department);
             this.Controls.Add(this.txt_surname);
             this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_department);
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_department);
@@ -257,7 +248,6 @@
         private System.Windows.Forms.Label lbl_department;
         private System.Windows.Forms.Label lbl_password;
         private System.Windows.Forms.TextBox txt_name;
-        private System.Windows.Forms.TextBox txt_department;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.TextBox txt_surname;
         private System.Windows.Forms.ComboBox cb_department;

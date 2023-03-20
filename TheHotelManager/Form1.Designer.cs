@@ -55,7 +55,7 @@
             this.lbl_login.Location = new System.Drawing.Point(204, 57);
             this.lbl_login.Name = "lbl_login";
             this.lbl_login.Size = new System.Drawing.Size(78, 29);
-            this.lbl_login.TabIndex = 1;
+            this.lbl_login.TabIndex = 4;
             this.lbl_login.Text = "Login";
             // 
             // lbl_department
@@ -111,10 +111,11 @@
             this.cb_department.Location = new System.Drawing.Point(168, 195);
             this.cb_department.Name = "cb_department";
             this.cb_department.Size = new System.Drawing.Size(170, 21);
-            this.cb_department.TabIndex = 4;
+            this.cb_department.TabIndex = 1;
             // 
             // frm_login
             // 
+            this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
