@@ -12,17 +12,16 @@ using MySql.Data.MySqlClient;
 
 namespace TheHotelManager
 {
-    public partial class frm_editRoom : Form
+    public partial class frm_editReservation : Form
     {
-        //finish after DataGridView form Alex
         int ID = 0;
 
-        public frm_editRoom()
+        public frm_editReservation()
         {
             InitializeComponent();
         }
 
-        private void frm_editRoom_Load(object sender, EventArgs e)
+        private void frm_editReservation_Load(object sender, EventArgs e)
         {
             GetData();
         }
@@ -37,25 +36,24 @@ namespace TheHotelManager
 
             con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
-            //MySqlCommand cmd = new MySqlCommand("Select * From login;", con);
-            adap = new MySqlDataAdapter("Select * From Rooms;", con);
+            adap = new MySqlDataAdapter("Select * From tables;", con);
             //adap.SelectCommand = cmd;
             dtset = new DataTable();
             adap.Fill(dtset);
 
             bsource.DataSource = dtset;
-            dgv_rooms.DataSource = bsource;
+            dgv_tables.DataSource = bsource;
             adap.Update(dtset);
             con.Close();
 
         }
 
-        private void ClearData()
+        private void btn_backEditRoom_Click(object sender, EventArgs e)
         {
-            txt_name.Text = "";
-            txt_surname.Text = "";
-            txt_price.Text = "";
-            ID = 0;
+            this.Hide();
+            frm_tables tables = new frm_tables();
+            tables.ShowDialog();
+            this.Close();
         }
 
         private void btn_deleteR_Click(object sender, EventArgs e)
@@ -65,7 +63,7 @@ namespace TheHotelManager
                 if (ID != 0)
                 {
                     con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
-                    MySqlCommand cmd = new MySqlCommand("delete from Rooms where id=@id", con);
+                    MySqlCommand cmd = new MySqlCommand("delete from tables where id=@id", con);
                     con.Open();
                     cmd.Parameters.AddWithValue("@id", ID);
                     cmd.ExecuteNonQuery();
@@ -86,36 +84,47 @@ namespace TheHotelManager
             }
         }
 
-        private void dgv_rooms_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgv_tables_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ID = Convert.ToInt32(dgv_rooms.Rows[e.RowIndex].Cells[0].Value.ToString());
-            cb_roomNumber.Text = dgv_rooms.Rows[e.RowIndex].Cells[1].Value.ToString();
-            cb_roomType.Text = dgv_rooms.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txt_name.Text = dgv_rooms.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txt_surname.Text = dgv_rooms.Rows[e.RowIndex].Cells[4].Value.ToString();
-            dtp_dateFrom.Text = dgv_rooms.Rows[e.RowIndex].Cells[5].Value.ToString();
-            dtp_dateTo.Text = dgv_rooms.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txt_price.Text = dgv_rooms.Rows[e.RowIndex].Cells[7].Value.ToString();
+            ID = Convert.ToInt32(dgv_tables.Rows[e.RowIndex].Cells[0].Value.ToString());
+            txt_Tname.Text = dgv_tables.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_Tsurname.Text = dgv_tables.Rows[e.RowIndex].Cells[2].Value.ToString();
+            nud_tNumber.Text = dgv_tables.Rows[e.RowIndex].Cells[3].Value.ToString();
+            nud_amount.Text = dgv_tables.Rows[e.RowIndex].Cells[4].Value.ToString();
+            dtp_date.Text = dgv_tables.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txt_notes.Text = dgv_tables.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearData()
+        {
+            txt_notes.Text = "";
+            txt_Tname.Text = "";
+            txt_Tsurname.Text = "";
+
+            ID = 0;
         }
 
         private void btn_saveR_Click(object sender, EventArgs e)
         {
-            
             try
             {
-                if (cb_roomNumber.Text != "" && cb_roomType.Text != "" && txt_name.Text != "" && txt_surname.Text != "" && dtp_dateTo.Text != "" && dtp_dateFrom.Text != "" && txt_price.Text != "")
+                if (txt_Tname.Text != "" && txt_Tsurname.Text != "" && txt_notes.Text != "" && nud_amount.Text != "" && nud_amount.Text != "" && dtp_date.Text != "")
                 {
                     con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
-                    MySqlCommand cmd = new MySqlCommand("UPDATE Rooms SET BedNumber = @bednumber, RoomType = @roomtype, Name = @name, Surname = @surname, FromDate = @fromdate, ToDate = @todate, Price = @price where ID = @id", con);
+                    MySqlCommand cmd = new MySqlCommand("UPDATE tables SET name = @name, surname = @surname, tablenum = @tablenum, people = @people, date = @date, comment = @comment where ID = @id", con);
                     con.Open();
                     cmd.Parameters.AddWithValue("@id", ID);
-                    cmd.Parameters.AddWithValue("@bednumber", cb_roomNumber.Text);
-                    cmd.Parameters.AddWithValue("@roomtype", cb_roomType.Text);
-                    cmd.Parameters.AddWithValue("@name", txt_name.Text);
-                    cmd.Parameters.AddWithValue("@surname", txt_surname.Text);
-                    cmd.Parameters.AddWithValue("@fromdate", dtp_dateFrom.Value);
-                    cmd.Parameters.AddWithValue("@todate", dtp_dateTo.Value);
-                    cmd.Parameters.AddWithValue("@price", txt_price.Text);
+                    cmd.Parameters.AddWithValue("@name", txt_Tname.Text);
+                    cmd.Parameters.AddWithValue("@surname", txt_Tsurname.Text);
+                    cmd.Parameters.AddWithValue("@tablenum", nud_tNumber.Text);
+                    cmd.Parameters.AddWithValue("@people", nud_amount.Text);
+                    cmd.Parameters.AddWithValue("@date", dtp_date.Value);
+                    cmd.Parameters.AddWithValue("@comment", txt_notes.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record Updated Successfully");
                     con.Close();
@@ -131,14 +140,6 @@ namespace TheHotelManager
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void btn_backEditRoom_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frm_rooms frm = new frm_rooms();
-            frm.ShowDialog();
-            this.Close();
         }
     }
 }

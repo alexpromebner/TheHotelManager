@@ -8,6 +8,8 @@ using System.Data;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
+using System.Xml.Linq;
 
 namespace TheHotelManager
 {
@@ -221,6 +223,24 @@ namespace TheHotelManager
                 MessageBox.Show(e.Message);
             }
 
+        }
+
+        public static void InsertIntoTables(string tablename, string name, string surname, int tablenum, int people, string date, string comment)
+        {
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                string text = "INSERT INTO " + tablename + " (name,surname,tablenum,people,date,comment) VALUES('" + name + "', '" + surname + "', '" + tablenum + "', '" + people + "', '" + date + "', '" + comment + "')";
+                cmd = new MySqlCommand(text, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("The table is reserved.", "Table reserved", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void SQLInteraction_Load(object sender, EventArgs e)

@@ -38,9 +38,8 @@
             this.lbl_roomType = new System.Windows.Forms.Label();
             this.nud_amount = new System.Windows.Forms.NumericUpDown();
             this.nud_tNumber = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_notes = new System.Windows.Forms.TextBox();
             this.pbx_logo = new System.Windows.Forms.PictureBox();
-            this.btn_cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_amount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_tNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
@@ -64,10 +63,11 @@
             this.edit_reservation.ForeColor = System.Drawing.Color.White;
             this.edit_reservation.Location = new System.Drawing.Point(9, 356);
             this.edit_reservation.Name = "edit_reservation";
-            this.edit_reservation.Size = new System.Drawing.Size(217, 35);
+            this.edit_reservation.Size = new System.Drawing.Size(217, 64);
             this.edit_reservation.TabIndex = 45;
-            this.edit_reservation.Text = "Edit Reservation";
+            this.edit_reservation.Text = "Edit/Show Reservations";
             this.edit_reservation.UseVisualStyleBackColor = false;
+            this.edit_reservation.Click += new System.EventHandler(this.edit_reservation_Click);
             // 
             // btn_addR
             // 
@@ -80,6 +80,7 @@
             this.btn_addR.TabIndex = 43;
             this.btn_addR.Text = "Add Reservation";
             this.btn_addR.UseVisualStyleBackColor = false;
+            this.btn_addR.Click += new System.EventHandler(this.btn_addR_Click);
             // 
             // dtp_date
             // 
@@ -97,6 +98,8 @@
             this.txt_Tsurname.Size = new System.Drawing.Size(405, 21);
             this.txt_Tsurname.TabIndex = 40;
             this.txt_Tsurname.Text = "Surname";
+            this.txt_Tsurname.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Tsurname_MaskInputRejected);
+            this.txt_Tsurname.Click += new System.EventHandler(this.txt_Tsurname_Click);
             // 
             // txt_Tname
             // 
@@ -107,6 +110,8 @@
             this.txt_Tname.Size = new System.Drawing.Size(405, 21);
             this.txt_Tname.TabIndex = 39;
             this.txt_Tname.Text = "Name";
+            this.txt_Tname.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Tname_MaskInputRejected);
+            this.txt_Tname.Click += new System.EventHandler(this.txt_Tname_Click);
             // 
             // label1
             // 
@@ -176,16 +181,18 @@
             0,
             0,
             0});
+            this.nud_tNumber.ValueChanged += new System.EventHandler(this.nud_tNumber_ValueChanged);
             // 
-            // textBox1
+            // txt_notes
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(9, 240);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 51);
-            this.textBox1.TabIndex = 50;
-            this.textBox1.Text = "Notes";
+            this.txt_notes.ForeColor = System.Drawing.Color.Silver;
+            this.txt_notes.Location = new System.Drawing.Point(9, 240);
+            this.txt_notes.Multiline = true;
+            this.txt_notes.Name = "txt_notes";
+            this.txt_notes.Size = new System.Drawing.Size(405, 51);
+            this.txt_notes.TabIndex = 50;
+            this.txt_notes.Text = "Notes";
+            this.txt_notes.Click += new System.EventHandler(this.txt_notes_Click);
             // 
             // pbx_logo
             // 
@@ -197,30 +204,17 @@
             this.pbx_logo.TabIndex = 34;
             this.pbx_logo.TabStop = false;
             // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.Gray;
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Location = new System.Drawing.Point(9, 397);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(217, 35);
-            this.btn_cancel.TabIndex = 44;
-            this.btn_cancel.Text = "Delete Reservation";
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            // 
             // frm_tables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 444);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_notes);
             this.Controls.Add(this.nud_tNumber);
             this.Controls.Add(this.nud_amount);
             this.Controls.Add(this.btn_backRooms);
             this.Controls.Add(this.edit_reservation);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_addR);
             this.Controls.Add(this.dtp_date);
             this.Controls.Add(this.txt_Tsurname);
@@ -231,6 +225,7 @@
             this.Name = "frm_tables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tables";
+            this.Load += new System.EventHandler(this.frm_tables_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_amount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_tNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
@@ -252,7 +247,6 @@
         private System.Windows.Forms.PictureBox pbx_logo;
         private System.Windows.Forms.NumericUpDown nud_amount;
         private System.Windows.Forms.NumericUpDown nud_tNumber;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.TextBox txt_notes;
     }
 }

@@ -24,5 +24,10 @@ namespace TheHotelManager
             warehouseHotel.ShowDialog();
             this.Close();
         }
+
+        private void frm_warehouse_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
