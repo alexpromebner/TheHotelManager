@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cleaning));
             this.txt_addSearch = new System.Windows.Forms.TextBox();
             this.lbl_choose = new System.Windows.Forms.Label();
             this.btn_backR = new System.Windows.Forms.Button();
@@ -141,6 +142,7 @@
             this.Controls.Add(this.btn_backR);
             this.Controls.Add(this.btn_dirty);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cleaning";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cleaning";

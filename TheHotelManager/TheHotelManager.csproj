@@ -224,6 +224,9 @@
     <EmbeddedResource Include="frm_employee.resx">
       <DependentUpon>frm_employee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_hotel.resx">
+      <DependentUpon>frm_hotel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_login));
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_login = new System.Windows.Forms.Label();
             this.lbl_department = new System.Windows.Forms.Label();
@@ -127,6 +128,7 @@
             this.Controls.Add(this.lbl_department);
             this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -145,7 +147,7 @@
         private System.Windows.Forms.Label lbl_password;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.ComboBox cb_department;
+        public System.Windows.Forms.ComboBox cb_department;
     }
 }
 

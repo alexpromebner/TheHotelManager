@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_restaurant));
             this.lbl_choose = new System.Windows.Forms.Label();
             this.btn_backR = new System.Windows.Forms.Button();
             this.btn_warehouseR = new System.Windows.Forms.Button();
@@ -118,6 +119,7 @@
             this.Controls.Add(this.btn_menu);
             this.Controls.Add(this.btn_tables);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_restaurant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Restaurant";

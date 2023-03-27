@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_warehouse));
             this.btn_backWh = new System.Windows.Forms.Button();
             this.edit_cancelOrder = new System.Windows.Forms.Button();
             this.btn_addOrder = new System.Windows.Forms.Button();
@@ -36,23 +37,25 @@
             this.lbl_warehouse = new System.Windows.Forms.Label();
             this.lbl_product = new System.Windows.Forms.Label();
             this.cb_product = new System.Windows.Forms.ComboBox();
-            this.pbx_info = new System.Windows.Forms.PictureBox();
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_info = new System.Windows.Forms.Label();
             this.nud_quantity = new System.Windows.Forms.NumericUpDown();
             this.lbl_quantity = new System.Windows.Forms.Label();
             this.btn_delivered = new System.Windows.Forms.Button();
             this.lbl_otherProducts = new System.Windows.Forms.Label();
+            this.lbl_notes = new System.Windows.Forms.Label();
+            this.txt_notes = new System.Windows.Forms.TextBox();
+            this.pbx_info = new System.Windows.Forms.PictureBox();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_warehouse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_quantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_quantity)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_backWh
             // 
             this.btn_backWh.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_backWh.Location = new System.Drawing.Point(343, 402);
+            this.btn_backWh.Location = new System.Drawing.Point(486, 401);
             this.btn_backWh.Name = "btn_backWh";
             this.btn_backWh.Size = new System.Drawing.Size(75, 23);
             this.btn_backWh.TabIndex = 46;
@@ -65,9 +68,9 @@
             this.edit_cancelOrder.BackColor = System.Drawing.Color.Gray;
             this.edit_cancelOrder.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edit_cancelOrder.ForeColor = System.Drawing.Color.White;
-            this.edit_cancelOrder.Location = new System.Drawing.Point(220, 347);
+            this.edit_cancelOrder.Location = new System.Drawing.Point(420, 348);
             this.edit_cancelOrder.Name = "edit_cancelOrder";
-            this.edit_cancelOrder.Size = new System.Drawing.Size(202, 35);
+            this.edit_cancelOrder.Size = new System.Drawing.Size(141, 35);
             this.edit_cancelOrder.TabIndex = 45;
             this.edit_cancelOrder.Text = "Cancel Order";
             this.edit_cancelOrder.UseVisualStyleBackColor = false;
@@ -78,9 +81,9 @@
             this.btn_addOrder.BackColor = System.Drawing.Color.Gray;
             this.btn_addOrder.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addOrder.ForeColor = System.Drawing.Color.White;
-            this.btn_addOrder.Location = new System.Drawing.Point(8, 347);
+            this.btn_addOrder.Location = new System.Drawing.Point(216, 348);
             this.btn_addOrder.Name = "btn_addOrder";
-            this.btn_addOrder.Size = new System.Drawing.Size(202, 35);
+            this.btn_addOrder.Size = new System.Drawing.Size(198, 35);
             this.btn_addOrder.TabIndex = 43;
             this.btn_addOrder.Text = "Add New Order";
             this.btn_addOrder.UseVisualStyleBackColor = false;
@@ -90,7 +93,7 @@
             // 
             this.lbl_openOrders.AutoSize = true;
             this.lbl_openOrders.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_openOrders.Location = new System.Drawing.Point(4, 154);
+            this.lbl_openOrders.Location = new System.Drawing.Point(4, 162);
             this.lbl_openOrders.Name = "lbl_openOrders";
             this.lbl_openOrders.Size = new System.Drawing.Size(118, 22);
             this.lbl_openOrders.TabIndex = 35;
@@ -101,14 +104,14 @@
             this.dgv_warehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_warehouse.Location = new System.Drawing.Point(12, 193);
             this.dgv_warehouse.Name = "dgv_warehouse";
-            this.dgv_warehouse.Size = new System.Drawing.Size(410, 148);
+            this.dgv_warehouse.Size = new System.Drawing.Size(549, 148);
             this.dgv_warehouse.TabIndex = 69;
             // 
             // lbl_warehouse
             // 
             this.lbl_warehouse.AutoSize = true;
             this.lbl_warehouse.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_warehouse.Location = new System.Drawing.Point(247, 0);
+            this.lbl_warehouse.Location = new System.Drawing.Point(387, 0);
             this.lbl_warehouse.Name = "lbl_warehouse";
             this.lbl_warehouse.Size = new System.Drawing.Size(182, 39);
             this.lbl_warehouse.TabIndex = 68;
@@ -130,36 +133,16 @@
             this.cb_product.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_product.FormattingEnabled = true;
             this.cb_product.Items.AddRange(new object[] {
-            "single bed",
-            "double bed",
-            "three beds",
-            "four beds"});
+            "towels",
+            "soap",
+            "shampoo",
+            "toilet paper",
+            "printer paper",
+            "printer cartridge"});
             this.cb_product.Location = new System.Drawing.Point(130, 68);
             this.cb_product.Name = "cb_product";
             this.cb_product.Size = new System.Drawing.Size(142, 21);
             this.cb_product.TabIndex = 70;
-            // 
-            // pbx_info
-            // 
-            this.pbx_info.Image = global::TheHotelManager.Properties.Resources.information;
-            this.pbx_info.Location = new System.Drawing.Point(182, 47);
-            this.pbx_info.Name = "pbx_info";
-            this.pbx_info.Size = new System.Drawing.Size(19, 15);
-            this.pbx_info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_info.TabIndex = 72;
-            this.pbx_info.TabStop = false;
-            this.pbx_info.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            this.pbx_info.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 17;
-            this.pbx_logo.TabStop = false;
             // 
             // lbl_info
             // 
@@ -210,7 +193,7 @@
             this.btn_delivered.BackColor = System.Drawing.Color.Green;
             this.btn_delivered.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delivered.ForeColor = System.Drawing.Color.White;
-            this.btn_delivered.Location = new System.Drawing.Point(8, 386);
+            this.btn_delivered.Location = new System.Drawing.Point(8, 348);
             this.btn_delivered.Name = "btn_delivered";
             this.btn_delivered.Size = new System.Drawing.Size(202, 35);
             this.btn_delivered.TabIndex = 76;
@@ -231,12 +214,54 @@
             this.lbl_otherProducts.Text = "Other products";
             this.lbl_otherProducts.Click += new System.EventHandler(this.lbl_otherProducts_Click);
             // 
+            // lbl_notes
+            // 
+            this.lbl_notes.AutoSize = true;
+            this.lbl_notes.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_notes.Location = new System.Drawing.Point(126, 104);
+            this.lbl_notes.Name = "lbl_notes";
+            this.lbl_notes.Size = new System.Drawing.Size(49, 19);
+            this.lbl_notes.TabIndex = 78;
+            this.lbl_notes.Text = "Notes:";
+            // 
+            // txt_notes
+            // 
+            this.txt_notes.Location = new System.Drawing.Point(131, 126);
+            this.txt_notes.Multiline = true;
+            this.txt_notes.Name = "txt_notes";
+            this.txt_notes.Size = new System.Drawing.Size(430, 50);
+            this.txt_notes.TabIndex = 79;
+            // 
+            // pbx_info
+            // 
+            this.pbx_info.Image = global::TheHotelManager.Properties.Resources.information;
+            this.pbx_info.Location = new System.Drawing.Point(182, 47);
+            this.pbx_info.Name = "pbx_info";
+            this.pbx_info.Size = new System.Drawing.Size(19, 15);
+            this.pbx_info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_info.TabIndex = 72;
+            this.pbx_info.TabStop = false;
+            this.pbx_info.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pbx_info.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(0, 0);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 17;
+            this.pbx_logo.TabStop = false;
+            // 
             // frm_warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(429, 436);
+            this.ClientSize = new System.Drawing.Size(568, 436);
+            this.Controls.Add(this.txt_notes);
+            this.Controls.Add(this.lbl_notes);
             this.Controls.Add(this.btn_delivered);
             this.Controls.Add(this.lbl_info);
             this.Controls.Add(this.pbx_info);
@@ -252,14 +277,15 @@
             this.Controls.Add(this.lbl_quantity);
             this.Controls.Add(this.nud_quantity);
             this.Controls.Add(this.lbl_otherProducts);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_warehouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Warehouse";
             this.Load += new System.EventHandler(this.frm_warehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_warehouse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_quantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_quantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +298,6 @@
         private System.Windows.Forms.Button edit_cancelOrder;
         private System.Windows.Forms.Button btn_addOrder;
         private System.Windows.Forms.Label lbl_openOrders;
-        private System.Windows.Forms.DataGridView dgv_warehouse;
         private System.Windows.Forms.Label lbl_warehouse;
         private System.Windows.Forms.Label lbl_product;
         private System.Windows.Forms.PictureBox pbx_info;
@@ -282,5 +307,8 @@
         private System.Windows.Forms.Button btn_delivered;
         private System.Windows.Forms.Label lbl_otherProducts;
         public System.Windows.Forms.ComboBox cb_product;
+        private System.Windows.Forms.Label lbl_notes;
+        private System.Windows.Forms.TextBox txt_notes;
+        public System.Windows.Forms.DataGridView dgv_warehouse;
     }
 }

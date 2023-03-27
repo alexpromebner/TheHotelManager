@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_editRoom));
             this.btn_backEditRoom = new System.Windows.Forms.Button();
             this.btn_deleteR = new System.Windows.Forms.Button();
             this.btn_saveR = new System.Windows.Forms.Button();
@@ -250,6 +251,7 @@
             this.Controls.Add(this.btn_deleteR);
             this.Controls.Add(this.btn_saveR);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_editRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_editRoom";

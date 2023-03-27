@@ -22,6 +22,7 @@ namespace TheHotelManager
         public static string usernameSQLcon;
 
         public static int getid;
+        public string departmentGiver;
 
 
         private void frm_login_Load(object sender, EventArgs e)
@@ -32,6 +33,7 @@ namespace TheHotelManager
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            departmentGiver = cb_department.Text;
             this.Hide();
             usernameSQLcon = txt_password.Text;
             SQLInteraction.CheckTable("login", cb_department.Text, txt_password.Text);

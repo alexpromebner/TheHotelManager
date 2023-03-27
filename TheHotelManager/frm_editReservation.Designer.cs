@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_editReservation));
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_headline = new System.Windows.Forms.Label();
             this.dgv_tables = new System.Windows.Forms.DataGridView();
@@ -286,6 +287,7 @@
             this.Controls.Add(this.dgv_tables);
             this.Controls.Add(this.lbl_headline);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_editReservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Show and Edit Reservations";
