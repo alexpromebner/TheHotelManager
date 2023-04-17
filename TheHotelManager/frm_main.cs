@@ -59,6 +59,7 @@ namespace TheHotelManager
 
         private void frm_main_Load(object sender, EventArgs e)
         {
+            lbl_welcome.Text = "Welcome, " + frm_login.department + "!";
             switch (frm_login.department)
             {
                 case "Cleaning":
@@ -76,7 +77,7 @@ namespace TheHotelManager
                     btn_restaurant.Enabled = false;
                     break;
             }
-            lbl_welcome.Text = "Welcome, " + frm_login.department + "!";
+
         }
     }
 }

@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace TheHotelManager
 {
@@ -94,11 +87,7 @@ namespace TheHotelManager
             txt_notes.Text = dgv_tables.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Clear Data in Textboxes
         private void ClearData()
         {
             txt_notes.Text = "";
@@ -108,6 +97,8 @@ namespace TheHotelManager
             ID = 0;
         }
 
+
+        //Save it to the database
         private void btn_saveR_Click(object sender, EventArgs e)
         {
             try

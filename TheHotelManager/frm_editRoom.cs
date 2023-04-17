@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace TheHotelManager
 {
@@ -104,7 +97,7 @@ namespace TheHotelManager
         //save the updates on database
         private void btn_saveR_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 if (cb_roomNumber.Text != "" && cb_roomType.Text != "" && txt_name.Text != "" && txt_surname.Text != "" && dtp_dateTo.Text != "" && dtp_dateFrom.Text != "" && txt_price.Text != "")
