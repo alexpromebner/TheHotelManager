@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net.Mail;
 using System.Net;
-using Org.BouncyCastle.Crypto;
+using System.Net.Mail;
+using System.Windows.Forms;
 
 namespace TheHotelManager
 {
@@ -28,10 +21,7 @@ namespace TheHotelManager
             this.Close();
         }
 
-        private void cb_problems_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void btn_send_Click(object sender, EventArgs e)
         {
@@ -44,9 +34,9 @@ namespace TheHotelManager
                 client.Timeout = 500000;
 
                 // Follow the RFS 5321 Email Standard
-                newMail.From = new MailAddress("thehotelmanagerswp@gmail.com", "The Hotel Manager");
+                newMail.From = new MailAddress(txt_email.Text, txt_email.Text);
 
-                newMail.To.Add(txt_email.Text);// declare the email subject
+                newMail.To.Add("thehotelmanagerswp@gmail.com");// declare the email subject
 
                 newMail.Subject = cb_problems.Text; // use HTML for the email body
 
@@ -73,20 +63,10 @@ namespace TheHotelManager
 
         }
 
-        private void txt_email_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txt_email_Click(object sender, EventArgs e)
         {
             txt_email.Text = "";
             txt_email.ForeColor = Color.Black;
-        }
-
-        private void frm_contactAdmin_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_delete_Click(object sender, EventArgs e)

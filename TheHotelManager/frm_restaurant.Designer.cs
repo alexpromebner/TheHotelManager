@@ -70,6 +70,7 @@
             this.btn_warehouseR.TabIndex = 13;
             this.btn_warehouseR.Text = "Warehouse";
             this.btn_warehouseR.UseVisualStyleBackColor = false;
+            this.btn_warehouseR.Click += new System.EventHandler(this.btn_warehouseR_Click);
             // 
             // btn_menu
             // 

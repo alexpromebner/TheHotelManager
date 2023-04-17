@@ -57,7 +57,7 @@
             this.btn_backWh.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_backWh.Location = new System.Drawing.Point(486, 401);
             this.btn_backWh.Name = "btn_backWh";
-            this.btn_backWh.Size = new System.Drawing.Size(75, 23);
+            this.btn_backWh.Size = new System.Drawing.Size(110, 23);
             this.btn_backWh.TabIndex = 46;
             this.btn_backWh.Text = "Back";
             this.btn_backWh.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@
             this.edit_cancelOrder.ForeColor = System.Drawing.Color.White;
             this.edit_cancelOrder.Location = new System.Drawing.Point(420, 348);
             this.edit_cancelOrder.Name = "edit_cancelOrder";
-            this.edit_cancelOrder.Size = new System.Drawing.Size(141, 35);
+            this.edit_cancelOrder.Size = new System.Drawing.Size(176, 35);
             this.edit_cancelOrder.TabIndex = 45;
             this.edit_cancelOrder.Text = "Cancel Order";
             this.edit_cancelOrder.UseVisualStyleBackColor = false;
@@ -101,11 +101,16 @@
             // 
             // dgv_warehouse
             // 
+            this.dgv_warehouse.AllowUserToAddRows = false;
+            this.dgv_warehouse.AllowUserToDeleteRows = false;
+            this.dgv_warehouse.AllowUserToResizeColumns = false;
+            this.dgv_warehouse.AllowUserToResizeRows = false;
             this.dgv_warehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_warehouse.Location = new System.Drawing.Point(12, 193);
             this.dgv_warehouse.Name = "dgv_warehouse";
-            this.dgv_warehouse.Size = new System.Drawing.Size(549, 148);
+            this.dgv_warehouse.Size = new System.Drawing.Size(584, 148);
             this.dgv_warehouse.TabIndex = 69;
+            this.dgv_warehouse.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_warehouse_RowHeaderMouseClick);
             // 
             // lbl_warehouse
             // 
@@ -199,6 +204,7 @@
             this.btn_delivered.TabIndex = 76;
             this.btn_delivered.Text = "Mark as completed";
             this.btn_delivered.UseVisualStyleBackColor = false;
+            this.btn_delivered.Click += new System.EventHandler(this.btn_delivered_Click);
             // 
             // lbl_otherProducts
             // 
@@ -229,7 +235,7 @@
             this.txt_notes.Location = new System.Drawing.Point(131, 126);
             this.txt_notes.Multiline = true;
             this.txt_notes.Name = "txt_notes";
-            this.txt_notes.Size = new System.Drawing.Size(430, 50);
+            this.txt_notes.Size = new System.Drawing.Size(465, 50);
             this.txt_notes.TabIndex = 79;
             // 
             // pbx_info
@@ -259,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(568, 436);
+            this.ClientSize = new System.Drawing.Size(608, 436);
             this.Controls.Add(this.txt_notes);
             this.Controls.Add(this.lbl_notes);
             this.Controls.Add(this.btn_delivered);
