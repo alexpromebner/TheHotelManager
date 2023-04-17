@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace TheHotelManager
 {
@@ -22,7 +14,7 @@ namespace TheHotelManager
         public string to;
         public double price;
         public double priceShort;
-       
+
 
         public frm_rooms()
         {
@@ -37,6 +29,7 @@ namespace TheHotelManager
 
         private void btn_backRooms_Click(object sender, EventArgs e)
         {
+            //Message to warn user
             DialogResult saveChanges = MessageBox.Show("Are you sure you want to quit? All unsaved data will be lost.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (saveChanges == DialogResult.Yes)
             {
@@ -49,18 +42,20 @@ namespace TheHotelManager
 
         private void btn_addR_Click(object sender, EventArgs e)
         {
-            if(dtp_dateTo.Value < dtp_dateFrom.Value)
+            //to check if the date is possible
+            if (dtp_dateTo.Value < dtp_dateFrom.Value)
             {
                 MessageBox.Show("The 'to' date has to be a later date than the 'from' date!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                //for the user to check if the date is correct
                 DialogResult controlDate = new DialogResult();
                 controlDate = MessageBox.Show("Is the date from " + dtp_dateFrom.Text + " to " + dtp_dateTo.Text + " correct?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (controlDate.Equals(DialogResult.Yes))
                 {
-                    //fix price sql con
+                    //insert the room
                     SQLInteraction.InsertIntoReservation("Rooms", cb_peopleNumber.Text, cb_roomType.Text, txt_name.Text, txt_surname.Text, dtp_dateFrom.Value.ToString(), dtp_dateTo.Value.ToString(), priceShort);
 
                     peopleNumber = cb_peopleNumber.Text;
@@ -137,6 +132,7 @@ namespace TheHotelManager
 
         public void Controller()
         {
+            //calculate the prices with the different room types
             if (cb_peopleNumber.Text.Equals("single bed") && cb_roomType.Text.Equals("Standard"))
             {
                 SingleStandard();
@@ -199,65 +195,66 @@ namespace TheHotelManager
             }
         }
 
+        //to calculate the prices with dates
         public void SingleStandard()
         {
-                price = Math.Round(35.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = price.ToString();
-                lbl_price.Text = "Price: " + dateToString + " €";
-                priceShort = Math.Round(price, 0);
+            price = Math.Round(35.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
+            lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
 
         public void DoubleStandard()
         {
-                price = Math.Round(69.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = price.ToString();
-                lbl_price.Text = "Price: " + dateToString + " €";
-                priceShort = Math.Round(price, 0);
+            price = Math.Round(69.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
+            lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
 
         public void ThreeStandard()
         {
-                price = Math.Round(99.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = price.ToString();
-                lbl_price.Text = "Price: " + dateToString + " €";
-                priceShort = Math.Round(price, 0);
+            price = Math.Round(99.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
+            lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
         public void FourStandard()
         {
-                price = Math.Round(134.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = price.ToString();
-                lbl_price.Text = "Price: " + dateToString + " €";
-                priceShort = Math.Round(price, 0);
+            price = Math.Round(134.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
+            lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
         public void SingleLuxury()
         {
-                price = Math.Round(69.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = price.ToString();
-                lbl_price.Text = "Price: " + dateToString + " €";
-                priceShort = Math.Round(price, 0);
+            price = Math.Round(69.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
+            lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
 
         public void DoubleLuxury()
         {
-                price = Math.Round(119.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = price.ToString();
-                lbl_price.Text = "Price: " + dateToString + " €";
-                priceShort = Math.Round(price, 0);
+            price = Math.Round(119.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
+            lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
 
         public void ThreeLuxury()
         {
-                price = Math.Round(169.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = price.ToString();
-                lbl_price.Text = "Price: " + dateToString + " €";
-                priceShort = Math.Round(price, 0);
+            price = Math.Round(169.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
+            lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
         public void FourLuxury()
         {
-                price = Math.Round(249.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
-                string dateToString = price.ToString();
-                lbl_price.Text = "Price: " + dateToString + " €";
-                priceShort = Math.Round(price, 0);
+            price = Math.Round(249.99 * (dtp_dateTo.Value - dtp_dateFrom.Value).TotalDays, 2);
+            string dateToString = price.ToString();
+            lbl_price.Text = "Price: " + dateToString + " €";
+            priceShort = Math.Round(price, 0);
         }
         public void SingleYouth()
         {
@@ -297,16 +294,6 @@ namespace TheHotelManager
             frm_editRoom frm = new frm_editRoom();
             frm.ShowDialog();
             this.Close();
-        }
-
-        private void frm_rooms_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_name_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
     }
 }

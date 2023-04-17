@@ -145,5 +145,10 @@ namespace TheHotelManager
             frm.ShowDialog();
             this.Close();
         }
+
+        private void dgv_rooms_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

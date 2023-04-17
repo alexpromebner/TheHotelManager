@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TheHotelManager
@@ -38,6 +31,14 @@ namespace TheHotelManager
             this.Hide();
             frm_main main = new frm_main();
             main.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_warehouseR_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_warehouse warehouse = new frm_warehouse();
+            warehouse.ShowDialog();
             this.Close();
         }
     }

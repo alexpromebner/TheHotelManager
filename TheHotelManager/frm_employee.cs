@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace TheHotelManager
 {
@@ -21,20 +13,14 @@ namespace TheHotelManager
             InitializeComponent();
         }
 
-       
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void frm_employee_Load(object sender, EventArgs e)
         {
             GetData();
         }
-        
+
         MySqlDataAdapter adap;
-       
+
         void GetData()
         {
             try
@@ -47,11 +33,11 @@ namespace TheHotelManager
                 dgv_employees.DataSource = dt;
                 con.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+
 
         }
 
@@ -72,11 +58,8 @@ namespace TheHotelManager
             this.Close();
         }
 
-        private void txt_addSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         int ID = 0;
+        //delete a user
         private void btn_delete_Click(object sender, EventArgs e)
         {
 
@@ -116,6 +99,7 @@ namespace TheHotelManager
             cb_department.Text = dgv_employees.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
+        //update a user
         private void btn_change_Click(object sender, EventArgs e)
         {
             string salt;
@@ -146,7 +130,7 @@ namespace TheHotelManager
                     MessageBox.Show("Please Select Record to Update");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }

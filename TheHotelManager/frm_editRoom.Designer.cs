@@ -114,6 +114,7 @@
             this.dgv_rooms.Name = "dgv_rooms";
             this.dgv_rooms.Size = new System.Drawing.Size(410, 148);
             this.dgv_rooms.TabIndex = 55;
+            this.dgv_rooms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_rooms_CellContentClick);
             this.dgv_rooms.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_rooms_RowHeaderMouseClick);
             // 
             // txt_name

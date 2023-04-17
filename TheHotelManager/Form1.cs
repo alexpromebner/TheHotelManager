@@ -20,7 +20,7 @@ namespace TheHotelManager
 
         public static int id;
         public static string usernameSQLcon;
-        public static string department; 
+        public static string department;
         public static int getid;
         public string departmentGiver;
 
