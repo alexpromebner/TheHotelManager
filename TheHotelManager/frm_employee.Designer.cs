@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_employee));
             this.lbl_choose = new System.Windows.Forms.Label();
             this.btn_backR = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -223,6 +224,7 @@
             this.Controls.Add(this.btn_backR);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees";
