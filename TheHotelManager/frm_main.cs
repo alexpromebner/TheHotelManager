@@ -59,7 +59,24 @@ namespace TheHotelManager
 
         private void frm_main_Load(object sender, EventArgs e)
         {
+            switch (frm_login.department)
+            {
+                case "Cleaning":
+                    btn_employee.Enabled = false;
+                    btn_restaurant.Enabled = false;
+                    break;
 
+                case "Restaurant":
+                    btn_employee.Enabled = false;
+                    btn_hotel.Enabled = false;
+                    break;
+
+                case "Reception":
+                    btn_employee.Enabled = false;
+                    btn_restaurant.Enabled = false;
+                    break;
+            }
+            lbl_welcome.Text = "Welcome, " + frm_login.department + "!";
         }
     }
 }

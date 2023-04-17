@@ -47,6 +47,7 @@ namespace TheHotelManager
                 rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
             }
         }
+
         private void btn_underline_Click(object sender, EventArgs e)
         {
             if (rtb_menuEditor.SelectionFont.Style != FontStyle.Underline)
