@@ -154,6 +154,7 @@
             this.btn_backWarehouse.TabIndex = 32;
             this.btn_backWarehouse.Text = "Back";
             this.btn_backWarehouse.UseVisualStyleBackColor = true;
+            this.btn_backWarehouse.Visible = false;
             this.btn_backWarehouse.Click += new System.EventHandler(this.btn_backWarehouse_Click);
             // 
             // frm_contactAdmin

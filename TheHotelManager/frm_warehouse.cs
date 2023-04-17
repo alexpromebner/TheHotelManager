@@ -83,6 +83,7 @@ namespace TheHotelManager
             frm_contactAdmin orderProducts = new frm_contactAdmin();
             orderProducts.cb_problems.Text = "Other";
             orderProducts.btn_backWarehouse.Enabled = true;
+            orderProducts.btn_backWarehouse.Visible = true;
             this.Hide();
             orderProducts.ShowDialog();
             this.Close();
