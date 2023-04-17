@@ -29,25 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_login));
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_login = new System.Windows.Forms.Label();
             this.lbl_department = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.cb_department = new System.Windows.Forms.ComboBox();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
+            this.btn_guestuser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(12, 12);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(88, 74);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 0;
-            this.pbx_logo.TabStop = false;
             // 
             // lbl_login
             // 
@@ -114,6 +105,29 @@
             this.cb_department.Size = new System.Drawing.Size(170, 21);
             this.cb_department.TabIndex = 1;
             // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(12, 12);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(88, 74);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 0;
+            this.pbx_logo.TabStop = false;
+            // 
+            // btn_guestuser
+            // 
+            this.btn_guestuser.BackColor = System.Drawing.Color.Gray;
+            this.btn_guestuser.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guestuser.ForeColor = System.Drawing.Color.White;
+            this.btn_guestuser.Location = new System.Drawing.Point(58, 117);
+            this.btn_guestuser.Name = "btn_guestuser";
+            this.btn_guestuser.Size = new System.Drawing.Size(340, 48);
+            this.btn_guestuser.TabIndex = 5;
+            this.btn_guestuser.Text = "Guest User";
+            this.btn_guestuser.UseVisualStyleBackColor = false;
+            this.btn_guestuser.Click += new System.EventHandler(this.btn_guestuser_Click_1);
+            // 
             // frm_login
             // 
             this.AcceptButton = this.btn_login;
@@ -121,6 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(443, 401);
+            this.Controls.Add(this.btn_guestuser);
             this.Controls.Add(this.cb_department);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_password);
@@ -148,6 +163,7 @@
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_login;
         public System.Windows.Forms.ComboBox cb_department;
+        private System.Windows.Forms.Button btn_guestuser;
     }
 }
 

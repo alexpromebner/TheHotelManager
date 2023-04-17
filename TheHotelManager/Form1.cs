@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TheHotelManager
@@ -17,17 +10,19 @@ namespace TheHotelManager
             InitializeComponent();
         }
 
-
+        #region Variablen
         public static int id;
         public static string usernameSQLcon;
-        public static string department; 
+        public static string department;
         public static int getid;
         public string departmentGiver;
-
+        #endregion
 
         private void frm_login_Load(object sender, EventArgs e)
         {
+            //Create the Database if not exists
             SQLInteraction.CreateDatabase("a.promebner_hotelmanager");
+            //Create the Table if not exists
             SQLInteraction.CreateTable("a.promebner_hotelmanager", "login");
         }
 
@@ -36,15 +31,32 @@ namespace TheHotelManager
             departmentGiver = cb_department.Text;
             this.Hide();
             usernameSQLcon = txt_password.Text;
+
+            //checks the database if department and password is correct
             SQLInteraction.CheckTable("login", cb_department.Text, txt_password.Text);
-            
+
+
             SQLInteraction.GetID("login", cb_department.Text, "id");
             SQLInteraction.con.Close();
 
+            //opens the main form
             frm_main frm = new frm_main();
             department = cb_department.Text;
             frm.ShowDialog();
             this.Close();
+        }
+
+        private void btn_guestuser_Click(object sender, EventArgs e)
+        {
+            //opens the menu
+            frm_GuestMenu frm = new frm_GuestMenu();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_guestuser_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

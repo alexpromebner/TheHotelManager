@@ -6,57 +6,74 @@ namespace TheHotelManager
 {
     public partial class frm_menu : Form
     {
-        
+
 
         public frm_menu()
         {
             InitializeComponent();
         }
 
-        private void frm_menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //Save it as RTF
         private void btn_save_Click(object sender, EventArgs e)
         {
+            SQLInteraction.InsertIntoMenu("menu", rtb_menuEditor.Rtf);
+            rtb_menuEditor.Text = "";
 
         }
 
         private void btn_bold_Click(object sender, EventArgs e)
         {
-            if(rtb_menuEditor.SelectionFont.Style != FontStyle.Bold)
+            if (rtb_menuEditor.SelectionFont != null)
             {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Bold);
+                FontStyle style = rtb_menuEditor.SelectionFont.Style;
+                if (rtb_menuEditor.SelectionFont.Bold)
+                {
+                    style &= FontStyle.Bold;
+                }
+                else
+                {
+                    style |= FontStyle.Bold;
+                }
+                rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.SelectionFont, style);
+
             }
-            else if(rtb_menuEditor.SelectionFont.Style == FontStyle.Bold)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            
+
+
         }
 
         private void btn_italic_Click(object sender, EventArgs e)
         {
-            if (rtb_menuEditor.SelectionFont.Style != FontStyle.Italic)
+            if (rtb_menuEditor.SelectionFont != null)
             {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Italic);
-            }
-            else
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
+                FontStyle style = rtb_menuEditor.SelectionFont.Style;
+                if (rtb_menuEditor.SelectionFont.Italic)
+                {
+                    style &= FontStyle.Italic;
+                }
+                else
+                {
+                    style |= FontStyle.Italic;
+                }
+                rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.SelectionFont, style);
+
             }
         }
 
         private void btn_underline_Click(object sender, EventArgs e)
         {
-            if (rtb_menuEditor.SelectionFont.Style != FontStyle.Underline)
+            if (rtb_menuEditor.SelectionFont != null)
             {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Underline);
-            }
-            else
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
+                FontStyle style = rtb_menuEditor.SelectionFont.Style;
+                if (rtb_menuEditor.SelectionFont.Underline)
+                {
+                    style &= FontStyle.Underline;
+                }
+                else
+                {
+                    style |= FontStyle.Underline;
+                }
+                rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.SelectionFont, style);
+
             }
         }
 
@@ -68,124 +85,44 @@ namespace TheHotelManager
             this.Close();
         }
 
+        //Change FontSize
         private void cb_fontSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cb_fontSize.SelectedIndex == 0)
+            float size;
+            if (float.TryParse(cb_fontSize.Text, out size))
             {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex + 1);
-            }
-            else if (cb_fontSize.SelectedIndex == 1)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 2)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 3)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 4)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 5)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 6)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 7)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 8)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 9)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 10)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 11)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 12)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 13)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 14)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 15)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 16)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 17)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 18)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 19)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex, FontStyle.Regular);
-            }
-            else if (cb_fontSize.SelectedIndex == 20)
-            {
-                rtb_menuEditor.SelectionFont = new Font("Arial", cb_fontSize.SelectedIndex);
+                rtb_menuEditor.SelectionFont = new Font(rtb_menuEditor.SelectionFont.FontFamily, size, rtb_menuEditor.SelectionFont.Style);
             }
         }
 
+        //Delete everything
         private void btn_reset_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Do you want to delete everything?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if(dialog == DialogResult.Yes)
+            if (dialog == DialogResult.Yes)
             {
                 rtb_menuEditor.Text = "";
             }
-            
-        }
-
-        private void rtb_menuEditor_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
+        //Allign Text to the center
         private void btn_center_Click(object sender, EventArgs e)
         {
-            if(rtb_menuEditor.SelectionAlignment != HorizontalAlignment.Center)
+            if (rtb_menuEditor.SelectionAlignment != HorizontalAlignment.Center)
             {
                 rtb_menuEditor.SelectionAlignment = HorizontalAlignment.Center;
                 btn_center.Text = "Left";
             }
-            else if(rtb_menuEditor.SelectionAlignment == HorizontalAlignment.Center)
+            else if (rtb_menuEditor.SelectionAlignment == HorizontalAlignment.Center)
             {
                 rtb_menuEditor.SelectionAlignment = HorizontalAlignment.Left;
                 btn_center.Text = "Center";
             }
         }
 
+        //Allign Text to the right
         private void btn_right_Click(object sender, EventArgs e)
         {
             if (rtb_menuEditor.SelectionAlignment != HorizontalAlignment.Right)

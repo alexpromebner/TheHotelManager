@@ -261,7 +261,6 @@
             this.lbl_notes.Size = new System.Drawing.Size(59, 22);
             this.lbl_notes.TabIndex = 64;
             this.lbl_notes.Text = "Notes";
-            this.lbl_notes.Click += new System.EventHandler(this.label4_Click);
             // 
             // frm_editReservation
             // 

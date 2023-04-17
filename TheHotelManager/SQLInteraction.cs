@@ -332,6 +332,46 @@ namespace TheHotelManager
             }
         }
 
+        public static void InsertIntoMenu(string tablename, string textm)
+        {
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                string text = "INSERT INTO " + tablename + " (text) VALUES('" + textm + "')";
+                cmd = new MySqlCommand(text, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("The menu is saved!", "Menu saved!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        public static string text;
+
+        public static void GetMenu(string tablename, string column1)
+        {
+            
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                SqlCommand cmd1 = new SqlCommand();
+                cmd.CommandText = "SELECT " + column1 +  " FROM " + tablename + " WHERE id = 1;";
+                text = "SELECT " + column1 + " FROM " + tablename + " WHERE id = 1;";
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+        }
+
         private void SQLInteraction_Load(object sender, EventArgs e)
         {
 
