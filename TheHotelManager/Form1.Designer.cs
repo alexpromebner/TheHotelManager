@@ -105,7 +105,7 @@
             this.cb_department.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_department.FormattingEnabled = true;
             this.cb_department.Items.AddRange(new object[] {
-            "admin",
+            "Admin",
             "Cleaning",
             "Reception",
             "Restaurant"});

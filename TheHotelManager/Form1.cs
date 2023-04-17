@@ -20,7 +20,7 @@ namespace TheHotelManager
 
         public static int id;
         public static string usernameSQLcon;
-
+        public static string department; 
         public static int getid;
         public string departmentGiver;
 
@@ -42,28 +42,7 @@ namespace TheHotelManager
             SQLInteraction.con.Close();
 
             frm_main frm = new frm_main();
-            if (cb_department.Text == "admin")
-            {
-                frm.lbl_welcome.Text = "Welcome, Admin!";
-            }
-            else if(cb_department.Text == "Cleaning")
-            {
-                frm.lbl_welcome.Text = "Welcome, Cleaning Staff!";
-                frm.btn_employee.Enabled = false;
-                frm.btn_restaurant.Enabled = false;
-            }
-            else if (cb_department.Text == "Restaurant")
-            {
-                frm.lbl_welcome.Text = "Welcome, Restaurant Staff!";
-                frm.btn_employee.Enabled = false;
-                frm.btn_hotel.Enabled = false;
-            }
-            else if (cb_department.Text == "Reception")
-            {
-                frm.lbl_welcome.Text = "Welcome, Reception Staff!";
-                frm.btn_employee.Enabled = false;
-                frm.btn_restaurant.Enabled = false;
-            }
+            department = cb_department.Text;
             frm.ShowDialog();
             this.Close();
         }
