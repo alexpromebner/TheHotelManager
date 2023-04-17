@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace TheHotelManager
 {
     public partial class frm_warehouse : Form
     {
+        public int id = 0;
         public frm_warehouse()
         {
             InitializeComponent();
@@ -38,7 +32,6 @@ namespace TheHotelManager
             con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
             adap = new MySqlDataAdapter("Select * From warehouse;", con);
-            //adap.SelectCommand = cmd;
             dtset = new DataTable();
             adap.Fill(dtset);
 
@@ -55,16 +48,30 @@ namespace TheHotelManager
 
         private void btn_addOrder_Click(object sender, EventArgs e)
         {
-            //fix department
-            frm_login frm_Login = new frm_login();
+            GetWarehouseData();
             SQLInteraction sQLInteraction = new SQLInteraction();
-            sQLInteraction.InsertIntoWarehouse(frm_Login.departmentGiver, cb_product.Text, Convert.ToInt32(nud_quantity.Value), txt_notes.Text);
-            MessageBox.Show("The order was completed successfully!");
+
+            if (cb_product.Text != "")
+            {
+                sQLInteraction.InsertIntoWarehouse(frm_login.department, cb_product.Text, Convert.ToInt32(nud_quantity.Value), txt_notes.Text);
+                MessageBox.Show("The order was completed successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Please select a product to continue.", "No product selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void edit_cancelOrder_Click(object sender, EventArgs e)
         {
-            //open the contact admin form and automatically choose cancellation + automatically show product ID in the notes field
+            frm_contactAdmin orderProducts = new frm_contactAdmin();
+            orderProducts.cb_problems.Text = "Cancellation";
+            orderProducts.btn_backWarehouse.Enabled = true;
+            orderProducts.btn_backWarehouse.Visible = true;
+            orderProducts.txt_other.Text = "Product ID: " + id.ToString();
+            this.Hide();
+            orderProducts.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
@@ -87,6 +94,50 @@ namespace TheHotelManager
             this.Hide();
             orderProducts.ShowDialog();
             this.Close();
+        }
+        private void ClearData()
+        {
+            txt_notes.Text = "";
+            cb_product.Text = "";
+            nud_quantity.Value = 1;
+            id = 0;
+        }
+
+        private void btn_delivered_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you really want to mark this as completed? This action cannot be reverted.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    if (id != 0)
+                    {
+                        con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                        MySqlCommand cmd = new MySqlCommand("delete from warehouse where id=@id", con);
+                        con.Open();
+                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Record Deleted Successfully!");
+                        GetWarehouseData();
+                        ClearData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please Select Record to Delete");
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        private void dgv_warehouse_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            id = Convert.ToInt32(dgv_warehouse.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
     }
 }

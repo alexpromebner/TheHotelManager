@@ -61,7 +61,7 @@
             // btn_backR
             // 
             this.btn_backR.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_backR.Location = new System.Drawing.Point(727, 551);
+            this.btn_backR.Location = new System.Drawing.Point(716, 441);
             this.btn_backR.Name = "btn_backR";
             this.btn_backR.Size = new System.Drawing.Size(75, 23);
             this.btn_backR.TabIndex = 20;
@@ -74,7 +74,7 @@
             this.btn_delete.BackColor = System.Drawing.Color.Gray;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Location = new System.Drawing.Point(12, 536);
+            this.btn_delete.Location = new System.Drawing.Point(12, 435);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(113, 35);
             this.btn_delete.TabIndex = 17;
@@ -87,7 +87,7 @@
             this.btn_add.BackColor = System.Drawing.Color.Gray;
             this.btn_add.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Location = new System.Drawing.Point(12, 495);
+            this.btn_add.Location = new System.Drawing.Point(12, 394);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(113, 35);
             this.btn_add.TabIndex = 22;
@@ -100,7 +100,7 @@
             this.btn_change.BackColor = System.Drawing.Color.Gray;
             this.btn_change.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_change.ForeColor = System.Drawing.Color.White;
-            this.btn_change.Location = new System.Drawing.Point(12, 454);
+            this.btn_change.Location = new System.Drawing.Point(12, 353);
             this.btn_change.Name = "btn_change";
             this.btn_change.Size = new System.Drawing.Size(113, 35);
             this.btn_change.TabIndex = 23;
@@ -123,9 +123,8 @@
             this.dgv_employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_employees.Location = new System.Drawing.Point(144, 271);
             this.dgv_employees.Name = "dgv_employees";
-            this.dgv_employees.Size = new System.Drawing.Size(658, 259);
+            this.dgv_employees.Size = new System.Drawing.Size(557, 197);
             this.dgv_employees.TabIndex = 26;
-            this.dgv_employees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgv_employees.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_employees_RowHeaderMouseClick);
             // 
             // lbl_name
@@ -208,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(831, 586);
+            this.ClientSize = new System.Drawing.Size(793, 476);
             this.Controls.Add(this.cb_department);
             this.Controls.Add(this.txt_surname);
             this.Controls.Add(this.txt_password);

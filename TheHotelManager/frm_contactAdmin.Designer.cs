@@ -121,7 +121,6 @@
             this.cb_problems.Name = "cb_problems";
             this.cb_problems.Size = new System.Drawing.Size(271, 21);
             this.cb_problems.TabIndex = 30;
-            this.cb_problems.SelectedIndexChanged += new System.EventHandler(this.cb_problems_SelectedIndexChanged);
             // 
             // txt_email
             // 
@@ -132,7 +131,6 @@
             this.txt_email.TabIndex = 31;
             this.txt_email.Text = "Enter your Email";
             this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
-            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
             // pbx_logo
             // 
@@ -177,7 +175,6 @@
             this.Name = "frm_contactAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact";
-            this.Load += new System.EventHandler(this.frm_contactAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,11 +187,11 @@
         private System.Windows.Forms.Label lbl_problems;
         private System.Windows.Forms.Button btn_backA;
         private System.Windows.Forms.Label lbl_other;
-        private System.Windows.Forms.TextBox txt_other;
         private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.TextBox txt_email;
         public System.Windows.Forms.ComboBox cb_problems;
         public System.Windows.Forms.Button btn_backWarehouse;
+        public System.Windows.Forms.TextBox txt_other;
     }
 }

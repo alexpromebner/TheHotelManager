@@ -99,7 +99,6 @@
             this.txt_Tsurname.Size = new System.Drawing.Size(405, 21);
             this.txt_Tsurname.TabIndex = 40;
             this.txt_Tsurname.Text = "Surname";
-            this.txt_Tsurname.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Tsurname_MaskInputRejected);
             this.txt_Tsurname.Click += new System.EventHandler(this.txt_Tsurname_Click);
             // 
             // txt_Tname
@@ -111,7 +110,6 @@
             this.txt_Tname.Size = new System.Drawing.Size(405, 21);
             this.txt_Tname.TabIndex = 39;
             this.txt_Tname.Text = "Name";
-            this.txt_Tname.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Tname_MaskInputRejected);
             this.txt_Tname.Click += new System.EventHandler(this.txt_Tname_Click);
             // 
             // label1
@@ -136,11 +134,6 @@
             // 
             // nud_amount
             // 
-            this.nud_amount.Increment = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
             this.nud_amount.Location = new System.Drawing.Point(132, 35);
             this.nud_amount.Maximum = new decimal(new int[] {
             20,
@@ -182,7 +175,6 @@
             0,
             0,
             0});
-            this.nud_tNumber.ValueChanged += new System.EventHandler(this.nud_tNumber_ValueChanged);
             // 
             // txt_notes
             // 
@@ -227,7 +219,6 @@
             this.Name = "frm_tables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tables";
-            this.Load += new System.EventHandler(this.frm_tables_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_amount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_tNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
