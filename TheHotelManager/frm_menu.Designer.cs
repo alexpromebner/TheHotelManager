@@ -62,7 +62,6 @@
             this.rtb_menuEditor.Size = new System.Drawing.Size(405, 208);
             this.rtb_menuEditor.TabIndex = 20;
             this.rtb_menuEditor.Text = "";
-            this.rtb_menuEditor.TextChanged += new System.EventHandler(this.rtb_menuEditor_TextChanged);
             // 
             // btn_Msave
             // 
@@ -219,7 +218,6 @@
             this.Name = "frm_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.frm_menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
