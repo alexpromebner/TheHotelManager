@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_addemployee));
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.lbl_login = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
@@ -188,6 +189,7 @@
             this.Controls.Add(this.lbl_department);
             this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_addemployee";
             this.Text = "Edit Employee";
             this.Load += new System.EventHandler(this.frm_editemployee_Load);

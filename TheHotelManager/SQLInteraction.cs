@@ -142,6 +142,24 @@ namespace TheHotelManager
                 MessageBox.Show(e.Message);
             }
         }
+
+        public void InsertIntoWarehouse(string department, string product, int quantity, string notes)
+        {
+            try
+            {
+                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.Open();
+                string text = "INSERT INTO warehouse (department,product,quantity,notes) VALUES('" + department + "', '" + product + "', '" + quantity + "', '" + notes + "')";
+                cmd = new MySqlCommand(text, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
         //TODO:
         //- add select command and check the variable for showing if the slected room is clean or dirty
         public static void GetRooms(int id, bool cleanDirty)

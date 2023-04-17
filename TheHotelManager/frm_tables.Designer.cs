@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_tables));
             this.btn_backRooms = new System.Windows.Forms.Button();
             this.edit_reservation = new System.Windows.Forms.Button();
             this.btn_addR = new System.Windows.Forms.Button();
@@ -222,6 +223,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_roomType);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_tables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tables";

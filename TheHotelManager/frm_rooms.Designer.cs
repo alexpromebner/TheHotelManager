@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_rooms));
             this.lbl_roomType = new System.Windows.Forms.Label();
             this.cb_peopleNumber = new System.Windows.Forms.ComboBox();
             this.cb_roomType = new System.Windows.Forms.ComboBox();
@@ -244,6 +245,7 @@
             this.Controls.Add(this.cb_peopleNumber);
             this.Controls.Add(this.lbl_roomType);
             this.Controls.Add(this.pbx_logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_rooms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rooms";
