@@ -27,7 +27,7 @@ namespace TheHotelManager
         void GetData()
         {
 
-            con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+            con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
             adap = new MySqlDataAdapter("Select * From tables;", con);
             dtset = new DataTable();
@@ -54,7 +54,7 @@ namespace TheHotelManager
             {
                 if (ID != 0)
                 {
-                    con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                    con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                     MySqlCommand cmd = new MySqlCommand("delete from tables where id=@id", con);
                     con.Open();
                     cmd.Parameters.AddWithValue("@id", ID);
@@ -105,7 +105,7 @@ namespace TheHotelManager
             {
                 if (txt_Tname.Text != "" && txt_Tsurname.Text != "" && txt_notes.Text != "" && nud_amount.Text != "" && nud_amount.Text != "" && dtp_date.Text != "")
                 {
-                    con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                    con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                     MySqlCommand cmd = new MySqlCommand("UPDATE tables SET name = @name, surname = @surname, tablenum = @tablenum, people = @people, date = @date, comment = @comment where ID = @id", con);
                     con.Open();
                     cmd.Parameters.AddWithValue("@id", ID);

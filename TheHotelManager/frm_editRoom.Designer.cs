@@ -53,9 +53,10 @@
             // btn_backEditRoom
             // 
             this.btn_backEditRoom.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_backEditRoom.Location = new System.Drawing.Point(341, 409);
+            this.btn_backEditRoom.Location = new System.Drawing.Point(455, 503);
+            this.btn_backEditRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_backEditRoom.Name = "btn_backEditRoom";
-            this.btn_backEditRoom.Size = new System.Drawing.Size(75, 23);
+            this.btn_backEditRoom.Size = new System.Drawing.Size(100, 28);
             this.btn_backEditRoom.TabIndex = 49;
             this.btn_backEditRoom.Text = "Back";
             this.btn_backEditRoom.UseVisualStyleBackColor = true;
@@ -66,9 +67,10 @@
             this.btn_deleteR.BackColor = System.Drawing.Color.Gray;
             this.btn_deleteR.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deleteR.ForeColor = System.Drawing.Color.White;
-            this.btn_deleteR.Location = new System.Drawing.Point(6, 397);
+            this.btn_deleteR.Location = new System.Drawing.Point(8, 489);
+            this.btn_deleteR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_deleteR.Name = "btn_deleteR";
-            this.btn_deleteR.Size = new System.Drawing.Size(202, 35);
+            this.btn_deleteR.Size = new System.Drawing.Size(269, 43);
             this.btn_deleteR.TabIndex = 48;
             this.btn_deleteR.Text = "Delete";
             this.btn_deleteR.UseVisualStyleBackColor = false;
@@ -79,9 +81,10 @@
             this.btn_saveR.BackColor = System.Drawing.Color.Gray;
             this.btn_saveR.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_saveR.ForeColor = System.Drawing.Color.White;
-            this.btn_saveR.Location = new System.Drawing.Point(6, 356);
+            this.btn_saveR.Location = new System.Drawing.Point(8, 438);
+            this.btn_saveR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_saveR.Name = "btn_saveR";
-            this.btn_saveR.Size = new System.Drawing.Size(202, 35);
+            this.btn_saveR.Size = new System.Drawing.Size(269, 43);
             this.btn_saveR.TabIndex = 47;
             this.btn_saveR.Text = "Save";
             this.btn_saveR.UseVisualStyleBackColor = false;
@@ -91,8 +94,9 @@
             // 
             this.pbx_logo.Image = global::TheHotelManager.Properties.Resources.Logo;
             this.pbx_logo.Location = new System.Drawing.Point(-1, 0);
+            this.pbx_logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(124, 141);
+            this.pbx_logo.Size = new System.Drawing.Size(165, 174);
             this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_logo.TabIndex = 38;
             this.pbx_logo.TabStop = false;
@@ -101,18 +105,21 @@
             // 
             this.lbl_editRooms.AutoSize = true;
             this.lbl_editRooms.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_editRooms.Location = new System.Drawing.Point(234, 0);
+            this.lbl_editRooms.Location = new System.Drawing.Point(312, 0);
+            this.lbl_editRooms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_editRooms.Name = "lbl_editRooms";
-            this.lbl_editRooms.Size = new System.Drawing.Size(183, 39);
+            this.lbl_editRooms.Size = new System.Drawing.Size(233, 50);
             this.lbl_editRooms.TabIndex = 54;
             this.lbl_editRooms.Text = "Edit Rooms";
             // 
             // dgv_rooms
             // 
             this.dgv_rooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_rooms.Location = new System.Drawing.Point(6, 190);
+            this.dgv_rooms.Location = new System.Drawing.Point(8, 234);
+            this.dgv_rooms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_rooms.Name = "dgv_rooms";
-            this.dgv_rooms.Size = new System.Drawing.Size(410, 148);
+            this.dgv_rooms.RowHeadersWidth = 51;
+            this.dgv_rooms.Size = new System.Drawing.Size(547, 182);
             this.dgv_rooms.TabIndex = 55;
             this.dgv_rooms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_rooms_CellContentClick);
             this.dgv_rooms.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_rooms_RowHeaderMouseClick);
@@ -121,9 +128,10 @@
             // 
             this.txt_name.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.ForeColor = System.Drawing.Color.Silver;
-            this.txt_name.Location = new System.Drawing.Point(129, 91);
+            this.txt_name.Location = new System.Drawing.Point(172, 112);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(142, 21);
+            this.txt_name.Size = new System.Drawing.Size(188, 25);
             this.txt_name.TabIndex = 56;
             this.txt_name.Text = "Name";
             // 
@@ -137,18 +145,20 @@
             "double bed",
             "three beds",
             "four beds"});
-            this.cb_roomNumber.Location = new System.Drawing.Point(129, 64);
+            this.cb_roomNumber.Location = new System.Drawing.Point(172, 79);
+            this.cb_roomNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_roomNumber.Name = "cb_roomNumber";
-            this.cb_roomNumber.Size = new System.Drawing.Size(142, 21);
+            this.cb_roomNumber.Size = new System.Drawing.Size(188, 24);
             this.cb_roomNumber.TabIndex = 57;
             // 
             // lbl_roomNumber
             // 
             this.lbl_roomNumber.AutoSize = true;
             this.lbl_roomNumber.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_roomNumber.Location = new System.Drawing.Point(125, 42);
+            this.lbl_roomNumber.Location = new System.Drawing.Point(167, 52);
+            this.lbl_roomNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_roomNumber.Name = "lbl_roomNumber";
-            this.lbl_roomNumber.Size = new System.Drawing.Size(103, 19);
+            this.lbl_roomNumber.Size = new System.Drawing.Size(135, 23);
             this.lbl_roomNumber.TabIndex = 58;
             this.lbl_roomNumber.Text = "Room Number:";
             // 
@@ -156,9 +166,10 @@
             // 
             this.lbl_roomType.AutoSize = true;
             this.lbl_roomType.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_roomType.Location = new System.Drawing.Point(277, 42);
+            this.lbl_roomType.Location = new System.Drawing.Point(369, 52);
+            this.lbl_roomType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_roomType.Name = "lbl_roomType";
-            this.lbl_roomType.Size = new System.Drawing.Size(81, 19);
+            this.lbl_roomType.Size = new System.Drawing.Size(108, 23);
             this.lbl_roomType.TabIndex = 60;
             this.lbl_roomType.Text = "Room Type:";
             // 
@@ -170,18 +181,20 @@
             "Standard",
             "Luxury",
             "Youth"});
-            this.cb_roomType.Location = new System.Drawing.Point(281, 64);
+            this.cb_roomType.Location = new System.Drawing.Point(375, 79);
+            this.cb_roomType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_roomType.Name = "cb_roomType";
-            this.cb_roomType.Size = new System.Drawing.Size(142, 21);
+            this.cb_roomType.Size = new System.Drawing.Size(188, 24);
             this.cb_roomType.TabIndex = 61;
             // 
             // txt_surname
             // 
             this.txt_surname.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_surname.ForeColor = System.Drawing.Color.Silver;
-            this.txt_surname.Location = new System.Drawing.Point(281, 91);
+            this.txt_surname.Location = new System.Drawing.Point(375, 112);
+            this.txt_surname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_surname.Name = "txt_surname";
-            this.txt_surname.Size = new System.Drawing.Size(142, 21);
+            this.txt_surname.Size = new System.Drawing.Size(188, 25);
             this.txt_surname.TabIndex = 62;
             this.txt_surname.Text = "Surname";
             // 
@@ -189,9 +202,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(125, 115);
+            this.label1.Location = new System.Drawing.Point(167, 142);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 19);
+            this.label1.Size = new System.Drawing.Size(56, 23);
             this.label1.TabIndex = 63;
             this.label1.Text = "From:";
             // 
@@ -199,42 +213,46 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(277, 115);
+            this.label2.Location = new System.Drawing.Point(369, 142);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 19);
+            this.label2.Size = new System.Drawing.Size(35, 23);
             this.label2.TabIndex = 64;
             this.label2.Text = "To:";
             // 
             // dtp_dateFrom
             // 
-            this.dtp_dateFrom.Location = new System.Drawing.Point(129, 137);
+            this.dtp_dateFrom.Location = new System.Drawing.Point(172, 169);
+            this.dtp_dateFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtp_dateFrom.Name = "dtp_dateFrom";
-            this.dtp_dateFrom.Size = new System.Drawing.Size(142, 20);
+            this.dtp_dateFrom.Size = new System.Drawing.Size(188, 22);
             this.dtp_dateFrom.TabIndex = 65;
             // 
             // dtp_dateTo
             // 
-            this.dtp_dateTo.Location = new System.Drawing.Point(281, 137);
+            this.dtp_dateTo.Location = new System.Drawing.Point(375, 169);
+            this.dtp_dateTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtp_dateTo.Name = "dtp_dateTo";
-            this.dtp_dateTo.Size = new System.Drawing.Size(142, 20);
+            this.dtp_dateTo.Size = new System.Drawing.Size(188, 22);
             this.dtp_dateTo.TabIndex = 66;
             // 
             // txt_price
             // 
             this.txt_price.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_price.ForeColor = System.Drawing.Color.Silver;
-            this.txt_price.Location = new System.Drawing.Point(129, 163);
+            this.txt_price.Location = new System.Drawing.Point(172, 201);
+            this.txt_price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(288, 21);
+            this.txt_price.Size = new System.Drawing.Size(383, 25);
             this.txt_price.TabIndex = 67;
             this.txt_price.Text = "Price";
             // 
             // frm_editRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(429, 444);
+            this.ClientSize = new System.Drawing.Size(572, 546);
             this.Controls.Add(this.txt_price);
             this.Controls.Add(this.dtp_dateTo);
             this.Controls.Add(this.dtp_dateFrom);
@@ -253,9 +271,10 @@
             this.Controls.Add(this.btn_saveR);
             this.Controls.Add(this.pbx_logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_editRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_editRoom";
+            this.Text = "Edit Rooms";
             this.Load += new System.EventHandler(this.frm_editRoom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_rooms)).EndInit();

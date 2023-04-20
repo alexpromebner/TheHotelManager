@@ -29,7 +29,7 @@ namespace TheHotelManager
         void GetWarehouseData()
         {
 
-            con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+            con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
             adap = new MySqlDataAdapter("Select * From warehouse;", con);
             dtset = new DataTable();
@@ -112,7 +112,7 @@ namespace TheHotelManager
                 {
                     if (id != 0)
                     {
-                        con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                        con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                         MySqlCommand cmd = new MySqlCommand("delete from warehouse where id=@id", con);
                         con.Open();
                         cmd.Parameters.AddWithValue("@id", id);

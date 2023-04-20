@@ -80,7 +80,7 @@ namespace TheHotelManager
         private void btn_backR_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_main menuRestaurant = new frm_main();
+            frm_restaurant menuRestaurant = new frm_restaurant();
             menuRestaurant.ShowDialog();
             this.Close();
         }

@@ -29,7 +29,8 @@ namespace TheHotelManager
 
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                //con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 string text = "CREATE DATABASE IF NOT EXISTS '" + dbname + "';";
                 cmd = new MySqlCommand(text, con);
@@ -50,7 +51,8 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                //con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 string text = "use [" + dbname + "] if not exists(select * from sysobjects where name = '" + tablename + "') begin create table " + tablename + "(Id int NOT NULL Primary Key,username varchar(20),password varchar(70)) end";
                 cmd = new MySqlCommand(text, con);
@@ -69,7 +71,8 @@ namespace TheHotelManager
             string hashedpw;
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                //con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 cmd.CommandText = "Select password From login Where department='" + role + "'";
                 hashedpw = (string)cmd.ExecuteScalar();
@@ -110,7 +113,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 string text = "INSERT INTO " + tablename + " (name,surname,password,department) VALUES('" + name + "', '" + surname + "', '" + password + "', '" + department + "')";
                 cmd = new MySqlCommand(text, con);
@@ -130,7 +133,7 @@ namespace TheHotelManager
 
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 string text = "INSERT INTO " + tablename + " (BedNumber,RoomType,Name,Surname,FromDate,ToDate,Price) VALUES('" + bednumber + "', '" + roomtype + "', '" + name + "', '" + surname + "', '" + datefrom + "', '" + dateto + "', '" + price + "')";
                 cmd = new MySqlCommand(text, con);
@@ -147,7 +150,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 string text = "INSERT INTO warehouse (department,product,quantity,notes) VALUES('" + department + "', '" + product + "', '" + quantity + "', '" + notes + "')";
                 cmd = new MySqlCommand(text, con);
@@ -166,7 +169,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 cmd.CommandText = "Select * from cleaning where ID = " + id + " ;";
                 int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
@@ -176,7 +179,7 @@ namespace TheHotelManager
                 {
                     try
                     {
-                        con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                        con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                         con.Open();
                         cmd.CommandText = "insert into cleaning (ID, CleanDirty) values(" + id + ", " + cleanDirty + " );";
                         cmd.ExecuteNonQuery();
@@ -204,7 +207,7 @@ namespace TheHotelManager
             try
             {
                 //code for updating room status
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 cmd.CommandText = "UPDATE cleaning SET CleanDirty = "+cleanDirty+" where ID = "+id+";";
                 cmd.ExecuteNonQuery();
@@ -220,7 +223,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 cmd.CommandText = "Select CleanDirty from cleaning where ID = " + id + " ;";
                 int cleanDirty2 = Convert.ToInt32(cmd.ExecuteScalar());
@@ -237,7 +240,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 //cmd.CommandText = "UPDATE " + tablename + " SET " + columnname + " = " + columnname + " + 1 WHERE id = " + id + ";";
                 cmd.ExecuteNonQuery();
@@ -253,7 +256,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 SqlCommand cmd1 = new SqlCommand();
                 cmd.CommandText = "SELECT " + name + " FROM " + tablename + " WHERE department = '" + v_department + "';";
@@ -271,7 +274,7 @@ namespace TheHotelManager
         {
             string username;
 
-            con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+            con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
             con.Open();
             cmd.Connection = con;
             //cmd.CommandText = "Select Username from Login where Username = '" + username1 + "';";
@@ -300,7 +303,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 SqlCommand cmd1 = new SqlCommand();
                 cmd.CommandText = "SELECT " + column1 + ", " + column2 + " FROM " + tablename + " WHERE name = '" + name + "' AND WHERE surname = '" + surname + "';";
@@ -318,7 +321,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 string text = "INSERT INTO " + tablename + " (name,surname,tablenum,people,date,comment) VALUES('" + name + "', '" + surname + "', '" + tablenum + "', '" + people + "', '" + date + "', '" + comment + "')";
                 cmd = new MySqlCommand(text, con);
@@ -336,7 +339,7 @@ namespace TheHotelManager
         {
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 string text = "INSERT INTO " + tablename + " (text) VALUES('" + textm + "')";
                 cmd = new MySqlCommand(text, con);
@@ -357,7 +360,7 @@ namespace TheHotelManager
             
             try
             {
-                con.ConnectionString = "server=eduweb20;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
+                con.ConnectionString = "server=web.hak-kitz.eu;database=a.promebner_hotelmanager;UID=a.promebner;password='MyDatabase034';";
                 con.Open();
                 SqlCommand cmd1 = new SqlCommand();
                 cmd.CommandText = "SELECT " + column1 +  " FROM " + tablename + " WHERE id = 1;";
